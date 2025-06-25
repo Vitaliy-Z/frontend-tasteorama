@@ -1,0 +1,1956 @@
+[
+  {
+    "_id": "6462a8f74c3d0ddd28897fcd",
+    "title": "Battenberg Cake",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "Heat oven to 180C/160C fan/gas 4 and line the base and sides of a 20cm square tin with baking parchment (the easiest way is to cross 2 x 20cm-long strips over the base). To make the almond sponge, put the butter, sugar, flour, ground almonds, baking powder, eggs, vanilla and almond extract in a large bowl. Beat with an electric whisk until the mix comes together smoothly. Scrape into the tin, spreading to the corners, and bake for 25-30 mins – when you poke in a skewer, it should come out clean. Cool in the tin for 10 mins, then transfer to a wire rack to finish cooling while you make the second sponge.\r\nFor the pink sponge, line the tin as above. Mix all the ingredients together as above, but don’t add the almond extract. Fold in some pink food colouring. Then scrape it all into the tin and bake as before. Cool.\r\nTo assemble, heat the jam in a small pan until runny, then sieve. Barely trim two opposite edges from the almond sponge, then well trim a third edge. Roughly measure the height of the sponge, then cutting from the well-trimmed edge, use a ruler to help you cut 4 slices each the same width as the sponge height. Discard or nibble leftover sponge. Repeat with pink cake.\r\nTake 2 x almond slices and 2 x pink slices and trim so they are all the same length. Roll out one marzipan block on a surface lightly dusted with icing sugar to just over 20cm wide, then keep rolling lengthways until the marzipan is roughly 0.5cm thick. Brush with apricot jam, then lay a pink and an almond slice side by side at one end of the marzipan, brushing jam in between to stick sponges, and leaving 4cm clear marzipan at the end. Brush more jam on top of the sponges, then sandwich remaining 2 slices on top, alternating colours to give a checkerboard effect. Trim the marzipan to the length of the cakes.\r\nCarefully lift up the marzipan and smooth over the cake with your hands, but leave a small marzipan fold along the bottom edge before you stick it to the first side. Trim opposite side to match size of fold, then crimp edges using fingers and thumb (or, more simply, press with prongs of fork). If you like, mark the 10 slices using the prongs of a fork.\r\nAssemble second Battenberg and keep in an airtight box or well wrapped in cling film for up to 3 days. Can be frozen for up to a month.",
+    "description": "A classic British cake made with almond sponge cake and covered with marzipan. It is traditionally pink and yellow checkered in appearance.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Battenberg%20Cake.jpg",
+    "time": "60",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "175g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3687",
+        "measure": "175g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3762",
+        "measure": "140g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3814",
+        "measure": "50g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3665",
+        "measure": "½ tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "3 Medium"
+      },
+      {
+        "id": "640c2dd963a319ea671e3786",
+        "measure": "½ tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3861",
+        "measure": "¼ teaspoon"
+      },
+      {
+        "id": "640c2dd963a319ea671e380f",
+        "measure": "½ tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e37bf",
+        "measure": "200g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3813",
+        "measure": "1kg"
+      },
+      {
+        "id": "640c2dd963a319ea671e379d",
+        "measure": "Dusting"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733243"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1709506071976"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897fbc",
+    "title": "Irish stew",
+    "category": "Beef",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Irish",
+    "instructions": "Heat the oven to 180C/350F/gas mark 4. Drain and rinse the soaked wheat, put it in a medium pan with lots of water, bring to a boil and simmer for an hour, until cooked. Drain and set aside.\r\n\r\nSeason the lamb with a teaspoon of salt and some black pepper. Put one tablespoon of oil in a large, deep sauté pan for which you have a lid; place on a medium-high heat. Add some of the lamb – don't overcrowd the pan – and sear for four minutes on all sides. Transfer to a bowl, and repeat with the remaining lamb, adding oil as needed.\r\n\r\nLower the heat to medium and add a tablespoon of oil to the pan. Add the shallots and fry for four minutes, until caramelised. Tip these into the lamb bowl, and repeat with the remaining vegetables until they are all nice and brown, adding more oil as you need it.\r\n\r\nOnce all the vegetables are seared and removed from the pan, add the wine along with the sugar, herbs, a teaspoon of salt and a good grind of black pepper. Boil on a high heat for about three minutes.\r\n\r\nTip the lamb, vegetables and whole wheat back into the pot, and add the stock. Cover and boil for five minutes, then transfer to the oven for an hour and a half.\r\n\r\nRemove the stew from the oven and check the liquid; if there is a lot, remove the lid and boil for a few minutes.",
+    "description": "A traditional Irish dish made with lamb, potatoes, carrots, onions, and herbs, cooked in a broth or gravy.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Irish%20stew.jpg",
+    "time": "160",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3796",
+        "measure": "300g soaked overnight in water"
+      },
+      {
+        "id": "640c2dd963a319ea671e370c",
+        "measure": "2kg cut into 3cm cubes"
+      },
+      {
+        "id": "640c2dd963a319ea671e372c",
+        "measure": "120ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e3765",
+        "measure": "24 Skinned"
+      },
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "4 large"
+      },
+      {
+        "id": "640c2dd963a319ea671e3784",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3689",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e368d",
+        "measure": "350g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3794",
+        "measure": "150ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e3687",
+        "measure": "1 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e36de",
+        "measure": "4 sprigs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3731",
+        "measure": "4 sprigs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3696",
+        "measure": "450ml"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733240"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1706220769038"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889800c",
+    "title": "Lancashire hotpot",
+    "category": "Lamb",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "Heat oven to 160C/fan 140C/gas 3. Heat some dripping or butter in a large shallow casserole dish, brown the lamb in batches, lift to a plate, then repeat with the kidneys.\r\nFry the onions and carrots in the pan with a little more dripping until golden. Sprinkle over the flour, allow to cook for a couple of mins, shake over the Worcestershire sauce, pour in the stock, then bring to the boil. Stir in the meat and bay leaves, then turn off the heat. Arrange the sliced potatoes on top of the meat, then drizzle with a little more dripping. Cover, then place in the oven for about 1½ hrs until the potatoes are cooked.\r\nRemove the lid, brush the potatoes with a little more dripping, then turn the oven up to brown the potatoes, or finish under the grill for 5-8 mins until brown.",
+    "description": "A hearty casserole with tender lamb and vegetables, topped with sliced potatoes.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Lancashire%20hotpot.jpg",
+    "time": "115",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "100g "
+      },
+      {
+        "id": "640c2dd963a319ea671e370b",
+        "measure": "900g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3801",
+        "measure": "3"
+      },
+      {
+        "id": "640c2dd963a319ea671e372e",
+        "measure": "2 medium"
+      },
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "4 sliced"
+      },
+      {
+        "id": "640c2dd963a319ea671e3743",
+        "measure": "25g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3798",
+        "measure": "2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3696",
+        "measure": "500ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e366b",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3746",
+        "measure": "900g"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733242"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1701383864274"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897fbf",
+    "title": "Teriyaki Chicken Casserole",
+    "category": "Chicken",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Japanese",
+    "instructions": "Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray.\r\nCombine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. Bring to a boil over medium heat. Remove lid and cook for one minute once boiling.\r\nMeanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat.\r\nPlace the chicken breasts in the prepared pan. Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through. Remove from oven and shred chicken in the dish using two forks.\r\n*Meanwhile, steam or cook the vegetables according to package directions.\r\nAdd the cooked vegetables and rice to the casserole dish with the chicken. Add most of the remaining sauce, reserving a bit to drizzle over the top when serving. Gently toss everything together in the casserole dish until combined. Return to oven and cook 15 minutes. Remove from oven and let stand 5 minutes before serving. Drizzle each serving with remaining sauce. Enjoy!",
+    "description": "A Japanese-inspired casserole made with chicken, teriyaki sauce, rice, and vegetables.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Teriyaki%20Chicken%20Casserole.jpg",
+    "time": "75",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e376c",
+        "measure": "3/4 cup"
+      },
+      {
+        "id": "640c2dd963a319ea671e378f",
+        "measure": "1/2 cup"
+      },
+      {
+        "id": "640c2dd963a319ea671e367d",
+        "measure": "1/4 cup"
+      },
+      {
+        "id": "640c2dd963a319ea671e36f8",
+        "measure": "1/2 teaspoon"
+      },
+      {
+        "id": "640c2dd963a319ea671e3720",
+        "measure": "1/2 teaspoon"
+      },
+      {
+        "id": "640c2dd963a319ea671e36b3",
+        "measure": "4 Tablespoons"
+      },
+      {
+        "id": "640c2dd963a319ea671e3694",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3772",
+        "measure": "1 (12 oz.)"
+      },
+      {
+        "id": "640c2dd963a319ea671e367c",
+        "measure": "3 cups"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733240"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1706301557199"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897fc3",
+    "title": "Honey Teriyaki Salmon",
+    "category": "Seafood",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Japanese",
+    "instructions": "Mix all the ingredients in the Honey Teriyaki Glaze together. Whisk to blend well. Combine the salmon and the Glaze together.\r\n\r\nHeat up a skillet on medium-low heat. Add the oil, Pan-fry the salmon on both sides until it’s completely cooked inside and the glaze thickens.\r\n\r\nGarnish with sesame and serve immediately.",
+    "description": "A Japanese-inspired dish made with salmon fillets, teriyaki sauce, honey, and sesame seeds.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Honey%20Teriyaki%20Salmon.jpg",
+    "time": "25",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e365c",
+        "measure": "1 lb"
+      },
+      {
+        "id": "640c2dd963a319ea671e372c",
+        "measure": "1 tablespoon"
+      },
+      {
+        "id": "640c2dd963a319ea671e376c",
+        "measure": "2 tablespoons"
+      },
+      {
+        "id": "640c2dd963a319ea671e375c",
+        "measure": "2 tablespoons"
+      },
+      {
+        "id": "640c2dd963a319ea671e3764",
+        "measure": "4 tablespoons"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733240"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1704918409835"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898019",
+    "title": "Poutine",
+    "category": "Miscellaneous",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Canadian",
+    "instructions": "Heat oil in a deep fryer or deep heavy skillet to 365°F (185°C).\r\nWarm gravy in saucepan or microwave.\r\nPlace the fries into the hot oil, and cook until light brown, about 5 minutes.\r\nRemove to a paper towel lined plate to drain.\r\nPlace the fries on a serving platter, and sprinkle the cheese over them.\r\nLadle gravy over the fries and cheese, and serve immediately.",
+    "description": "A Canadian dish made with french fries, cheese curds, and gravy.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Poutine.jpg",
+    "time": "20",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3789",
+        "measure": "Dash"
+      },
+      {
+        "id": "640c2dd963a319ea671e366e",
+        "measure": "1 Can"
+      },
+      {
+        "id": "640c2dd963a319ea671e3746",
+        "measure": "5 thin cut"
+      },
+      {
+        "id": "640c2dd963a319ea671e3690",
+        "measure": "2 cups"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733240"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1700580532671"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897fbd",
+    "title": "Bakewell tart",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "To make the pastry, measure the flour into a bowl and rub in the butter with your fingertips until the mixture resembles fine breadcrumbs. Add the water, mixing to form a soft dough.\r\nRoll out the dough on a lightly floured work surface and use to line a 20cm/8in flan tin. Leave in the fridge to chill for 30 minutes.\r\nPreheat the oven to 200C/400F/Gas 6 (180C fan).\r\nLine the pastry case with foil and fill with baking beans. Bake blind for about 15 minutes, then remove the beans and foil and cook for a further five minutes to dry out the base.\r\nFor the filing, spread the base of the flan generously with raspberry jam.\r\nMelt the butter in a pan, take off the heat and then stir in the sugar. Add ground almonds, egg and almond extract. Pour into the flan tin and sprinkle over the flaked almonds.\r\nBake for about 35 minutes. If the almonds seem to be browning too quickly, cover the tart loosely with foil to prevent them burning.",
+    "description": "A British dessert consisting of a shortcrust pastry shell filled with raspberry jam, frangipane, and topped with almonds.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Bakewell%20tart.jpg",
+    "time": "85",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3743",
+        "measure": "175g/6oz"
+      },
+      {
+        "id": "640c2dd963a319ea671e369a",
+        "measure": "75g/2½oz"
+      },
+      {
+        "id": "640c2dd963a319ea671e36ad",
+        "measure": "2-3 tbsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3749",
+        "measure": "1 tbsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "125g/4½oz"
+      },
+      {
+        "id": "640c2dd963a319ea671e3687",
+        "measure": "125g/4½oz"
+      },
+      {
+        "id": "640c2dd963a319ea671e36f6",
+        "measure": "125g/4½oz"
+      },
+      {
+        "id": "640c2dd963a319ea671e36da",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e3861",
+        "measure": "½ tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e36d5",
+        "measure": "50g/1¾oz"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733239"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1699098827388"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898054",
+    "title": "Callaloo Jamaican Style",
+    "category": "Miscellaneous",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Jamaican",
+    "instructions": "Cut leaves and soft stems from the kale branches, them soak in a bowl of cold water for about 5-10 minutes or until finish with prep.\r\nProceed to slicing the onions, mincing the garlic and dicing the tomatoes. Set aside\r\nRemove kale from water cut in chunks.\r\nPlace bacon on saucepan and cook until crispy. Then add onions, garlic, thyme, stir for about a minute or more\r\nAdd tomatoes; scotch bonnet pepper, smoked paprika. Sauté for about 2-3 more minutes.\r\nFinally add vegetable, salt, mix well, and steamed for about 6-8 minutes or until leaves are tender. Add a tiny bit of water as needed. Adjust seasonings and turn off the heat.\r\nUsing a sharp knife cut both ends off the plantain. This will make it easy to grab the skin of the plantains. Slit a shallow line down the long seam of the plantain; peel only as deep as the peel. Remove plantain peel by pulling it back.\r\nSlice the plantain into medium size lengthwise slices and set aside.\r\nCoat a large frying pan with cooking oil spray. Spray the tops of the plantains with a generous layer of oil spray and sprinkle with salt, freshly ground pepper.\r\nLet the plantains \"fry\" on medium heat, shaking the frying pan to redistribute them every few minutes.\r\nAs the plantains brown, continue to add more cooking oil spray, salt and pepper (if needed) until they have reached the desired color and texture.\r\nRemove and serve with kale",
+    "description": "A traditional Jamaican dish made with callaloo leaves and a variety of spices. Served with rice and peas.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Callaloo%20Jamaican%20Style.jpg",
+    "time": "30",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3707",
+        "measure": "1  bunch"
+      },
+      {
+        "id": "640c2dd963a319ea671e3664",
+        "measure": "2 strips"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "3 cloves Chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "1 medium"
+      },
+      {
+        "id": "640c2dd963a319ea671e3733",
+        "measure": "1/2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e377c",
+        "measure": "1 Sprig"
+      },
+      {
+        "id": "640c2dd963a319ea671e37af",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e374f",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e37d4",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e3789",
+        "measure": "Splash"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733244"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1701539235567"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897fd4",
+    "title": "Beef Brisket Pot Roast",
+    "category": "Beef",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "American",
+    "instructions": "1 Prepare the brisket for cooking: On one side of the brisket there should be a layer of fat, which you want. If there are any large chunks of fat, cut them off and discard them. Large pieces of fat will not be able to render out completely.\r\nUsing a sharp knife, score the fat in parallel lines, about 3/4-inch apart. Slice through the fat, not the beef. Repeat in the opposite direction to make a cross-hatch pattern.\r\nSalt the brisket well and let it sit at room temperature for 30 minutes.\r\n \r\n2 Sear the brisket: You'll need an oven-proof, thick-bottomed pot with a cover, or Dutch oven, that is just wide enough to hold the brisket roast with a little room for the onions.\r\nPat the brisket dry and place it, fatty side down, into the pot and place it on medium high heat. Cook for 5-8 minutes, lightly sizzling, until the fat side is nicely browned. (If the roast seems to be cooking too fast, turn the heat down to medium. You want a steady sizzle, not a raging sear.)\r\nTurn the brisket over and cook for a few minutes more to brown the other side.\r\n\r\n3 Sauté the onions and garlic: When the brisket has browned, remove it from the pot and set aside. There should be a couple tablespoons of fat rendered in the pot, if not, add some olive oil.\r\nAdd the chopped onions and increase the heat to high. Sprinkle a little salt on the onions. Sauté, stirring often, until the onions are lightly browned, 5-8 minutes. Stir in the garlic and cook 1-2 more minutes.\r\n \r\n4 Return brisket to pot, add herbs, stock, bring to simmer, cover, cook in oven: Preheat the oven to 300°F. Use kitchen twine to tie together the bay leaves, rosemary and thyme.\r\nMove the onions and garlic to the sides of the pot and nestle the brisket inside. Add the beef stock and the tied-up herbs. Bring the stock to a boil on the stovetop.\r\nCover the pot, place the pot in the 300°F oven and cook for 3 hours. Carefully flip the brisket every hour so it cooks evenly.\r\n \r\n5 Add carrots, continue to cook: After 3 hours, add the carrots. Cover the pot and cook for 1 hour more, or until the carrots are cooked through and the brisket is falling-apart tender.\r\n6 Remove brisket to cutting board, tent with foil: When the brisket is falling-apart tender, take the pot out of the oven and remove the brisket to a cutting board. Cover it with foil. Pull out and discard the herbs.\r\n7 Make sauce (optional): At this point you have two options. You can serve as is, or you can make a sauce with the drippings and some of the onions. If you serve as is, skip this step.\r\nTo make a sauce, remove the carrots and half of the onions, set aside and cover them with foil. Pour the ingredients that are remaining into the pot into a blender, and purée until smooth. If you want, add 1 tablespoon of mustard to the mix. Put into a small pot and keep warm.\r\n8 Slice the meat across the grain: Notice the lines of the muscle fibers of the roast. This is the \"grain\" of the meat. Slice the meat perpendicular to these lines, or across the grain (cutting this way further tenderizes the meat), in 1/4-inch to 1/2-inch slices.\r\nServe with the onions, carrots and gravy. Serve with mashed, roasted or boiled potatoes, egg noodles or polenta.",
+    "description": "A comforting American dish of beef brisket slow-cooked with root vegetables and herbs until tender and flavorful.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Beef%20Brisket%20Pot%20Roast.jpg",
+    "time": "300",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e366c",
+        "measure": "4-5 pound"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "Dash"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "3"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "5 cloves"
+      },
+      {
+        "id": "640c2dd963a319ea671e377c",
+        "measure": "1 Sprig"
+      },
+      {
+        "id": "640c2dd963a319ea671e37cb",
+        "measure": "1 sprig "
+      },
+      {
+        "id": "640c2dd963a319ea671e366b",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e366f",
+        "measure": "2 cups"
+      },
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "3 Large"
+      },
+      {
+        "id": "640c2dd963a319ea671e3727",
+        "measure": "1 Tbsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3746",
+        "measure": "4 Mashed"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733241"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1697620698842"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889806d",
+    "title": "Rogaliki (Polish Croissant Cookies)",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Polish",
+    "instructions": "In a medium bowl mix egg yolks, philly cheese and baking powder using a hand held mixer. Carefully start adding the flour. When the mixture will not be mixing well, and will look like wood chips, put away the blending mixer and using your hands knead the dough.\r\nCreate a roll and cover in foil and freeze for 15 minutes. At this time preheat the oven to 375.\r\nTake the dough out and separate into two. Roll and cut out 3 inch trangles.\r\nMake as many as you can and on centre of each put a small spoon of jam. Roll them into a croissant shape.\r\nPlace the croissants onto a greased cookie sheet, and bake for 10-12 minutes or until golden.\r\nRepeat with the rest of the dough.\r\nWhen you take them out, put aside and sprinkle with powdered sugar on top.\r\nThis makes about 3 batches of 20 cookies each.\r\nTotal count about 60 cookies.",
+    "description": "A popular Polish pastry, Rogaliki are crescent-shaped cookies made from a flaky, buttery dough and typically filled with jam, nuts, or poppy seeds.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Rogaliki%20_Polish%20Croissant%20Cookies_.jpg",
+    "time": "35",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "1 cup "
+      },
+      {
+        "id": "640c2dd963a319ea671e36c9",
+        "measure": "3"
+      },
+      {
+        "id": "640c2dd963a319ea671e379c",
+        "measure": "8 oz "
+      },
+      {
+        "id": "640c2dd963a319ea671e3665",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36d7",
+        "measure": "3 cups "
+      },
+      {
+        "id": "640c2dd963a319ea671e3890",
+        "measure": "1 Jar"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733247"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1699370269867"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897ff4",
+    "title": "Thai Green Curry",
+    "category": "Chicken",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Thai",
+    "instructions": "Put the potatoes in a pan of boiling water and cook for 5 minutes. Throw in the beans and cook for a further 3 minutes, by which time both should be just tender but not too soft. Drain and put to one side.\r\nIn a wok or large frying pan, heat the oil until very hot, then drop in the garlic and cook until golden, this should take only a few seconds. Don’t let it go very dark or it will spoil the taste. Spoon in the curry paste and stir it around for a few seconds to begin to cook the spices and release all the flavours. Next, pour in the coconut milk and let it come to a bubble.\r\nStir in the fish sauce and sugar, then the pieces of chicken. Turn the heat down to a simmer and cook, covered, for about 8 minutes until the chicken is cooked.\r\nTip in the potatoes and beans and let them warm through in the hot coconut milk, then add a lovely citrussy flavour by stirring in the shredded lime leaves (or lime zest). The basil leaves go in next, but only leave them briefly on the heat or they will quickly lose their brightness. Scatter with the lime garnish and serve immediately with boiled rice.",
+    "description": "A fragrant Thai dish made with coconut milk, green curry paste, and a mix of vegetables and meat or seafood.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Thai%20Green%20Curry.jpg",
+    "time": "40",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3746",
+        "measure": "225g new"
+      },
+      {
+        "id": "640c2dd963a319ea671e36f1",
+        "measure": "100g "
+      },
+      {
+        "id": "640c2dd963a319ea671e3776",
+        "measure": "1 tbsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "1 clove"
+      },
+      {
+        "id": "640c2dd963a319ea671e377a",
+        "measure": "4 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36ab",
+        "measure": "400ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e3779",
+        "measure": "2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3774",
+        "measure": "1 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e365b",
+        "measure": "450g boneless"
+      },
+      {
+        "id": "640c2dd963a319ea671e3716",
+        "measure": "2 fresh kaffir leaves"
+      },
+      {
+        "id": "640c2dd963a319ea671e3667",
+        "measure": "handfull"
+      },
+      {
+        "id": "640c2dd963a319ea671e3753",
+        "measure": "Boiled"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733241"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898047",
+    "title": "Traditional Croatian Goulash",
+    "category": "Beef",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Croatian",
+    "instructions": "Clean the meat from the veins if there are some and cut it into smaller pieces, 3 × 3 cm. Marinate the meat in the mustard and spices and let it sit in the refrigerator for one hour\r\nHeat one tablespoon of pork fat or vegetable oil in a pot and fry the meat on all sides until it gets browned. Once the meat is cooked, transfer it to a plate and add another tablespoon of fat to the pot\r\nCut the onions very fine, peel the carrots and shred it using a grater. Cook the onions and carrots over low heat for 15 minutes. You can salt the vegetables a little to make them soften faster\r\nOnce the vegetables have browned and become slightly mushy, add the meat and bay leaves and garlic. Pour over with wine and simmer for 10-15 minutes to allow the alcohol to evaporate. Now is the right time to add 2/3 the amount of liquid\r\nCover the pot and cook over low heat for an hour, stirring occasionally. After the first hour, pour over the rest of the water or stock and cook for another 30-45 minutes\r\nAllow the stew to cool slightly and serve it with a sprinkle of chopped parsley and few slices of fresh hot pepper if you like to spice it up a bit\r\nSlice ​​some fresh bread, season the salad and simply enjoying these wonderful flavors",
+    "description": "A hearty Croatian stew made with beef, potatoes, onions, and paprika, often served with a side of bread or pasta. The dish has a rich and savory flavor and is a popular comfort food in Croatia.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Traditional%20Croatian%20Goulash.jpg",
+    "time": "135",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e365d",
+        "measure": "500g"
+      },
+      {
+        "id": "640c2dd963a319ea671e372e",
+        "measure": "2 chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "2 chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "2 cloves"
+      },
+      {
+        "id": "640c2dd963a319ea671e366a",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3751",
+        "measure": "200ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e378f",
+        "measure": "2 Litres"
+      },
+      {
+        "id": "640c2dd963a319ea671e3727",
+        "measure": "3 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "1tbsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e373f",
+        "measure": "1/2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3733",
+        "measure": "1/2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3789",
+        "measure": "2 tbs"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733248"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28897ffc",
+    "title": "Chicken Parmentier",
+    "category": "Chicken",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "French",
+    "instructions": "For the topping, boil the potatoes in salted water until tender. Drain and push through a potato ricer, or mash thoroughly. Stir in the butter, cream and egg yolks. Season and set aside.\r\nFor the filling, melt the butter in a large pan. Add the shallots, carrots and celery and gently fry until soft, then add the garlic. Pour in the wine and cook for 1 minute. Stir in the tomato purée, chopped tomatoes and stock and cook for 10–15 minutes, until thickened. Add the shredded chicken, olives and parsley. Season to taste with salt and pepper.\r\nPreheat the oven to 180C/160C Fan/Gas 4.\r\nPut the filling in a 20x30cm/8x12in ovenproof dish and top with the mashed potato. Grate over the Gruyère. Bake for 30–35 minutes, until piping hot and the potato is golden-brown.",
+    "description": "A French-inspired chicken dish with layers of mashed potatoes and cheese.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Chicken%20Parmentier.jpg",
+    "time": "75",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3746",
+        "measure": "1.5kg"
+      },
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "30g"
+      },
+      {
+        "id": "640c2dd963a319ea671e36c3",
+        "measure": "5 tblsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36c9",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3765",
+        "measure": "7"
+      },
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "3 chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e368a",
+        "measure": "2 sticks"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e4",
+        "measure": "1 finely chopped "
+      },
+      {
+        "id": "640c2dd963a319ea671e3794",
+        "measure": "4 tbsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e377e",
+        "measure": "1 tbls"
+      },
+      {
+        "id": "640c2dd963a319ea671e37e8",
+        "measure": "400g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3696",
+        "measure": "350ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e365b",
+        "measure": "600g"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ad",
+        "measure": "16"
+      },
+      {
+        "id": "640c2dd963a319ea671e3738",
+        "measure": "2 tbs"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733242"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1697211980441"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889804b",
+    "title": "Chinon Apple Tarts",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "French",
+    "instructions": "To make the red wine jelly, put the red wine, jam sugar, star anise, clove, cinnamon stick, allspice, split vanilla pod and seeds in a medium saucepan. Stir together, then heat gently to dissolve the sugar. Turn up the heat and boil for 20 mins until reduced and syrupy. Strain into a small, sterilised jam jar and leave to cool completely. Will keep in the fridge for up to 1 month.\r\n\r\nTake the pastry out of the fridge and leave at room temperature for 10 mins, then unroll. Heat the grill to high and heat the oven to 180C/160C fan/gas 4. Cut out 2 x 13cm circles of pastry, using a plate as a guide, and place on a non-stick baking sheet. Sprinkle each circle with 1 tbsp sugar and grill for 5 mins to caramelise, watching carefully so that the sugar doesn’t burn. Remove from the grill. Can be done a few hours ahead, and left, covered, out of the fridge.\r\n\r\nPeel, quarter and core the apples, cut into 2mm-thin slices and arrange on top of the pastry. Sprinkle over the remaining sugar and pop in the oven for 20-25 mins until the pastry is cooked through and golden, and the apples are softened. Remove and allow to cool slightly. Warm 3 tbsp of the red wine jelly in a small pan over a low heat with 1 tsp water to make it a little more runny, then brush over the top of the tarts.\r\n\r\nTip the crème fraîche into a bowl, sift over the icing sugar and cardamom, and mix together. Carefully lift the warm tarts onto serving plates and serve with the cardamom crème fraîche.",
+    "description": "A delicious French pastry with caramelized apples and a flaky pastry crust.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Chinon%20Apple%20Tarts.jpg",
+    "time": "70",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3748",
+        "measure": "320g"
+      },
+      {
+        "id": "640c2dd963a319ea671e37db",
+        "measure": "4 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e380d",
+        "measure": "3"
+      },
+      {
+        "id": "640c2dd963a319ea671e3824",
+        "measure": "4 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e36b5",
+        "measure": "100ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e379d",
+        "measure": "1 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3683",
+        "measure": "3"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733243"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898017",
+    "title": "Sticky Toffee Pudding",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "Preheat the oven to 180C/160C Fan/Gas 4. Butter a wide shallow 1.7-litre/3-pint ovenproof dish.\r\nPut the butter, sugar, eggs, flour, baking powder, bicarbonate of soda and treacle into a mixing bowl. Beat using an electric handheld whisk for about 30 seconds or until combined. Pour in the milk gradually and whisk again until smooth. Pour into the prepared dish. Bake for 35–40 minutes or until well risen and springy in the centre.\r\nTo make the sauce, put all the ingredients into a saucepan and stir over a low heat until the sugar has dissolved and the butter has melted. Bring to the boil, stirring for a minute.\r\nTo serve, pour half the sauce over the pudding in the baking dish. Serve with the cream or ice cream.",
+    "description": "A decadent dessert with moist sponge cake and a rich toffee sauce.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Sticky%20Toffee%20Pudding.jpg",
+    "time": "50",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "100g "
+      },
+      {
+        "id": "640c2dd963a319ea671e3725",
+        "measure": "175g"
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "2 large"
+      },
+      {
+        "id": "640c2dd963a319ea671e3762",
+        "measure": "225g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3665",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e3670",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e3673",
+        "measure": "3 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e371f",
+        "measure": "275ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e36c3",
+        "measure": "to serve"
+      },
+      {
+        "id": "640c2dd963a319ea671e3786",
+        "measure": "1 tsp "
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733242"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898050",
+    "title": "Carrot Cake",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "For the carrot cake, preheat the oven to 160C/325F/Gas 3. Grease and line a 26cm/10in springform cake tin.\r\nMix all of the ingredients for the carrot cake, except the carrots and walnuts, together in a bowl until well combined. Stir in the carrots and walnuts.\r\nSpoon the mixture into the cake tin and bake for 1 hour 15 minutes, or until a skewer inserted into the middle comes out clean. Remove the cake from the oven and set aside to cool for 10 minutes, then carefully remove the cake from the tin and set aside to cool completely on a cooling rack.\r\nMeanwhile, for the icing, beat the cream cheese, caster sugar and butter together in a bowl until fluffy. Spread the icing over the top of the cake with a palette knife.",
+    "description": "A cake made with grated carrots, flour, eggs, sugar, and spices like cinnamon and nutmeg. It is often topped with cream cheese frosting and is a popular dessert in many countries.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Carrot%20Cake.jpg",
+    "time": "75",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3789",
+        "measure": "450ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e3743",
+        "measure": "400g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3670",
+        "measure": "2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3774",
+        "measure": "550ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "5"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "½ tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e36a5",
+        "measure": "2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "500g grated"
+      },
+      {
+        "id": "640c2dd963a319ea671e37d7",
+        "measure": "150g"
+      },
+      {
+        "id": "640c2dd963a319ea671e379c",
+        "measure": "200g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3687",
+        "measure": "150g"
+      },
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "100g "
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733243"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889802b",
+    "title": "English Breakfast",
+    "category": "Breakfast",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "Heat the flat grill plate over a low heat, on top of 2 rings/flames if it fits, and brush sparingly with light olive oil.\r\nCook the sausages first. Add the sausages to the hot grill plate/the coolest part if there is one and allow to cook slowly for about 15-20 minutes, turning occasionally, until golden. After the first 10 minutes, increase the heat to medium before beginning to cook the other ingredients. If you are struggling for space, completely cook the sausages and keep hot on a plate in the oven.\r\nSnip a few small cuts into the fatty edge of the bacon. Place the bacon straight on to the grill plate and fry for 2-4 minutes each side or until your preferred crispiness is reached. Like the sausages, the cooked bacon can be kept hot on a plate in the oven.\r\nFor the mushrooms, brush away any dirt using a pastry brush and trim the stalk level with the mushroom top. Season with salt and pepper and drizzle over a little olive oil. Place stalk-side up on the grill plate and cook for 1-2 minutes before turning and cooking for a further 3-4 minutes. Avoid moving the mushrooms too much while cooking, as this releases the natural juices, making them soggy.\r\nFor the tomatoes, cut the tomatoes across the centre/or in half lengthways if using plum tomatoes , and with a small, sharp knife remove the green 'eye'. Season with salt and pepper and drizzle with a little olive oil. Place cut-side down on the grill plate and cook without moving for 2 minutes. Gently turn over and season again. Cook for a further 2-3 minutes until tender but still holding their shape.\r\nFor the black pudding, cut the black pudding into 3-4 slices and remove the skin. Place on the grill plate and cook for 1½-2 minutes each side until slightly crispy.\r\nFor 'proper' fried bread it's best to cook it in a separate pan. Ideally, use bread that is a couple of days old. Heat a frying pan to a medium heat and cover the base with oil. Add the bread and cook for 2-3 minutes each side until crispy and golden. If the pan becomes too dry, add a little more oil. For a richer flavour, add a knob of butter after you turn the slice.\r\nFor the fried eggs, break the egg straight into the pan with the fried bread and leave for 30 seconds. Add a good knob of butter and lightly splash/baste the egg with the butter when melted. Cook to your preferred stage, season and gently remove with a fish slice.\r\nOnce all the ingredients are cooked, serve on warm plates and enjoy straight away with a good squeeze of tomato ketchup or brown sauce.",
+    "description": "A hearty breakfast meal consisting of eggs, bacon, sausage, baked beans, grilled tomato, and toast. It is a popular breakfast in the United Kingdom.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/English%20Breakfast.jpg",
+    "time": "51",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3760",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3664",
+        "measure": "3"
+      },
+      {
+        "id": "640c2dd963a319ea671e3726",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e377f",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3815",
+        "measure": "1 Slice"
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3678",
+        "measure": "1 Slice"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733243"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1701600392250"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889803c",
+    "title": "Tuna and Egg Briks",
+    "category": "Seafood",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Tunisian",
+    "instructions": "Heat 2 tsp of the oil in a large saucepan and cook the spring onions over a low heat for 3 minutes or until beginning to soften. Add the spinach, cover with a tight-fitting lid and cook for a further 2–3 minutes or until tender and wilted, stirring once or twice. Tip the mixture into a sieve or colander and leave to drain and cool.\r\nUsing a saucer as a guide, cut out 24 rounds about 12.5 cm (5 in) in diameter from the filo pastry, cutting 6 rounds from each sheet. Stack the filo rounds in a pile, then cover with cling film to prevent them from drying out.\r\nWhen the spinach mixture is cool, squeeze out as much excess liquid as possible, then transfer to a bowl. Add the tuna, eggs, hot pepper sauce, and salt and pepper to taste. Mix well.\r\nPreheat the oven to 200°C (400°F, gas mark 6). Take one filo round and very lightly brush with some of the remaining oil. Top with a second round and brush with a little oil, then place a third round on top and brush with oil.\r\nPlace a heaped tbsp of the filling in the middle of the round, then fold the pastry over to make a half-moon shape. Fold in the edges, twisting them to seal, and place on a non-stick baking sheet. Repeat with the remaining pastry and filling to make 8 briks in all.\r\nLightly brush the briks with the remaining oil. Bake for 12–15 minutes or until the pastry is crisp and golden brown.\r\nMeanwhile, combine the tomatoes and cucumber in a bowl and sprinkle with the lemon juice and seasoning to taste. Serve the briks hot with this salad and the chutney.",
+    "description": "A crispy Tunisian pastry filled with tuna, egg, onion, and parsley, spiced with cumin and harissa.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Tuna%20and%20Egg%20Briks.jpg",
+    "time": "45",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e372c",
+        "measure": "2 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3770",
+        "measure": "8"
+      },
+      {
+        "id": "640c2dd963a319ea671e376f",
+        "measure": "200g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3867",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e3781",
+        "measure": "1 can "
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3700",
+        "measure": "Dash"
+      },
+      {
+        "id": "640c2dd963a319ea671e377f",
+        "measure": "4 Chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e36b7",
+        "measure": "1/4 "
+      },
+      {
+        "id": "640c2dd963a319ea671e3712",
+        "measure": "1 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3812",
+        "measure": "4 tbs"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733245"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1701429181058"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889803e",
+    "title": "BBQ Pork Sloppy Joes",
+    "category": "Pork",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "American",
+    "instructions": "1\r\n\r\nPreheat oven to 450 degrees. Wash and dry all produce. Cut sweet potatoes into ½-inch-thick wedges. Toss on a baking sheet with a drizzle of oil, salt, and pepper. Roast until browned and tender, 20-25 minutes.\r\n\r\n2\r\n\r\nMeanwhile, halve and peel onion. Slice as thinly as possible until you have ¼ cup (½ cup for 4 servings); finely chop remaining onion. Peel and finely chop garlic. Halve lime; squeeze juice into a small bowl. Halve buns. Add 1 TBSP butter (2 TBSP for 4) to a separate small microwave-safe bowl; microwave until melted, 30 seconds. Brush onto cut sides of buns.\r\n\r\n3\r\n\r\nTo bowl with lime juice, add sliced onion, ¼ tsp sugar (½ tsp for 4 servings), and a pinch of salt. Stir to combine; set aside to quick-pickle.\r\n\r\n4\r\n\r\nHeat a drizzle of oil in a large pan over medium-high heat. Add chopped onion and season with salt and pepper. Cook, stirring, until softened, 4-5 minutes. Add garlic and cook until fragrant, 30 seconds more. Add pork and season with salt and pepper. Cook, breaking up meat into pieces, until browned and cooked through, 4-6 minutes.\r\n\r\n5\r\n\r\nWhile pork cooks, in a third small bowl, combine BBQ sauce, pickling liquid from onion, 3 TBSP ketchup (6 TBSP for 4 servings), ½ tsp sugar (1 tsp for 4), and ¼ cup water (⅓ cup for 4). Once pork is cooked through, add BBQ sauce mixture to pan. Cook, stirring, until sauce is thickened, 2-3 minutes. Taste and season with salt and pepper.\r\n\r\n6\r\n\r\nMeanwhile, toast buns in oven or toaster oven until golden, 3-5 minutes. Divide toasted buns between plates and fill with as much BBQ pork as you’d like. Top with pickled onion and hot sauce. Serve with sweet potato wedges on the side.",
+    "description": "These classic sloppy joes are made with BBQ pork instead of ground beef, and are a quick and easy dinner option.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/BBQ%20Pork%20Sloppy%20Joes.jpg",
+    "time": "35",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3746",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e374e",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "2 cloves"
+      },
+      {
+        "id": "640c2dd963a319ea671e3716",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e3678",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e365e",
+        "measure": "1 lb"
+      },
+      {
+        "id": "640c2dd963a319ea671e37c4",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e3700",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e377d",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e3774",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e3789",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e373f",
+        "measure": " "
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733246"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1696355081600"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898051",
+    "title": "Seafood fideuà",
+    "category": "Seafood",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Spanish",
+    "instructions": "Boil the kettle. Empty the mussels into a colander and run under cold water. Throw away any with broken shells. Pick through the shells, tapping each one on the side of the sink – they should be closed or should slowly close when tapped – if they stay open, throw them away. If any of the shells still have barnacles or stringy beards attached, pull them off with a cutlery knife and rinse the shells well. Keep in the colander, covered with a cold, damp cloth, until you’re ready to cook. Peel the prawn shells on the body section only – leave the heads and tails intact. Score down the backs and pull out any gritty entrails. Chill until you’re ready to cook.\r\nPut the saffron in a small cup, cover with 50ml kettle-hot water and set aside for 10 mins. If using vermicelli, put in a bowl and crush to little pieces (about 1cm long) with your hands.\r\nHeat the oil in a large frying pan with at least a 3cm lip, or a 40cm paella pan. Add the onion and stir around the pan for 5 mins until soft. Add the garlic and cook for 1 min more, then tip in the vermicelli and cook for 5 mins, stirring from time to time, until the vermicelli is toasted brown. Stir in the paprika.\r\nKeeping the heat moderate, stir through the monkfish, squid and saffron with its water, seasoning well. Spread the ingredients out in an even layer, then pour over the hot stock and scatter the tomatoes on top. Bring to a simmer, then cover the whole dish with a tight-fitting lid (or foil). Turn the heat to medium and cook for 6 mins.\r\nUncover and stir to incorporate the dry top layer of pasta. Push the mussels into the pasta so the hinges are buried in the bottom of the dish, and they stand straight up. Arrange the prawns on top, cover tightly and cook for another 6 mins or until the mussels are open, the prawns are pink and the pasta is cooked through. Leave to simmer for another 2-3 mins to cook off most of the remaining liquid (leave a little in the pan to prevent the pasta from sticking together). Allow to sit for 2-3 mins, then squeeze over the lemon juice and arrange the wedges on top. Scatter with parsley before serving.",
+    "description": "Spanish-style noodle dish with seafood",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Seafood%20fideu_.jpg",
+    "time": "40",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e37a5",
+        "measure": "400g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3747",
+        "measure": "8"
+      },
+      {
+        "id": "640c2dd963a319ea671e375a",
+        "measure": "2 pinches"
+      },
+      {
+        "id": "640c2dd963a319ea671e372c",
+        "measure": "5 tblsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e372e",
+        "measure": "1 large"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "3 cloves"
+      },
+      {
+        "id": "640c2dd963a319ea671e3733",
+        "measure": "2 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e37a7",
+        "measure": "1 tail"
+      },
+      {
+        "id": "640c2dd963a319ea671e37a9",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ab",
+        "measure": "650ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e377f",
+        "measure": "2 large"
+      },
+      {
+        "id": "640c2dd963a319ea671e3711",
+        "measure": "Juice of 1"
+      },
+      {
+        "id": "640c2dd963a319ea671e3738",
+        "measure": "Topping"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733245"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889803f",
+    "title": "Moroccan Carrot Soup",
+    "category": "Vegetarian",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Moroccan",
+    "instructions": "Step 1\r\nPreheat oven to 180° C.\r\nStep 2\r\nCombine carrots, onion, garlic, cumin seeds, coriander seeds, salt and olive oil in a bowl and mix well. Transfer on a baking tray.\r\nStep 3\r\nPut the baking tray in preheated oven and roast for 10-12 minutes or till carrots soften. Remove from heat and cool.\r\nStep 4\r\nGrind the baked carrot mixture along with some water to make a smooth paste and strain in a bowl.\r\nStep 5\r\nHeat the carrot mixture in a non-stick pan. Add two cups of water and bring to a boil. Add garam masala powder and mix. Add salt and mix well.\r\nStep 6\r\nRemove from heat, add lemon juice and mix well.\r\nStep 7\r\nServe hot.",
+    "description": "A hearty soup made with carrots, onions, garlic, and a blend of Moroccan spices like cumin, cinnamon, and ginger. Served hot with a dollop of yogurt and a sprinkle of cilantro for a touch of freshness.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Moroccan%20Carrot%20Soup.jpg",
+    "time": "30",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3684",
+        "measure": "6 chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "1 sliced"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e4",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e36b8",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36af",
+        "measure": "1/2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e372c",
+        "measure": "1 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e2",
+        "measure": "1/4 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3712",
+        "measure": "1 tsp "
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733248"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1689095972386"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898040",
+    "title": "Burek",
+    "category": "Side",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Croatian",
+    "instructions": "Fry the finely chopped onions and minced meat in oil. Add the salt and pepper. Grease a round baking tray and put a layer of pastry in it. Cover with a thin layer of filling and cover this with another layer of filo pastry which must be well coated in oil. Put another layer of filling and cover with pastry. When you have five or six layers, cover with filo pastry, bake at 200ºC/392ºF for half an hour and cut in quarters and serve.",
+    "description": "Burek is a traditional Balkan pastry made with phyllo dough and a savory filling, usually of meat, cheese, or vegetables. It's a popular street food in the region and can be enjoyed as a snack or a meal.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Burek.jpg",
+    "time": "30",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3867",
+        "measure": "1 Packet"
+      },
+      {
+        "id": "640c2dd963a319ea671e37c2",
+        "measure": "150g"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "150g"
+      },
+      {
+        "id": "640c2dd963a319ea671e372b",
+        "measure": "40g"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "Dash"
+      },
+      {
+        "id": "640c2dd963a319ea671e373f",
+        "measure": "Dash"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733248"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1692914933908"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898069",
+    "title": "Duck Confit",
+    "category": "Miscellaneous",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "French",
+    "instructions": "The day before you want to make the dish, scatter half the salt, half the garlic and half of the herbs over the base of a small shallow dish. Lay the duck legs, skin-side up, on top, then scatter over the remaining salt, garlic and herbs. Cover the duck and refrigerate overnight. This can be done up to 2 days ahead.\r\nPour the wine into a saucepan that will snugly fit the duck legs in a single layer. Brush the salt off the duck legs and place them, skin-side down, in the wine. Cover the pan with a lid and place over a medium heat. As soon as the wine starts to bubble, turn the heat down to the lowest setting and cook for 2 hours, checking occasionally that the liquid is just barely simmering. (If you own a heat diffuser, it would be good to use it here.) After 2 hours, the duck legs should be submerged in their own fat and the meat should feel incredibly tender when prodded. Leave to cool.\r\nThe duck legs are now cooked and can be eaten immediately – or you can follow the next step if you like them crisp. If you are preparing ahead, pack the duck legs tightly into a plastic container or jar and pour over the fat, but not the liquid at the bottom of the pan. Cover and leave in the fridge for up to a month, or freeze for up to 3 months. The liquid you are left with makes a tasty gravy, which can be chilled or frozen until needed.\r\nTo reheat and crisp up the duck legs, heat oven to 220C/fan 200C/gas 7. Remove the legs from the fat and place them, skin-side down, in an ovenproof frying pan. Roast for 30-40 mins, turning halfway through, until brown and crisp. Serve with the reheated gravy, a crisp salad and some crisp golden ptoatoes.",
+    "description": "Tender and flavorful duck legs that have been slowly cooked in their own fat until they are fall-off-the-bone delicious. A gourmet dish that's surprisingly easy to make.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Duck%20Confit.jpg",
+    "time": "160",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3761",
+        "measure": "Handful"
+      },
+      {
+        "id": "640c2dd963a319ea671e366a",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "4 cloves"
+      },
+      {
+        "id": "640c2dd963a319ea671e377c",
+        "measure": "Handful"
+      },
+      {
+        "id": "640c2dd963a319ea671e37b1",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e3794",
+        "measure": "100ml"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733245"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898055",
+    "title": "Eccles Cakes",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "British",
+    "instructions": "To make the pastry, dice the butter and put it in the freezer to go really hard. Tip flour into the bowl of a food processor with half the butter and pulse to the texture of breadcrumbs. Pour in the lemon juice and 100ml iced water, and pulse to a dough. Tip in the rest of the butter and pulse a few times until the dough is heavily flecked with butter. It is important that you don’t overdo this as the flecks of butter are what makes the pastry flaky.\r\nOn a floured surface roll the pastry out to a neat rectangle about 20 x 30cm. Fold the two ends of the pastry into the middle (See picture 1), then fold in half (pic 2). Roll the pastry out again and refold the same way 3 more times resting the pastry for at least 15 mins each time between roll and fold, then leave to rest in the fridge for at least 30 mins before using.\r\nTo make the filling, melt the butter in a large saucepan. Take it off the heat and stir in all the other ingredients until completely mixed, then set aside.\r\nTo make the cakes, roll the pastry out until it’s just a little thicker than a £1 coin and cut out 8 rounds about 12cm across. Re-roll the trimming if needed. Place a good heaped tablespoon of mixture in the middle of each round, brush the edges of the rounds with water, then gather the pastry around the filling and squeeze it together (pic 3). Flip them over so the smooth top is upwards and pat them into a smooth round. Flatten each round with a rolling pin to an oval until the fruit just starts to poke through, then place on a baking tray. Cut 2 little slits in each Eccles cakes, brush generously with egg white and sprinkle with the sugar (pic 4).\r\nHeat the oven to 220C/200C fan/gas 8. Bake the Eccles cakes for 15-20 mins until just past golden brown and sticky. Leave to cool on a rack and enjoy while still warm or cold with a cup of tea. If you prefer, Eccles cakes also go really well served with a wedge of hard, tangy British cheese such as Lancashire or cheddar.",
+    "description": "A sweet pastry filled with currants, spices, and brown sugar, named after the town of Eccles in Greater Manchester.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Eccles%20Cakes.jpg",
+    "time": "80",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "250g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3743",
+        "measure": "350g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3711",
+        "measure": "Juice of 1/2"
+      },
+      {
+        "id": "640c2dd963a319ea671e3807",
+        "measure": "200g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3809",
+        "measure": "50g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3725",
+        "measure": "100g "
+      },
+      {
+        "id": "640c2dd963a319ea671e36a5",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36e8",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e3860",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "1 beaten"
+      },
+      {
+        "id": "640c2dd963a319ea671e3774",
+        "measure": "spinkling"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733242"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1690549536838"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898068",
+    "title": "Sweet and Sour Pork",
+    "category": "Pork",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Chinese",
+    "instructions": "Preparation\r\n1. Crack the egg into a bowl. Separate the egg white and yolk.\r\n\r\nSweet and Sour Pork\r\n2. Slice the pork tenderloin into strips.\r\n\r\n3. Prepare the marinade using a pinch of salt, one teaspoon of starch, two teaspoons of light soy sauce, and an egg white.\r\n\r\n4. Marinade the pork strips for about 20 minutes.\r\n\r\n5. Put the remaining starch in a bowl. Add some water and vinegar to make a starchy sauce.\r\n\r\nSweet and Sour Pork\r\nCooking Instructions\r\n1. Pour the cooking oil into a wok and heat to 190°C (375°F). Add the marinated pork strips and fry them until they turn brown. Remove the cooked pork from the wok and place on a plate.\r\n\r\n2. Leave some oil in the wok. Put the tomato sauce and white sugar into the wok, and heat until the oil and sauce are fully combined.\r\n\r\n3. Add some water to the wok and thoroughly heat the sweet and sour sauce before adding the pork strips to it.\r\n\r\n4. Pour in the starchy sauce. Stir-fry all the ingredients until the pork and sauce are thoroughly mixed together.\r\n\r\n5. Serve on a plate and add some coriander for decoration.",
+    "description": "A Chinese-American classic made with tender pieces of pork, bell peppers, and pineapple in a sweet and tangy sauce. Served with rice.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Sweet%20and%20Sour%20Pork.jpg",
+    "time": "20",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e365e",
+        "measure": "200g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3820",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e378f",
+        "measure": "Dash"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "1/2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3774",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e376c",
+        "measure": "10g"
+      },
+      {
+        "id": "640c2dd963a319ea671e384d",
+        "measure": "10g"
+      },
+      {
+        "id": "640c2dd963a319ea671e377e",
+        "measure": "30g"
+      },
+      {
+        "id": "640c2dd963a319ea671e378e",
+        "measure": "10g"
+      },
+      {
+        "id": "640c2dd963a319ea671e36af",
+        "measure": "Dash"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733244"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898099",
+    "title": "Crispy Sausages and Greens",
+    "category": "Pork",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Irish",
+    "instructions": "Preheat the oven to 350°. Remove the stems from one bunch of Tuscan kale and tear the leaves into 1\" pieces (mustard greens, collards, spinach, and chard are great, too). Coarsely chop half a head of green cabbage. Combine the greens in a large baking dish and add 4 cloves of thinly sliced garlic. Adding some sliced onions and shiitake mushrooms at this point is optional, but highly recommended (I'll sauté the onions and mushrooms in a cast iron baking dish right on the stove before adding to the greens). Coat the greens with some olive oil and pour ½ cup chicken stock or broth over everything. Cover the dish with foil and bake until the greens are wilted, about 15 minutes. Remove foil and season with salt and pepper. Continue to bake until cabbage is tender, about 20-25 minutes more.\r\n\r\nMeanwhile, heat a little olive oil in a large skillet over medium-high. Prick four sweet Italian sausages with a fork and cook until browned on all sides and cooked through, 10 to 12 minutes. When the greens are done, slice the sausage and toss into the greens with a splash of your favorite vinegar (I like sherry or red wine).",
+    "description": "This dish features crispy sausages served with a side of sautéed greens, such as kale or spinach.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Crispy%20Sausages%20and%20Greens.jpg",
+    "time": "55",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3707",
+        "measure": "1  bunch"
+      },
+      {
+        "id": "640c2dd963a319ea671e3702",
+        "measure": "8"
+      },
+      {
+        "id": "640c2dd963a319ea671e37f5",
+        "measure": "1 Head chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e4",
+        "measure": "8"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "Sliced"
+      },
+      {
+        "id": "640c2dd963a319ea671e37f6",
+        "measure": "Sliced"
+      },
+      {
+        "id": "640c2dd963a319ea671e3696",
+        "measure": "1 cup "
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": " "
+      },
+      {
+        "id": "640c2dd963a319ea671e373f",
+        "measure": " "
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733247"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd28898067",
+    "title": "Steak Diane",
+    "category": "Beef",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "French",
+    "instructions": "Heat oil in a 12\" skillet over medium-high heat. Season steaks with salt and pepper, and add to skillet; cook, turning once, until browned on both sides and cooked to desired doneness, about 4 to 5 minutes for medium-rare. Transfer steaks to a plate, and set aside.\r\nReturn skillet to high heat, and add stock; cook until reduced until to 1⁄2 cup, about 10 minutes. Pour into a bowl, and set aside. Return skillet to heat, and add butter; add garlic and shallots, and cook, stirring, until soft, about 2 minutes. Add mushrooms, and cook, stirring, until they release any liquid and it evaporates and mushrooms begin to brown, about 2 minutes. Add cognac, and light with a match to flambée; cook until flame dies down. Stir in reserved stock, cream, Dijon, Worcestershire, and hot sauce, and then return steaks to skillet; cook, turning in sauce, until warmed through and sauce is thickened, about 4 minutes. Transfer steak to serving plates and stir parsley and chives into sauce; pour sauce over steaks to serve.",
+    "description": "A classic French dish made with pan-seared steak, served with a sauce made from butter, shallots, mushrooms, and cream, and flavored with brandy and Worcestershire sauce.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Steak%20Diane.jpg",
+    "time": "30",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e3838",
+        "measure": "2 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e366d",
+        "measure": "4"
+      },
+      {
+        "id": "640c2dd963a319ea671e366f",
+        "measure": "1 1/2 cup "
+      },
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "2 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "2 cloves minced"
+      },
+      {
+        "id": "640c2dd963a319ea671e368c",
+        "measure": "1 medium finely diced"
+      },
+      {
+        "id": "640c2dd963a319ea671e3726",
+        "measure": "4 oz "
+      },
+      {
+        "id": "640c2dd963a319ea671e3677",
+        "measure": "¼ cup"
+      },
+      {
+        "id": "640c2dd963a319ea671e36fc",
+        "measure": "¼ cup"
+      },
+      {
+        "id": "640c2dd963a319ea671e3836",
+        "measure": "1 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3798",
+        "measure": "1 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3837",
+        "measure": "Dash"
+      },
+      {
+        "id": "640c2dd963a319ea671e3738",
+        "measure": "1 tbs minced"
+      },
+      {
+        "id": "640c2dd963a319ea671e382b",
+        "measure": "1 tbs minced"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "to taste"
+      },
+      {
+        "id": "640c2dd963a319ea671e373f",
+        "measure": "to taste"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733244"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd288980a7",
+    "title": "Apam balik",
+    "category": "Dessert",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Malaysian",
+    "instructions": "Mix milk, oil and egg together. Sift flour, baking powder and salt into the mixture. Stir well until all ingredients are combined evenly.\r\n\r\nSpread some batter onto the pan. Spread a thin layer of batter to the side of the pan. Cover the pan for 30-60 seconds until small air bubbles appear.\r\n\r\nAdd butter, cream corn, crushed peanuts and sugar onto the pancake. Fold the pancake into half once the bottom surface is browned.\r\n\r\nCut into wedges and best eaten when it is warm.",
+    "description": "A popular Malaysian dessert made with a crispy and fluffy pancake-like batter, filled with sweet roasted peanuts, sugar, and creamed corn. Served hot, folded in half and drizzled with sweet syrup or condensed milk.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Apam%20balik.jpg",
+    "time": "10",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e371f",
+        "measure": "200ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e372b",
+        "measure": "60ml"
+      },
+      {
+        "id": "640c2dd963a319ea671e36ca",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e36d7",
+        "measure": "1600g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3665",
+        "measure": "3 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "1/2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e3828",
+        "measure": "25g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3774",
+        "measure": "45g"
+      },
+      {
+        "id": "640c2dd963a319ea671e3739",
+        "measure": "3 tbs"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733248"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1700509211983"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889805a",
+    "title": "Gołąbki (cabbage roll)",
+    "category": "Beef",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "Polish",
+    "instructions": "Bring a large pot of lightly salted water to a boil. Place cabbage head into water, cover pot, and cook until cabbage leaves are slightly softened enough to remove from head, 3 minutes. Remove cabbage from pot and let cabbage sit until leaves are cool enough to handle, about 10 minutes.\r\n\r\nRemove 18 whole leaves from the cabbage head, cutting out any thick tough center ribs. Set whole leaves aside. Chop the remainder of the cabbage head and spread it in the bottom of a casserole dish.\r\n\r\nMelt butter in a large skillet over medium-high heat. Cook and stir onion in hot butter until tender, 5 to 10 minutes. Cool.\r\n\r\nStir onion, beef, pork, rice, garlic, 1 teaspoon salt, and 1/4 teaspoon pepper together in a large bowl.\r\n\r\nPreheat oven to 350 degrees F (175 degrees C).\r\n\r\nPlace about 1/2 cup beef mixture on a cabbage leaf. Roll cabbage around beef mixture, tucking in sides to create an envelope around the meat. Repeat with remaining leaves and meat mixture. Place cabbage rolls in a layer atop the chopped cabbage in the casserole dish; season rolls with salt and black pepper.\r\n\r\nWhisk tomato soup, tomato juice, and ketchup together in a bowl. Pour tomato soup mixture over cabbage rolls and cover dish wish aluminum foil.\r\n\r\nBake in the preheated oven until cabbage is tender and meat is cooked through, about 1 hour.",
+    "description": "A classic Polish dish, Gołąbki are cabbage rolls filled with a mixture of ground meat, rice, and onions, and then baked or steamed and served with tomato sauce.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Go__bki%20_cabbage%20roll_.jpg",
+    "time": "73",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e37f5",
+        "measure": "1"
+      },
+      {
+        "id": "640c2dd963a319ea671e367e",
+        "measure": "2 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "1 chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e383d",
+        "measure": "1 lb"
+      },
+      {
+        "id": "640c2dd963a319ea671e3873",
+        "measure": "1/2 lb"
+      },
+      {
+        "id": "640c2dd963a319ea671e3753",
+        "measure": "1 1/2 cups "
+      },
+      {
+        "id": "640c2dd963a319ea671e36e3",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e375e",
+        "measure": "1 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e3672",
+        "measure": "1/4 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e377e",
+        "measure": "3 cans"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733247"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681502548085"
+      }
+    }
+  },
+  {
+    "_id": "6462a8f74c3d0ddd2889806c",
+    "title": "Big Mac",
+    "category": "Beef",
+    "owner": {
+      "_id": "64c8d958249fae54bae90bb9"
+    },
+    "area": "American",
+    "instructions": "For the Big Mac sauce, combine all the ingredients in a bowl, season with salt and chill until ready to use.\r\n2. To make the patties, season the mince with salt and pepper and form into 4 balls using about 1/3 cup mince each. Place each onto a square of baking paper and flatten to form into four x 15cm circles. Heat oil in a large frypan over high heat. In 2 batches, cook beef patties for 1-2 minutes each side until lightly charred and cooked through. Remove from heat and keep warm. Repeat with remaining two patties.\r\n3. Carefully slice each burger bun into three acrossways, then lightly toast.\r\n4. To assemble the burgers, spread a little Big Mac sauce over the bottom base. Top with some chopped onion, shredded lettuce, slice of cheese, beef patty and some pickle slices. Top with the middle bun layer, and spread with more Big Mac sauce, onion, lettuce, pickles, beef patty and then finish with more sauce. Top with burger lid to serve.\r\n5. After waiting half an hour for your food to settle, go for a jog.",
+    "description": "A beloved fast-food burger made with two juicy beef patties, special sauce, lettuce, cheese, pickles, onions, and a sesame seed bun, for a classic taste of Americana.",
+    "thumb": "https://ftp.goit.study/img/so-yummy/preview/Big%20Mac.jpg",
+    "time": "30",
+    "ingredients": [
+      {
+        "id": "640c2dd963a319ea671e37c2",
+        "measure": "400g"
+      },
+      {
+        "id": "640c2dd963a319ea671e372c",
+        "measure": "2 tbs"
+      },
+      {
+        "id": "640c2dd963a319ea671e3881",
+        "measure": "2"
+      },
+      {
+        "id": "640c2dd963a319ea671e37ae",
+        "measure": "Chopped"
+      },
+      {
+        "id": "640c2dd963a319ea671e3883",
+        "measure": "1/4 "
+      },
+      {
+        "id": "640c2dd963a319ea671e368f",
+        "measure": "2 sliced"
+      },
+      {
+        "id": "640c2dd963a319ea671e3880",
+        "measure": "2 large"
+      },
+      {
+        "id": "640c2dd963a319ea671e387a",
+        "measure": "1 cup "
+      },
+      {
+        "id": "640c2dd963a319ea671e385a",
+        "measure": "2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e373f",
+        "measure": "Pinch"
+      },
+      {
+        "id": "640c2dd963a319ea671e3727",
+        "measure": "2 tsp"
+      },
+      {
+        "id": "640c2dd963a319ea671e372d",
+        "measure": "1 1/2 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e36e5",
+        "measure": "1 1/2 tsp "
+      },
+      {
+        "id": "640c2dd963a319ea671e3733",
+        "measure": "1/2 tsp"
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1678562733247"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1699370171229"
+      }
+    }
+  }
+]
