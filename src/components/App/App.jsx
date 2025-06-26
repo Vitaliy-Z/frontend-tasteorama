@@ -1,5 +1,6 @@
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
+import Layout from "../Layout/Layout";
 
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
@@ -15,16 +16,18 @@ const App = () => {
     <>
       <Header />
 
-      <Suspense fallback={<p>Loading...</p>}>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
-          <Route path="/add-recipe" element={<AddRecipePage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/auth" element={<AuthPage />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Suspense>
+      <Layout>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
+            <Route path="/add-recipe" element={<AddRecipePage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
+      </Layout>
 
       <Footer />
     </>
