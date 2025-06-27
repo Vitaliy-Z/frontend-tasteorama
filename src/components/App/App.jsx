@@ -6,7 +6,7 @@ import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 const MainPage = lazy(() => import("../../pages/MainPage"));
-const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage.jsx"));
+const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage"));
 const AddRecipePage = lazy(() => import("../../pages/AddRecipePage"));
 const ProfilePage = lazy(() => import("../../pages/ProfilePage"));
 const AuthPage = lazy(() => import("../../pages/AuthPage"));
