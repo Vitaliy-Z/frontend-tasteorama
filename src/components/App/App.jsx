@@ -1,18 +1,36 @@
-import styles from "./App.module.css";
-import { Navigate, Routes, Route } from "react-router-dom";
-import RecipeViewPage from "../../pages/RecipeViewPage";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
+import Layout from "../Layout/Layout";
+
+import { lazy, Suspense } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+
+const MainPage = lazy(() => import("../../pages/MainPage"));
+const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage.jsx"));
+const AddRecipePage = lazy(() => import("../../pages/AddRecipePage"));
+const ProfilePage = lazy(() => import("../../pages/ProfilePage"));
+const AuthPage = lazy(() => import("../../pages/AuthPage"));
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        {/* <Route
-          path="/"
-          element={<Navigate to="" />}
-        /> */}
-        <Route path="/recipes/:id" element={<RecipeViewPage />} />
-      </Routes>
-    </div>
+    <>
+      <Header />
+
+      <Layout>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
+            <Route path="/add-recipe" element={<AddRecipePage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
+      </Layout>
+
+      <Footer />
+    </>
   );
 };
 

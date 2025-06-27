@@ -4,6 +4,11 @@ import recipesData from "../api/mockData/recipes.json";
 export const fetchRecipeById = createAsyncThunk(
   "recipes/fetchRecipeById",
   async (id, { rejectWithValue }) => {
+    console.log("ID із URL:", id);
+    console.log(
+      "IDs у JSON:",
+      recipesData.map((r) => r._id)
+    );
     console.log("Looking for recipe with ID:", id);
     const recipe = recipesData.find((r) => r._id === id);
     console.log("Found recipe:", recipe);
@@ -11,17 +16,6 @@ export const fetchRecipeById = createAsyncThunk(
     return recipe;
   }
 );
-
-// export const toggleFavorite = (id) => (dispatch, getState) => {
-//   const { currentRecipe } = getState().recipes;
-//   if (currentRecipe && currentRecipe._id === id) {
-//     dispatch({
-//       type: "recipes/toggleFavoriteSync",
-//       payload: !currentRecipe.isFavorite,
-//     });
-//   }
-// };
-
 const recipeSlice = createSlice({
   name: "recipes",
   initialState: {
@@ -35,6 +29,11 @@ const recipeSlice = createSlice({
         state.recipe.isFavorite = !state.recipe.isFavorite;
       }
     },
+    clearRecipe: (state) => {
+      state.recipe = null;
+      state.error = null;
+      state.loading = false;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -45,16 +44,20 @@ const recipeSlice = createSlice({
       })
       .addCase(fetchRecipeById.fulfilled, (state, action) => {
         state.loading = false;
-        state.recipe = action.payload;
+        state.recipe = {
+          ...action.payload,
+          isFavorite: false,
+        };
       })
       .addCase(fetchRecipeById.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
+        console.error("Fetch failed:", action.payload);
       });
   },
 });
 
-export const { toggleFavorite } = recipeSlice.actions;
+export const { toggleFavorite, clearRecipe } = recipeSlice.actions;
 
 export const selectRecipe = (state) => state.recipes.recipe;
 export const selectLoading = (state) => state.recipes.loading;

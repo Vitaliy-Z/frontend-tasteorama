@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRecipeById } from "../redux/recipesSlice";
 import {
+  fetchRecipeById,
+  clearRecipe,
   selectRecipe,
   selectLoading,
   selectError,
@@ -12,21 +13,25 @@ import RecipeDetails from "../components/RecipeViewPageComponents/RecipeDetails.
 import Loader from "../components/RecipeViewPageComponents/Loader.jsx";
 
 const RecipeViewPage = () => {
-  const { id } = useParams();
+  const { recipeId } = useParams();
   const dispatch = useDispatch();
   const recipe = useSelector(selectRecipe);
   const isLoading = useSelector(selectLoading);
   const error = useSelector(selectError);
-
+  console.log("recipeId:", recipeId);
   console.log("Recipe:", recipe);
   console.log("Loading:", isLoading);
   console.log("Error:", error);
 
   useEffect(() => {
-    console.log("Fetching recipe with id:", id);
-    dispatch(fetchRecipeById(id));
-  }, [id, dispatch]);
-
+    if (recipeId) {
+      console.log("Dispatching fetchRecipeById with id:", recipeId);
+      dispatch(fetchRecipeById(recipeId));
+    }
+    return () => {
+      dispatch(clearRecipe());
+    };
+  }, [recipeId, dispatch]);
   if (isLoading) return <Loader />;
   if (error) return <NotFound />;
   if (!recipe) return <NotFound />;
