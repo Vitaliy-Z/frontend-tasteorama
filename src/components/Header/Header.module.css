@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3d2218;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    /* щоб позиціонувати мобільне меню */
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Класи для посилань (якщо потрібні) */
+.link {
+    color: white;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 
+.active {
+    font-weight: bold;
+    background: #9b6c43;
+} */
+
+.registerBtn {
+    font-weight: bold;
+    color: yellow;
+}
+
+.burger {
+    display: none;
+    background: none;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    /* щоб кнопка була поверх меню */
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        /* висота хедера + відступ */
+        right: 10px;
+        background: #3d2218;
+        padding: 1rem;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        width: 180px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
