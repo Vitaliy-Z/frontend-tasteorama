@@ -30,7 +30,6 @@ export default function Header() {
       >
         {/* Можна замінити на SVG або іконку */}☰
       </button>
-
       {/* Навігація — додаємо клас active, якщо меню відкрите */}
       <nav className={css.nav}>
         <NavLink

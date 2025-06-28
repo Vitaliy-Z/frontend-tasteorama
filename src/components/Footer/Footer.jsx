@@ -12,7 +12,7 @@ import { useState } from "react";
 const Footer = () => {
   // тимчасово — заглушка, поки немає Redux
   const [isLoggedIn] = useState(false); //  замість useSelector
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   const navigate = useNavigate();
 
@@ -65,6 +65,7 @@ const Footer = () => {
 
         <div className={css.nav}>
           <NavLink
+            to="/recipes"
             className={({ isActive }) =>
               isActive ? `${css.link} ${css.active}` : css.link
             }
