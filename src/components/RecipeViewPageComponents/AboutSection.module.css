@@ -1,0 +1,11 @@
+.sectionabout h2 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+}
+.sectionabout {
+  margin-bottom: 40px;
+}
+.textabout {
+  margin-top: 8px;
+}
