@@ -4,6 +4,7 @@ import Layout from "../Layout/Layout";
 
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 const MainPage = lazy(() => import("../../pages/MainPage"));
 const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage"));
@@ -23,13 +24,13 @@ const App = () => {
             <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
             <Route path="/add-recipe" element={<AddRecipePage />} />
             <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/auth/:authType" element={<AuthPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
       </Layout>
-
       <Footer />
+      <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
 };
