@@ -96,7 +96,7 @@ const RecipeDetails = ({ recipe }) => {
                 .split(/\r?\n/)
                 .filter((step) => step.trim())
                 .map((step, i) => (
-                  <li key={i}>{step.trim()}</li>
+                  <li key={i} className={styles.stepItem}>{step.trim()}</li>
                 ))}
             </ul>
           </section>
