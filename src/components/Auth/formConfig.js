@@ -9,22 +9,26 @@ export const initialValues = {
 };
 
 export const registerSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
+  name: Yup.string()
+    .max(16, "Name must be at most 16 characters")
+    .required("Name is required"),
   email: Yup.string()
     .email("Invalid email format")
+    .max(128, "Email must be at most 128 characters")
     .required("Email is required"),
   password: Yup.string()
-    .min(8, "Minimum 8 characters")
-    .matches(/[a-z]/, "At least one lowercase letter")
-    .matches(/[A-Z]/, "At least one uppercase letter")
-    .matches(/\d/, "At least one number")
+    .min(8, "Password must be at least 8 characters")
+    .max(128, "Password must be at most 128 characters")
+    .matches(/[a-z]/, "Password must contain at least one lowercase letter")
+    .matches(/[A-Z]/, "Password must contain at least one uppercase letter")
+    .matches(/\d/, "Password must contain at least one number")
     .required("Password is required"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password")], "Passwords must match")
     .required("Please confirm your password"),
   privacyPolicyAccepted: Yup.boolean()
     .oneOf([true], "You must accept the Terms and Privacy Policy")
-    .required("Required"),
+    .required("You must accept the Terms and Privacy Policy"),
 });
 
 export const loginInitialValues = {
@@ -34,9 +38,11 @@ export const loginInitialValues = {
 
 export const loginSchema = Yup.object().shape({
   email: Yup.string()
-    .email("Невірний формат email")
-    .required("Email обовʼязковий"),
+    .email("Invalid email format")
+    .max(128, "Email must be at most 128 characters")
+    .required("Email is required"),
   password: Yup.string()
-    .min(6, "Пароль має містити мінімум 6 символів")
-    .required("Пароль обовʼязковий"),
+    .min(8, "Password must be at least 8 characters")
+    .max(128, "Password must be at most 128 characters")
+    .required("Password is required"),
 });
