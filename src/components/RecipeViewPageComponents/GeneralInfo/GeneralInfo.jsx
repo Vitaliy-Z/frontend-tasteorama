@@ -1,9 +1,6 @@
 import styles from "./GeneralInfo.module.css";
-import categoriesData from "../../api/mockData/categories.json";
 const GeneralInfo =  ({recipe})=> {
-    const categoryTitle =
-    categoriesData.find((c) => c._id === recipe.category)?.name ||
-    recipe.category;
+    const categoryTitle = recipe.category;
 return (
          <div className={styles.generalInfo}>
             <h3 className={styles.recipeinform}>General informations</h3>
