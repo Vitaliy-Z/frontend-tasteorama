@@ -43,20 +43,30 @@
     padding: 12px 16px;
     width: 100%;
     text-align: center;
+    transition: background 0.3s ease,
+        box-shadow 0.3s ease;
+    outline: none;
 }
 
 .linkBtn:hover {
+    background-color: #6d554b;
+}
+
+.linkBtn:focus {
+    background-color: #9b6c43;
     box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
 }
 
-/* UserInfo */
+.linkBtn:focus:hover {
+    background-color: #9b6c43;
+}
+
+/* Порядок лінків + UserInfo  на мобілці */
 .userInfo {
     order: 2;
     align-self: center;
 }
 
-
-/* Порядок лінків + UserInfo  на мобілці */
 .navGroup>.recipes {
     order: 0;
 }
@@ -101,7 +111,7 @@
     }
 
 
-    /* Порядок лінків+UserInfo  на десктопі */
+    /* Порядок лінків+UserInfo  на планшеті і десктопі */
     .navGroup>.recipes {
         order: 0;
     }

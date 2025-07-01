@@ -1,4 +1,4 @@
-import Icon from "../../Icon/Icon";
+import Icon from "../../shared/Icon/Icon";
 import css from "./BurgerMenu.module.css";
 
 export default function BurgerMenu({ open, setOpen }) {

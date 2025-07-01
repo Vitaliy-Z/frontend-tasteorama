@@ -14,23 +14,6 @@
     justify-content: center;
 }
 
-/* анімашка Пар */
-.iconBox:hover .steam {
-    animation: steam 7s linear infinite;
-    opacity: 1;
-}
-
-.steam {
-    position: absolute;
-    top: -8px;
-    width: 30px;
-    height: 32px;
-    background: linear-gradient(to top, rgba(240, 237, 237, 0.949), transparent);
-    border-radius: 60%;
-    opacity: 0;
-    animation: steam 7s linear infinite;
-    transform: scaleX(0.5);
-}
 
 .logoIcon {
     color: #fff;
@@ -46,42 +29,4 @@
     transition: letter-spacing 0.3s ease;
     position: relative;
     overflow: hidden;
-}
-
-.logo:hover .logoText {
-    letter-spacing: 0.02em;
-}
-
-
-.logoText::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(216, 213, 213, 0.4), transparent);
-    animation: shine 15s infinite;
-}
-
-@keyframes shine {
-    0% {
-        left: -75%;
-    }
-
-    100% {
-        left: 125%;
-    }
-}
-
-@keyframes steam {
-    0% {
-        opacity: 0.4;
-        transform: translateY(0) scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-20px) scale(1.3);
-    }
 }

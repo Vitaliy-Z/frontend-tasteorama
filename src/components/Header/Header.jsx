@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { selectUser } from "../../redux/auth/selectors";
+import { fetchLogoutUser } from "../../redux/auth/operations";
 
 import Logo from "../Logo/Logo";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
@@ -9,15 +12,15 @@ import css from "./Header.module.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [userName, setUserName] = useState("Tina");
-
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const isLoggedIn = Boolean(user);
+  const userName = user?.name || "Guest";
+
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsLoggedIn(false);
-    setUserName("");
+    dispatch(fetchLogoutUser());
     navigate("/");
   };
 
