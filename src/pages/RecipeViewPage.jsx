@@ -1,28 +1,25 @@
-import { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { fetchRecipesById } from "../redux/recipes/operations.js";
 import NotFound from "../components/RecipeViewPageComponents/NotFound/NotFound.jsx";
 import RecipeDetails from "../components/RecipeViewPageComponents/RecipeDetails/RecipeDetails.jsx";
-import Loader from "../components/RecipeViewPageComponents/Loader.jsx";
-import recipes from '../api/mockData/recipes.json'
+
 const RecipeViewPage = () => {
   const { recipeId } = useParams();
-  const [recipe, setRecipe] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
-    useEffect(() => {
-    setIsLoading(true);
-    setError(false);
-  
-    const foundRecipe = recipes.find(r => r._id === recipeId);
-    if (foundRecipe) {
-      setRecipe(foundRecipe);
-      setIsLoading(false);
-    } else {
-      setError(true);
-      setIsLoading(false);
+  const dispatch = useDispatch();
+
+  const recipe = useSelector((state) => state.recipes.currentRecipe);
+  const error = useSelector(state => state.recipes.error);
+  const isLoading = useSelector(state => state.recipes.isLoading);
+
+  useEffect(() => {
+    if (recipeId) {
+      dispatch(fetchRecipesById(recipeId));
     }
-  }, [recipeId]);
-  if (isLoading) return <Loader />;
+  }, [dispatch, recipeId]);
+
+  if (isLoading) return <div>Loading...</div>;
   if (error) return <NotFound />;
   if (!recipe) return <NotFound />;
   
