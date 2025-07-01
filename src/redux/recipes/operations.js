@@ -28,7 +28,6 @@ export const fetchAddRecipe = createAsyncThunk(
   async (newRecipe, thunkAPI) => {
     try {
       const { data } = await apiClient.post("/recipes", newRecipe);
-      console.log(" fetchAddRecipe:", data);
       return data.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
@@ -42,6 +41,17 @@ export const fetchOwnRecipes = createAsyncThunk(
       const { data } = await apiClient.get("/recipes/user", {
         params: queryParams
       });
+      return data.data;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err);
+    }
+  }
+);
+export const fetchFavoriteRecipes = createAsyncThunk(
+  "recipes/fetchFavoriteRecipes",
+  async (_, thunkAPI) => {
+    try {
+      const { data } = await apiClient.get("/recipes/favorite");
       return data.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);

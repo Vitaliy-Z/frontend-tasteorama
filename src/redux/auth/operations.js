@@ -4,19 +4,16 @@ import apiClient, {
   setAuthorizationToken
 } from "../../api/api.js";
 
-// ============TEMP
-import usersMock from "../../api/mockData/users.json";
-// ============ /TEMP
-
 export const fetchRegisterUser = createAsyncThunk(
   "auth/fetchRegisterUser",
   async (newUser, thunkAPI) => {
     try {
       const { data } = await apiClient.post("/auth/register", newUser);
-
       const { accessToken } = data.data;
       setAuthorizationToken(accessToken);
-      return usersMock[0];
+      const dataUser = await apiClient.get("/users");
+      const user = dataUser.data.data;
+      return user;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
@@ -30,10 +27,9 @@ export const fetchLoginUser = createAsyncThunk(
       const dataLogin = await apiClient.post("/auth/login", credentials);
       const { accessToken } = dataLogin.data.data;
       setAuthorizationToken(accessToken);
-      // const dataUser = await apiClient.get("/users/me");
-      // const user = dataUser.data.data;
-      // console.log(" user:", user);
-      return usersMock[0];
+      const dataUser = await apiClient.get("/users");
+      const user = dataUser.data.data;
+      return user;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }

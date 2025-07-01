@@ -14,10 +14,12 @@
     "axios": "^1.10.0",
     "lottie-react": "^2.4.1",
     "modern-normalize": "^3.0.1",
+    "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.2",
+    "react-tabs": "^6.1.0",
     "react-spinners": "^0.17.0"
   },
   "devDependencies": {
