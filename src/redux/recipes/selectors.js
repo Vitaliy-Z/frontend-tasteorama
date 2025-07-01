@@ -1,4 +1,5 @@
 export const selectRecipes = ({ recipes }) => recipes.items;
+export const selectCurrentRecipes = ({ recipes }) => recipes.currentRecipe;
 export const selectRecipesIsLoading = ({ recipes }) => recipes.isLoading;
 export const selectRecipesError = ({ recipes }) => recipes.error;
 export const selectRecipeByName = ({ recipes, filters }) => {

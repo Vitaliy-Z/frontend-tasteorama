@@ -6,6 +6,7 @@ import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "../../routes/PrivateRoute.jsx";
 import { RestrictedRoute } from "../../routes/RestrictedRoute.jsx";
+import Loader from "../shared/Loader/Loader.jsx";
 
 const MainPage = lazy(() => import("../../pages/MainPage.jsx"));
 const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage.jsx"));
@@ -21,10 +22,10 @@ const App = () => {
       <Header />
 
       <Layout>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/recipes/:recipeId" element={RecipeViewPage} />
+            <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
 
             <Route
               path="/add-recipe"
