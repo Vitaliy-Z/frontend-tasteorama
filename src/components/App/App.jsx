@@ -1,9 +1,11 @@
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
-import Layout from "../Layout/Layout";
+import Layout from "../shared/Layout/Layout.jsx";
 
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { PrivateRoute } from "../../routes/PrivateRoute.jsx";
+import { RestrictedRoute } from "../../routes/RestrictedRoute.jsx";
 
 const MainPage = lazy(() => import("../../pages/MainPage"));
 const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage"));
