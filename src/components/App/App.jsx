@@ -23,6 +23,10 @@ const App = () => {
             <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
             <Route path="/add-recipe" element={<AddRecipePage />} />
             <Route path="/profile/:recipeType" element={<ProfilePage />} />
+            <Route
+              path="/profile/*"
+              element={<Navigate to="/profile/own" replace />}
+            />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

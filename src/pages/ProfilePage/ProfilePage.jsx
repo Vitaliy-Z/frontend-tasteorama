@@ -1,19 +1,30 @@
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 import MyRecipesList from "../../components/MyRecipesList";
 import FavoritesList from "../../components/FavoritesList";
 import styles from "./ProfilePage.module.css";
-import { useState } from "react";
 
 const ProfilePage = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const { recipeType } = useParams();
+  const navigate = useNavigate();
+
+  const tabRoutes = ["own", "favorites"];
+  const selectedIndex = tabRoutes.indexOf(recipeType);
+
+  const handleSelect = (index) => {
+    navigate(`/profile/${tabRoutes[index]}`);
+  };
+
+  if (!tabRoutes.includes(recipeType))
+    return <Navigate to={`/profile/${tabRoutes[0]}`} replace />;
 
   return (
     <main className={styles.container}>
       <h1 className={styles.title}>My Profile</h1>
 
-      <Tabs selectedIndex={tabIndex} onSelect={setTabIndex}>
+      <Tabs selectedIndex={selectedIndex} onSelect={handleSelect}>
         <TabList className={styles.tabList}>
           <Tab className={styles.tab} selectedClassName={styles.selectedTab}>
             My Recipes
