@@ -28,7 +28,6 @@ export const fetchAddRecipe = createAsyncThunk(
   async (newRecipe, thunkAPI) => {
     try {
       const { data } = await apiClient.post("/recipes", newRecipe);
-      console.log(" fetchAddRecipe:", data);
       return data.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
