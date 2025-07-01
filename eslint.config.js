@@ -29,7 +29,6 @@ export default defineConfig([
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "react/prop-types": 0
     }
   }
 ]);

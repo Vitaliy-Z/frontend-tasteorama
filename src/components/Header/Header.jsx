@@ -1,87 +1,54 @@
-// const Header = () => {
-//   return <header>Header</header>;
-// };
-
-// export default Header;
-
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
+
+import Logo from "../Logo/Logo";
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import Navigation from "./Navigation/Navigation";
+
 import css from "./Header.module.css";
 
-// Поки без useSelector
-const isLoggedIn = false; // false  true
-const buildLinkClass = ({ isActive }) => {
-  return clsx(css.link, isActive && css.active);
-};
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const userName = "Tinadin"; // заглушка для юзера
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [userName, setUserName] = useState("Tina");
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    setUserName("");
+    navigate("/");
+  };
 
   return (
     <header className={css.header}>
-      <div className={css.logo}>Tasteorama</div>
+      <div className={css.container}>
+        <Logo />
+        <BurgerMenu open={menuOpen} setOpen={setMenuOpen} />
 
-      {/* Бургер-кнопка */}
-      <button
-        className={css.burger}
-        aria-label="Toggle menu"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        {/* Можна замінити на SVG або іконку */}☰
-      </button>
-      {/* Навігація — додаємо клас active, якщо меню відкрите */}
-      <nav className={css.nav}>
-        <NavLink
-          to="/"
-          className={buildLinkClass}
-          onClick={() => setMenuOpen(false)}
-        >
-          Recipes
-        </NavLink>
+        <div className={css.desktopNav}>
+          <Navigation
+            isLoggedIn={isLoggedIn}
+            closeMenu={() => {}}
+            userName={userName}
+            onLogout={handleLogout}
+            isMobile={false}
+          />
+        </div>
+      </div>
 
-        {!isLoggedIn ? (
-          <>
-            <NavLink
-              to="/auth/login"
-              className={buildLinkClass}
-              onClick={() => setMenuOpen(false)}
-            >
-              Log in
-            </NavLink>
-            <NavLink
-              to="/auth/register"
-              className={buildLinkClass}
-              onClick={() => setMenuOpen(false)}
-            >
-              Register
-            </NavLink>
-          </>
-        ) : (
-          <>
-            <NavLink
-              to="/profile"
-              className={buildLinkClass}
-              onClick={() => setMenuOpen(false)}
-            >
-              My Profile
-            </NavLink>
-            <NavLink
-              to="/add"
-              className={buildLinkClass}
-              onClick={() => setMenuOpen(false)}
-            >
-              Add Recipe
-            </NavLink>
-
-            <div className={css.userBox}>
-              <div className={css.avatar}>{userName[0]}</div>
-              <span>{userName}</span>
-              <button className={css.logoutBtn}>Вийти</button>
-            </div>
-          </>
-        )}
-      </nav>
+      {menuOpen && (
+        <div className={`${css.mobileMenu} ${css.open}`}>
+          <Navigation
+            isLoggedIn={isLoggedIn}
+            closeMenu={() => setMenuOpen(false)}
+            userName={userName}
+            onLogout={handleLogout}
+            isMobile={true}
+          />
+        </div>
+      )}
     </header>
   );
 }

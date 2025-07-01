@@ -1,85 +1,70 @@
 .header {
+    background-color: #3d2218;
+    position: relative;
+    color: white;
+    padding: 14px 16px;
+}
+
+.container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: #3d2218;
-    color: white;
-    padding: 1rem;
     position: relative;
-    /* щоб позиціонувати мобільне меню */
+    text-align: left;
 }
 
-.logo {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-/* Класи для посилань (якщо потрібні) */
-.link {
-    color: white;
-    text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* 
-.active {
-    font-weight: bold;
-    background: #9b6c43;
-} */
-
-.registerBtn {
-    font-weight: bold;
-    color: yellow;
-}
-
-.burger {
+/* Приховуємо десктопну навігацію на мобілці */
+.desktopNav {
     display: none;
-    background: none;
-    font-size: 2rem;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    /* щоб кнопка була поверх меню */
 }
 
-/* Для мобільних пристроїв */
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        /* висота хедера + відступ */
-        right: 10px;
-        background: #3d2218;
-        padding: 1rem;
-        border: 1px solid #fff;
-        border-radius: 8px;
-        width: 180px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+/* Мобільне меню */
+/* Базові стилі */
+.mobileMenu {
+    display: none;
+}
+
+/* Активні стилі — лише коли меню відкрите */
+.mobileMenu.open {
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 26px;
+    z-index: 999;
+    text-align: center;
+}
+
+
+/* ====  Планшет   ==== */
+
+@media (min-width: 768px) {
+    .header {
+        padding: 14px 32px;
     }
 
-    .nav.active {
-        display: flex;
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        margin: 0 auto;
     }
 
-    .burger {
+    .desktopNav {
         display: block;
+    }
+
+    .mobileMenu.open {
+        display: none;
+    }
+}
+
+/* ====   Десктоп (великий екран)   ====  */
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 14px 108px;
     }
 }

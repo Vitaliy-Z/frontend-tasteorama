@@ -1,41 +1,22 @@
 .footer {
     background-color: #3d2218;
-    color: white;
+    color: #fff;
     padding: 24px 0;
 }
 
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.logoBlock {
-    display: flex;
-    align-items: center;
-    height: 46px;
-}
-
-.icon {
-    width: 32px;
-    height: 30px;
-}
-
-.logoText {
-    font-size: 18px;
-    font-weight: 600;
-}
-
 .copyright {
     font-size: 12px;
     font-weight: 400;
-    padding: 32px 0;
-    margin: 0 auto;
+    height: 15px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
 }
 
@@ -46,40 +27,25 @@
     gap: 40px;
     font-size: 16px;
     font-weight: 600;
-    height: 88px;
+    height: auto;
 }
 
 .link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
+    color: #fff;
+    height: 24px;
 }
 
-.linkBtn {
-    background: none;
-    border: none;
-    color: white;
-    font-weight: 600;
-}
+/* ====   Планшет   ==== */
 
-/* Tablet */
 @media (min-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .nav {
         flex-direction: row;
         gap: 32px;
     }
 }
 
-/* Desktop */
+/* ====   Десктоп  ==== */
+
 @media (min-width: 1024px) {
     .footer {
         padding: 24px 108px;
@@ -87,9 +53,6 @@
 
     .container {
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
     }
 
     .copyright {
@@ -100,7 +63,5 @@
 
     .nav {
         flex-direction: row;
-        gap: 20px;
-        height: auto;
     }
 }
