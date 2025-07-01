@@ -2,8 +2,8 @@ import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-import MyRecipesList from "../../components/MyRecipesList";
-import FavoritesList from "../../components/FavoritesList";
+import MyRecipesList from "../../components/ProfilePage/MyRecipesList/MyRecipesList";
+import FavoritesList from "../../components/ProfilePage/FavoritesList/FavoritesList";
 import styles from "./ProfilePage.module.css";
 
 const ProfilePage = () => {
@@ -21,7 +21,7 @@ const ProfilePage = () => {
     return <Navigate to={`/profile/${tabRoutes[0]}`} replace />;
 
   return (
-    <main className={styles.container}>
+    <>
       <h1 className={styles.title}>My Profile</h1>
 
       <Tabs selectedIndex={selectedIndex} onSelect={handleSelect}>
@@ -41,7 +41,7 @@ const ProfilePage = () => {
           <FavoritesList />
         </TabPanel>
       </Tabs>
-    </main>
+    </>
   );
 };
 
