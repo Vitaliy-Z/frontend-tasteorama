@@ -8,7 +8,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 const MainPage = lazy(() => import("../../pages/MainPage"));
 const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage"));
 const AddRecipePage = lazy(() => import("../../pages/AddRecipePage"));
-const ProfilePage = lazy(() => import("../../pages/ProfilePage"));
+const ProfilePage = lazy(() =>
+  import("../../pages/ProfilePage/ProfilePage.jsx")
+);
 const AuthPage = lazy(() => import("../../pages/AuthPage"));
 
 const App = () => {
@@ -22,7 +24,8 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
             <Route path="/add-recipe" element={<AddRecipePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile/:recipeType" element={<ProfilePage />} />
+            <Route path="*" element={<Navigate to="/profile/own" replace />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
