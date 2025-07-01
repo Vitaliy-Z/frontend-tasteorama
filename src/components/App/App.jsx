@@ -22,7 +22,7 @@ const App = () => {
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/recipes/:recipeId" element={RecipeViewPage} />
+            <Route path="/recipes/:recipeId" element={<RecipeViewPage/>} />
 
             <Route
               path="/add-recipe"
