@@ -1,11 +1,13 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/auth/selectors";
 import css from "./Footer.module.css";
 import Logo from "../Logo/Logo.jsx";
-// import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const location = useLocation();
-  const hideAccountLink = location.pathname.startsWith("/auth");
+  const user = useSelector(selectUser);
+  console.log("Footer user:", user);
+  const isLoggedIn = !!user;
 
   return (
     <footer className={css.footer}>
@@ -21,7 +23,7 @@ const Footer = () => {
             Recipes
           </NavLink>
 
-          {!hideAccountLink && (
+          {!isLoggedIn && (
             <NavLink to="/profile" className={css.link}>
               Account
             </NavLink>
