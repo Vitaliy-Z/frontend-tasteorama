@@ -24,7 +24,7 @@ export default function Navigation({
       {!isLoggedIn ? (
         <>
           <NavLink
-            to="/auth/login"
+            to="/auth"
             className={({ isActive }) =>
               `${css.link} ${css.login} ${isActive ? css.active : ""}`
             }
@@ -34,7 +34,7 @@ export default function Navigation({
           </NavLink>
 
           <NavLink
-            to="/auth/register"
+            to="/auth"
             className={({ isActive }) =>
               `${css.linkBtn} ${css.register} ${isActive ? css.active : ""}`
             }
