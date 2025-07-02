@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Icon from "../Icon/Icon";
 import styles from "./AddRecipeForm.module.css";
+import GeneralInfoForm from "../GeneralInfoForm/GeneralInfoForm.jsx";
+import IngredientsForm from "../IngredientsForm/IngredientsForm.jsx";
 
 const AddRecipeForm = () => {
   const [title, setTitle] = useState("");
@@ -47,7 +49,7 @@ const AddRecipeForm = () => {
 
   return (
     <>
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         <div className={styles.logo}>
           <Icon name="recipe" classname={styles.icon} />
           <span className={styles.logoText}>Tasteorama</span>
@@ -59,50 +61,23 @@ const AddRecipeForm = () => {
           <div className={styles.userIcon}>M</div>
           <div className={styles.syncIcon}>⟳</div>
         </nav>
-      </header>
+      </header> */}
 
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <h1>Add Recipe</h1>
 
         <div className={styles.mainSection}>
-          <div className={styles.leftSide}>
-            <h3>General Information</h3>
-            <label>
-              Recipe Title
-              <input
-                type="text"
-                placeholder="Enter the name of your recipe"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-              />
-            </label>
-            <label>
-              Recipe Description
-              <textarea
-                placeholder="Enter a brief description of your recipe"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
-            </label>
-            <label>
-              Cooking time in minutes
-              <input
-                type="number"
-                placeholder="10"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-              />
-            </label>
-            <label>
-              Calories
-              <input
-                type="number"
-                placeholder="150"
-                value={calories}
-                onChange={(e) => setCalories(e.target.value)}
-              />
-            </label>
-          </div>
+          <GeneralInfoForm title={title}
+  setTitle={setTitle}
+  description={description}
+  setDescription={setDescription}
+  time={time}
+  setTime={setTime}
+  calories={calories}
+  setCalories={setCalories}
+  category={category}
+  setCategory={setCategory}
+  categoryOptions={["Soup", "Main", "Salad", "Dessert"]}/>
 
           <div className={styles.rightSide}>
             <h3>Upload Photo</h3>
@@ -116,8 +91,18 @@ const AddRecipeForm = () => {
             </div>
           </div>
         </div>
+        <IngredientsForm
+          ingredient={ingredientName}
+          setIngredient={setIngredientName}
+          amount={ingredientAmount}
+          setAmount={setIngredientAmount}
+          ingredientsList={ingredientsList}
+          addIngredient={addIngredient}
+          removeIngredient={removeIngredient}
+          ingredientOptions={ingredientOptions}
+        />
 
-        <div className={styles.ingredients}>
+        {/* <div className={styles.ingredients}>
           <h3>Ingredients</h3>
           <div className={styles.row}>
             <label>
@@ -157,16 +142,13 @@ const AddRecipeForm = () => {
               <li key={index}>
                 <span>{ing.name}</span>
                 <span>{ing.amount}</span>
-                <button
-                  type="button"
-                  onClick={() => removeIngredient(index)}
-                >
+                <button type="button" onClick={() => removeIngredient(index)}>
                   Remove
                 </button>
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         <div className={styles.instructions}>
           <h3>Instructions</h3>
@@ -182,7 +164,7 @@ const AddRecipeForm = () => {
         </button>
       </form>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <div className={styles.logo}>
           <Icon name="recipe" classname={styles.icon} />
           <span className={styles.logoText}>Tasteorama</span>
@@ -192,7 +174,7 @@ const AddRecipeForm = () => {
           <a href="/">Recipes</a>
           <a href="/account">Account</a>
         </nav>
-      </footer>
+      </footer> */}
     </>
   );
 };
