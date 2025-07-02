@@ -1,0 +1,19 @@
+.sectioningredients h2 {
+  margin-bottom: 8px;
+}
+.sectioningredients {
+  margin-bottom: 40px;
+}
+.ingredientsList {
+  padding-left: 20px;
+  margin: 0;
+}
+.ingredientsList li {
+  font-size: 16px;
+  line-height: 1.55;
+  list-style-type: disc;
+}
+.ingname {
+   font-weight: 400;
+   font-size: 16px;
+}

@@ -1,0 +1,12 @@
+ .sectionsteps h2 {
+  margin-bottom: 24px;
+}
+.steps {
+  list-style-type: none;
+  margin: 0;
+}
+
+.stepItem {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}

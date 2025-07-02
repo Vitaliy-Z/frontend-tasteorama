@@ -10,6 +10,7 @@ export default defineConfig([
     files: ["**/*.{js,jsx}"],
     extends: [
       js.configs.recommended,
+      "plugin:react/recommended",
       reactHooks.configs["recommended-latest"],
       reactRefresh.configs.vite
     ],
