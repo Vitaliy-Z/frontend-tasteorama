@@ -1,0 +1,20 @@
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #faf3e0;;
+  padding: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+.recipeinfovalue {
+  font-weight: 600;
+font-size: 16px;
+color: #000;
+}
+.recipeinform {
+  font-weight: 600;
+  font-size: 24px;
+}

@@ -64,9 +64,16 @@ export const fetchRegisterUser = createAsyncThunk(
   async (newUser, thunkAPI) => {
     try {
       const { data } = await apiClient.post("/auth/register", newUser);
+
       const { accessToken, user } = data.data;
 
       setAuthorizationToken(accessToken);
+
+//       const { accessToken } = data.data;
+//       setAuthorizationToken(accessToken);
+//       const dataUser = await apiClient.get("/users");
+//       const user = dataUser.data.data;
+
       return user;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response?.data || err.message);
@@ -83,8 +90,13 @@ export const fetchLoginUser = createAsyncThunk(
 
       setAuthorizationToken(accessToken);
 
+
       const dataUser = await apiClient.get("/users"); // або /users/me
       const user = dataUser.data.data;
+
+
+//       const dataUser = await apiClient.get("/users");
+//       const user = dataUser.data.data;
 
       return user;
     } catch (err) {

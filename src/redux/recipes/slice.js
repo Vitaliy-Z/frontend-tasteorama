@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   fetchRecipes,
   fetchRecipesById,
+  fetchFavoriteRecipes,
   fetchAddRecipe,
   fetchOwnRecipes
 } from "./operations.js";
@@ -34,10 +35,18 @@ const recipesSlice = createSlice({
       })
       .addCase(fetchRecipesById.rejected, handleError)
 
+      .addCase(fetchFavoriteRecipes.pending, handlePending)
+      .addCase(fetchFavoriteRecipes.fulfilled, (state, { payload }) => {
+        state.error = null;
+        state.items = payload;
+        state.isLoading = false;
+      })
+      .addCase(fetchFavoriteRecipes.rejected, handleError)
+
       .addCase(fetchAddRecipe.pending, handlePending)
       .addCase(fetchAddRecipe.fulfilled, (state, { payload }) => {
         state.error = null;
-        state.items.push(payload);
+        state.currentRecipe = payload;
         state.isLoading = false;
       })
       .addCase(fetchAddRecipe.rejected, handleError)
