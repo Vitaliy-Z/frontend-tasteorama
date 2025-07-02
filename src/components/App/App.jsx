@@ -1,22 +1,29 @@
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
-import Layout from "../Layout/Layout";
-
-import { lazy, Suspense } from "react";
+import Layout from "../shared/Layout/Layout.jsx";
+import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { lsGetToken } from "../../utils/localStorageUtils";
+import { setAuthorizationToken } from "../../api/api";
 
-const MainPage = lazy(() => import("../../pages/MainPage"));
-const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage"));
-const AddRecipePage = lazy(() => import("../../pages/AddRecipePage"));
-const ProfilePage = lazy(() => import("../../pages/ProfilePage"));
-const AuthPage = lazy(() => import("../../pages/AuthPage"));
+const MainPage = lazy(() => import("../../pages/MainPage.jsx"));
+const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage.jsx"));
+const AddRecipePage = lazy(() => import("../../pages/AddRecipePage.jsx"));
+const ProfilePage = lazy(() => import("../../pages/ProfilePage.jsx"));
+const AuthPage = lazy(() => import("../../pages/AuthPage.jsx"));
 
 const App = () => {
+  useEffect(() => {
+    const token = lsGetToken();
+    if (token) {
+      setAuthorizationToken(token);
+    }
+  }, []);
+
   return (
     <>
       <Header />
-
       <Layout>
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>

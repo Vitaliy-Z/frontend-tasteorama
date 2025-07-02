@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import Spinner from "./Spinner.jsx";
-import css from "./RegistrationForm/RegistrationForm.module.css";
+import Loader from "../../shared/Loader/Loader";
+import css from "./StylesForm.module.css";
 
 const SubmitButton = ({ isSubmitting, text }) => {
   return (
@@ -10,7 +10,7 @@ const SubmitButton = ({ isSubmitting, text }) => {
       disabled={isSubmitting}
       aria-busy={isSubmitting}
     >
-      {isSubmitting ? <Spinner /> : text}
+      {isSubmitting ? <Loader /> : text}
     </button>
   );
 };

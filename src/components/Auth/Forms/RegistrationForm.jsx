@@ -1,16 +1,19 @@
 import { useDispatch } from "react-redux";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useCallback } from "react";
 import { Formik, Form } from "formik";
-import { register } from "../../../redux/auth/operations.js";
-import { registerSchema, initialValues } from "../formConfig.js";
-import BaseInput from "../BaseInput.jsx";
-import CheckboxInput from "./CheckboxInput.jsx";
-import SubmitButton from "../SubmitButton.jsx";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-import css from "./RegistrationForm.module.css";
+import { fetchRegisterUser } from "../../../redux/auth/operations.js";
+import { registerSchema, initialValues } from "./formConfig.js";
+
+import BaseInput from "./BaseInput.jsx";
+import CheckboxInput from "./CheckboxInput.jsx";
+import SubmitButton from "./SubmitButton.jsx";
+import RedirectLink from "./RedirectLink.jsx";
+
+import "react-toastify/dist/ReactToastify.css";
+import css from "./StylesForm.module.css";
 
 export default function RegistrationForm() {
   const dispatch = useDispatch();
@@ -23,18 +26,22 @@ export default function RegistrationForm() {
     async (values, actions) => {
       try {
         const { name, email, password, privacyPolicyAccepted } = values;
+
         await dispatch(
-          register({ name, email, password, privacyPolicyAccepted })
+          fetchRegisterUser({ name, email, password, privacyPolicyAccepted })
         ).unwrap();
-        actions.resetForm();
-        navigate("/profile");
+
+        toast.success("Registration successful");
+        navigate("/");
       } catch (error) {
-        const message = error?.toLowerCase?.() || "";
+        const message = error?.message?.toLowerCase?.() || "";
+
         if (message.includes("email")) {
           actions.setFieldError("email", "Email already in use.");
         } else {
           toast.error("Registration failed. Try again later.");
         }
+
         actions.setSubmitting(false);
       }
     },
@@ -54,13 +61,8 @@ export default function RegistrationForm() {
         validationSchema={registerSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting, status }) => (
+        {({ isSubmitting }) => (
           <Form className={css.form} noValidate>
-            {status && (
-              <div className={css.errorMessage} aria-live="polite">
-                {status}
-              </div>
-            )}
             <BaseInput label="Enter your name" name="name" placeholder="Max" />
             <BaseInput
               label="Enter your email address"
@@ -86,20 +88,15 @@ export default function RegistrationForm() {
               show={showConfirm}
               onToggle={() => setShowConfirm(!showConfirm)}
             />
-            <CheckboxInput name="privacyPolicyAccepted">
-              <p className={css.checkbox_privacy}>
-                I agree to the Terms of Service and Privacy Policy
-              </p>
-            </CheckboxInput>
+            <CheckboxInput name="privacyPolicyAccepted" />
 
             <SubmitButton isSubmitting={isSubmitting} text="Create account" />
 
-            <p className={css.footer}>
-              Already have an account?{" "}
-              <NavLink to="/auth/login" className={css.login}>
-                Log in
-              </NavLink>
-            </p>
+            <RedirectLink
+              text="Already have an account?"
+              linkText="Log in"
+              to="/auth/login"
+            />
           </Form>
         )}
       </Formik>
