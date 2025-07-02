@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./IngredientsForm.module.css";
 
 const IngredientsForm = ({
   ingredient,
@@ -8,24 +9,18 @@ const IngredientsForm = ({
   ingredientsList,
   addIngredient,
   removeIngredient,
+  ingredientOptions,
 }) => {
   return (
     <section>
       <h3>Ingredients</h3>
-      {/* <select
-        value={ingredient}
-        onChange={(e) => setIngredient(e.target.value)}
-      >
-        <option value="">Select ingredient</option>
-        <option value="Broccoli">Broccoli</option>
-        <option value="Eggs">Eggs</option>
-      </select> */}
       <label>
         Name
         <select
           value={ingredient}
           onChange={(e) => setIngredient(e.target.value)}
         >
+          <option value="">Select ingredient</option>
           {ingredientOptions.map((ing) => (
             <option key={ing} value={ing}>
               {ing}

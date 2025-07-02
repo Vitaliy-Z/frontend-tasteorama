@@ -10,9 +10,10 @@ const GeneralInfoForm = ({
   setCalories,
   category,
   setCategory,
+  categoryOptions,
 }) => {
   return (
-    <section className="{styles.section}">
+    <section className={styles.sectionGeneralInfo}>
       <h3>General Information</h3>
       <label>
         Recipe Title

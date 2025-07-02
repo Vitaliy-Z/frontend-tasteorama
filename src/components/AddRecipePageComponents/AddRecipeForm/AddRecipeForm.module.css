@@ -1,4 +1,14 @@
-:root {
+.formContainer {
+  padding: 48px 16px;
+}
+.titleAddRecipe {
+  margin-bottom: 16px;
+}
+.submitBtn {
+  width: 100%;
+}
+
+/* :root {
     --brown-dark: #3d2218;
     --brown-light: #9b6c43;
     --brown-light-hover: #8b5c2c;
@@ -11,9 +21,9 @@ body {
     font-family: var(--font);
     background: #f9f8f3;
     color: #000;
-}
+} */
 
-/* HEADER */
+/* HEADER
 .header {
     background: var(--brown-dark);
     color: var(--white);
@@ -81,9 +91,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 14px;
-}
+} */
 
-/* FORM CONTAINER */
+/* FORM CONTAINER
 .formContainer {
     max-width: 1100px;
     margin: 3rem auto;
@@ -100,10 +110,10 @@ h1 {
 h3 {
     font-size: 1.3rem;
     font-weight: 600;
-}
+} */
 
 /* MAIN SECTION */
-.mainSection {
+/* .mainSection {
     display: flex;
     gap: 2rem;
 }
@@ -116,7 +126,7 @@ h3 {
     gap: 1rem;
 }
 
-/* INPUTS & TEXTAREA */
+INPUTS & TEXTAREA
 label {
     display: flex;
     flex-direction: column;
@@ -138,7 +148,7 @@ textarea {
 }
 
 /* UPLOAD PHOTO */
-.uploadArea {
+/* .uploadArea {
     height: 300px;
     background: var(--gray);
     border-radius: 16px;
@@ -162,7 +172,7 @@ textarea {
 }
 
 /* INGREDIENTS */
-.ingredients {
+/* .ingredients {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -206,17 +216,17 @@ ul li {
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
     padding: 0.5rem 0;
-}
+} */
 
 /* INSTRUCTIONS */
-.instructions {
+/* .instructions {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 /* SUBMIT BUTTON */
-.submitBtn {
+/* .submitBtn {
     width: 100%;
     padding: 1rem;
     background: var(--brown-light);
@@ -230,10 +240,10 @@ ul li {
 
 .submitBtn:hover {
     background: var(--brown-light-hover);
-}
+} */
 
 /* FOOTER */
-.footer {
+/* .footer {
     background: var(--brown-dark);
     color: #eee;
     padding: 14px 108px;
@@ -255,10 +265,10 @@ ul li {
 
 .footer a:hover {
     text-decoration: underline;
-}
+} */
 
 /* ADAPTIVE */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .mainSection {
         flex-direction: column;
     }
@@ -267,4 +277,4 @@ ul li {
     .footer {
         padding: 14px 32px;
     }
-}
+} */

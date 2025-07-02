@@ -1,0 +1,32 @@
+.uploadArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 16px;
+  width: 361px;
+  height: 383px;
+  background: #9f9f9f;
+  position: relative;
+  cursor: pointer;
+}
+
+.cameraIcon {
+  width: 48px;
+  height: 48px;
+  stroke: #070707;
+  stroke-width: 1;
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.fileInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}

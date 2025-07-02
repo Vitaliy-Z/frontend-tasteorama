@@ -1,5 +1,5 @@
 import React from "react";
-import AddRecipeForm from "../components/AddRecipePageComponents/AddRecipeForm";
+import AddRecipeForm from "../components/AddRecipePageComponents/AddRecipeForm/AddRecipeForm";
 
 const AddRecipePage = () => {
   return (
@@ -10,4 +10,3 @@ const AddRecipePage = () => {
 };
 
 export default AddRecipePage;
-І
