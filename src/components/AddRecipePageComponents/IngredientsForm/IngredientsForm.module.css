@@ -78,7 +78,7 @@ li {
 }
 
 li button {
-  background-color: #e74c3c;
+  background-color: var(--light-brown);
   padding: 6px 10px;
   font-size: 0.9rem;
   border-radius: 6px;
@@ -89,4 +89,37 @@ li button {
 
 li button:hover {
   background-color: #c0392b;
+}
+.inputRow {
+  display: block; 
+}
+@media screen and (min-width: 768px){
+  .inputRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+  }
+
+  label {
+    flex: 1;
+  }
+
+  .buttonAddingr {
+    display: flex;
+    margin-left: auto;
+    padding: 8px;
+    width: 249px;
+    height: 36px;
+    justify-content: center;
+   
+  }
+  .tableHeader,
+  ul {
+    max-width: none;
+  }
+
+  li {
+    gap: 12px;
+  }
 }

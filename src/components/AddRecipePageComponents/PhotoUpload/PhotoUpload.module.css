@@ -1,23 +1,31 @@
+.rightSide {
+  margin-bottom: 32px;
+}
+
+h3 {
+  margin-bottom: 16px;
+}
+
 .uploadArea {
+  width: 100%;
+  max-width: 361px;
+  height: 383px;
+  background: #9f9f9f;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  border-radius: 16px;
-  width: 361px;
-  height: 383px;
-  background: #9f9f9f;
-  position: relative;
-  cursor: pointer;
+  margin: 0 auto;
 }
 
 .cameraIcon {
-  width: 48px;
-  height: 48px;
-  stroke: #070707;
+  width: 52px;
+  height: 52px;
   stroke-width: 1;
-  display: block;
-  margin: 0 auto;
+  fill: #070707;  
   pointer-events: none;
 }
 
@@ -30,3 +38,10 @@
   top: 0;
   left: 0;
 }
+@media screen and (min-width: 768px) {
+  .uploadArea {
+    width: 100%;        /* на планшеті - розтягнути на всю ширину */
+    max-width: none;    /* прибираємо обмеження по max-width */
+    height: 383px;
+  }
+  }

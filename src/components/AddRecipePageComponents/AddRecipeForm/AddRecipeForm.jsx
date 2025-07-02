@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Icon from "../../shared/Icon/Icon.jsx";
 import styles from "./AddRecipeForm.module.css";
 import GeneralInfoForm from "../GeneralInfoForm/GeneralInfoForm.jsx";
 import IngredientsForm from "../IngredientsForm/IngredientsForm.jsx";
-import InstructionsForm from "../InstructionsForm.jsx";
+import InstructionsForm from "../InstructionsForm/InstructionsForm.jsx";
 import PhotoUpload from "../../AddRecipePageComponents/PhotoUpload/PhotoUpload.jsx";
 const AddRecipeForm = () => {
   const [title, setTitle] = useState("");
@@ -54,8 +53,9 @@ const AddRecipeForm = () => {
     <>
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <h1 className={styles.titleAddRecipe}>Add Recipe</h1>
+        <div className={styles.flexContainer}>
         <PhotoUpload handlePhotoChange={handlePhotoChange} />
-        <div className={styles.mainSection}>
+        <div className={styles.leftContent}>
           <GeneralInfoForm
             title={title}
             setTitle={setTitle}
@@ -69,20 +69,7 @@ const AddRecipeForm = () => {
             setCategory={setCategory}
             categoryOptions={["Soup", "Main", "Salad", "Dessert"]}
           />
-
-          {/* <div className={styles.rightSide}>
-            <h3>Upload Photo</h3>
-            <div className={styles.uploadArea}>
-              <span className={styles.cameraIcon}>📷</span>
-              <input
-                type="file"
-                onChange={handlePhotoChange}
-                className={styles.fileInput}
-              />
-            </div>
-          </div> */}
-        </div>
-        <IngredientsForm
+          <IngredientsForm
           ingredient={ingredientName}
           setIngredient={setIngredientName}
           amount={ingredientAmount}
@@ -92,16 +79,17 @@ const AddRecipeForm = () => {
           removeIngredient={removeIngredient}
           ingredientOptions={ingredientOptions}
         />
-
         <InstructionsForm
           instructions={instructions}
           setInstructions={setInstructions}
         />
-
         <button type="submit" className={styles.submitBtn}>
           Publish Recipe
         </button>
+        </div>
+        </div>
       </form>
+      
     </>
   );
 };

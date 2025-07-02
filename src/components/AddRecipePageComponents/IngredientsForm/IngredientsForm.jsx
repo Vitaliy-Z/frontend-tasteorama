@@ -14,6 +14,7 @@ const IngredientsForm = ({
   return (
     <section>
       <h3>Ingredients</h3>
+      <div className={styles.inputRow}>
       <label>
         Name
         <select
@@ -38,7 +39,8 @@ const IngredientsForm = ({
           onChange={(e) => setAmount(e.target.value)}
         />
       </label>
-      <button type="button" onClick={addIngredient}>
+      </div>
+      <button className={styles.buttonAddingr}type="button" onClick={addIngredient}>
         Add new ingredient
       </button>
       <div className={styles.tableHeader}>
