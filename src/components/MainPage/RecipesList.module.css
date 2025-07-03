@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 24px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+/* Mobile */
+
+.list > li {
+  width: 100%;
+  max-width: 361px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .list > li {
+    flex: 0 1 calc((100% - 24px * 1 - 64px) / 2);
+    max-width: 336px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+
+  .list > li {
+    flex: 0 1 calc((100% - 24px * 3 - 200px) / 4);
+    max-width: 288px;
+  }
+}
