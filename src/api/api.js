@@ -27,10 +27,9 @@ import { fetchLogoutUser } from "../redux/auth/operations";
 
 const apiClient = axios.create({
   baseURL: "http://localhost:3000/api",
-  withCredentials: true, // refreshToken передається автоматично
+  withCredentials: true,
 });
 
-// ===== SET TOKEN =====
 export const setAuthorizationToken = (token) => {
   lsSetToken(token);
   apiClient.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -41,7 +40,6 @@ export const deleteAuthorizationToken = () => {
   delete apiClient.defaults.headers.common.Authorization;
 };
 
-// ===== REQUEST INTERCEPTOR =====
 apiClient.interceptors.request.use((config) => {
   const token = lsGetToken();
   if (token) {
@@ -50,7 +48,6 @@ apiClient.interceptors.request.use((config) => {
   return config;
 });
 
-// ===== RESPONSE INTERCEPTOR =====
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -78,8 +75,8 @@ apiClient.interceptors.response.use(
 
         return apiClient(originalRequest);
       } catch (refreshError) {
-        deleteAuthorizationToken(); // Очистити токен з localStorage
-        store.dispatch(fetchLogoutUser()); // Примусове логаут
+        deleteAuthorizationToken();
+        store.dispatch(fetchLogoutUser());
         return Promise.reject(refreshError);
       }
     }

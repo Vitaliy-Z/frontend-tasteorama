@@ -42,8 +42,6 @@ export default function BaseInput({
                     <Icon
                       name={show ? "eye-open" : "eye-crossed"}
                       className={css.eyeIcon}
-                      width="100%"
-                      height="100%"
                     />
                   </button>
                 )}
