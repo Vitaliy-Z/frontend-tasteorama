@@ -3,7 +3,7 @@ import styles from "./PhotoUpload.module.css";
 import Icon from "../../shared/Icon/Icon";
 const PhotoUpload = ({ handlePhotoChange }) => {
   return (
-    <div className={styles.rightSide}>
+    <>
       <h3>Upload Photo</h3>
       <div className={styles.uploadArea}>
         <Icon name="photo" className={styles.cameraIcon} />
@@ -13,7 +13,7 @@ const PhotoUpload = ({ handlePhotoChange }) => {
           className={styles.fileInput}
         />
       </div>
-    </div>
+    </>
   );
 };
 

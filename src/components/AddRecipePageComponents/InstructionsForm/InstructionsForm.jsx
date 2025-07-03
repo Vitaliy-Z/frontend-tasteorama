@@ -1,4 +1,4 @@
-import styles from './InstructionsForm.module.css'
+import styles from "./InstructionsForm.module.css";
 const InstructionsForm = ({ instructions, setInstructions }) => {
   return (
     <div className={styles.instrContainer}>
