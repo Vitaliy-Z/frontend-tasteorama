@@ -1,0 +1,140 @@
+.title{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--White, rgba(255, 255, 255, 1));
+  }
+
+  .area{
+  padding-bottom: 128px;
+  padding-top: 128px;
+  }
+
+/* ===== Mobile ===== */
+
+ .area{
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding-left: 32px; 
+  gap: 24px;
+  }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  /* margin-bottom: 40px; */
+  width: 100%;
+  max-width: 329px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input,
+.button {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+.input {
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  background-color: #9b643d;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #86512f;
+}
+
+.input {
+  border: none;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+/* === Tablet === */
+@media screen and (min-width: 768px) {
+
+  .area{
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding-left: 32px; 
+  gap: 24px;
+  }
+
+  .form {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    max-width: 671px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0;
+  }
+
+  .input {
+    /* min-width: 400px; */
+    width: 471px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .button {
+    width: 176px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
+
+/* === Desktop === */
+@media screen and (min-width: 1440px) {
+
+  .area{
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding-left: 104px; 
+  gap: 24px;
+  }
+
+  .form {
+    /* max-width: 700px; */
+    gap: 12px;
+  }
+
+  .input {
+    /* min-width: 460px; */
+    /* height: 54px; */
+    width: 459px;
+  }
+
+  .button {
+    width: 190px;
+    /* height: 54px; */
+    font-size: 18px;
+  }
+}

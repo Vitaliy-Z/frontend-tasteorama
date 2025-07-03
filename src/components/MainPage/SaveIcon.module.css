@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: transparent;
+
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
+  color: #000;
+  margin: 0 auto;
+}
+
+.button:not(.active):hover,
+.button:not(.active):focus {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.active {
+  color: #fff;
+  border: none;
+  background-color: #ff6b6b;
+}

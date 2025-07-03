@@ -1,0 +1,47 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 372px;
+  height: 54px;
+  margin: 24px auto;
+
+  padding: 16px;
+  background-color: #9b6c43;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #6d554b;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
+}
+
+.button:disabled {
+  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
+  opacity: 0.3;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .button {
+    width: 344px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .button {
+    width: 289px;
+  }
+}
