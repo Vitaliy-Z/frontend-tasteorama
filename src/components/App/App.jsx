@@ -12,7 +12,6 @@ import { PrivateRoute } from "../../routes/PrivateRoute.jsx";
 import { RestrictedRoute } from "../../routes/RestrictedRoute.jsx";
 import Loader from "../shared/Loader/Loader.jsx";
 
-
 const MainPage = lazy(() => import("../../pages/MainPage.jsx"));
 const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage.jsx"));
 const AddRecipePage = lazy(() => import("../../pages/AddRecipePage.jsx"));
@@ -38,9 +37,10 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
 
-   
-            <Route path="/auth/:authType" element={<AuthPage />} />
-
+            <Route
+              path="/auth/:authType"
+              element={<RestrictedRoute component={AuthPage} />}
+            />
 
             <Route
               path="/add-recipe"
@@ -58,7 +58,6 @@ const App = () => {
               path="/auth"
               element={<RestrictedRoute component={AuthPage} />}
             />
-
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
