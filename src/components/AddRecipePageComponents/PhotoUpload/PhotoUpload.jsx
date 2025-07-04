@@ -6,7 +6,7 @@ const PhotoUpload = ({ handlePhotoChange }) => {
     <>
       <h3>Upload Photo</h3>
       <div className={styles.uploadArea}>
-        <Icon name="photo" className={styles.cameraIcon} />
+        <Icon name="photo" classname={styles.cameraIcon} />
         <input
           type="file"
           onChange={handlePhotoChange}

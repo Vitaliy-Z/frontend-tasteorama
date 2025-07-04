@@ -52,42 +52,44 @@ const AddRecipeForm = () => {
   return (
     <>
       <form className={styles.formContainer} onSubmit={handleSubmit}>
-        <h1 className={styles.titleAddRecipe}>Add Recipe</h1>
-        <div className={styles.flexContainer}>
-          <div className={styles.rightSide}>
-            <PhotoUpload handlePhotoChange={handlePhotoChange} />
-          </div>
-          <div className={styles.leftContent}>
-            <GeneralInfoForm
-              title={title}
-              setTitle={setTitle}
-              description={description}
-              setDescription={setDescription}
-              time={time}
-              setTime={setTime}
-              calories={calories}
-              setCalories={setCalories}
-              category={category}
-              setCategory={setCategory}
-              categoryOptions={["Soup", "Main", "Salad", "Dessert"]}
-            />
-            <IngredientsForm
-              ingredient={ingredientName}
-              setIngredient={setIngredientName}
-              amount={ingredientAmount}
-              setAmount={setIngredientAmount}
-              ingredientsList={ingredientsList}
-              addIngredient={addIngredient}
-              removeIngredient={removeIngredient}
-              ingredientOptions={ingredientOptions}
-            />
-            <InstructionsForm
-              instructions={instructions}
-              setInstructions={setInstructions}
-            />
-            <button type="submit" className={styles.submitBtn}>
-              Publish Recipe
-            </button>
+        <div className={styles.container}>
+          <h1 className={styles.titleAddRecipe}>Add Recipe</h1>
+          <div className={styles.flexContainer}>
+            <div className={styles.rightSide}>
+              <PhotoUpload handlePhotoChange={handlePhotoChange} />
+            </div>
+            <div className={styles.leftContent}>
+              <GeneralInfoForm
+                title={title}
+                setTitle={setTitle}
+                description={description}
+                setDescription={setDescription}
+                time={time}
+                setTime={setTime}
+                calories={calories}
+                setCalories={setCalories}
+                category={category}
+                setCategory={setCategory}
+                categoryOptions={["Soup", "Main", "Salad", "Dessert"]}
+              />
+              <IngredientsForm
+                ingredient={ingredientName}
+                setIngredient={setIngredientName}
+                amount={ingredientAmount}
+                setAmount={setIngredientAmount}
+                ingredientsList={ingredientsList}
+                addIngredient={addIngredient}
+                removeIngredient={removeIngredient}
+                ingredientOptions={ingredientOptions}
+              />
+              <InstructionsForm
+                instructions={instructions}
+                setInstructions={setInstructions}
+              />
+              <button type="submit" className={styles.submitBtn}>
+                Publish Recipe
+              </button>
+            </div>
           </div>
         </div>
       </form>

@@ -5,7 +5,7 @@ import categoriesReducer from "./categories/slice.js";
 import ingredientsReducer from "./ingredients/slice.js";
 import filtersReducer from "./filters/slice.js";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     auth: userReducer,
     recipes: recipesReducer,
@@ -14,4 +14,3 @@ const store = configureStore({
     filteres: filtersReducer,
   },
 });
-export default store;

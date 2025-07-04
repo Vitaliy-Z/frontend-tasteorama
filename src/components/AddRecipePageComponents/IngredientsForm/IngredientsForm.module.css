@@ -59,7 +59,7 @@ ul {
   margin: 0;
 }
 
-li {
+.ingrlist {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +86,9 @@ li button:hover {
 .inputRow {
   display: block;
 }
+.buttonAddingr {
+  margin-bottom: 40px;
+}
 @media screen and (min-width: 768px) {
   .inputRow {
     display: flex;
@@ -111,7 +114,10 @@ li button:hover {
     max-width: none;
   }
 
-  li {
+  .ingrlist {
     gap: 12px;
+  }
+  .tableHeader {
+    margin-bottom: 72px;
   }
 }

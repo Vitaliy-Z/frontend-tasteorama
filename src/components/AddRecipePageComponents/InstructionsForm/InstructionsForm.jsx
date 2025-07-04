@@ -4,6 +4,7 @@ const InstructionsForm = ({ instructions, setInstructions }) => {
     <div className={styles.instrContainer}>
       <h3>Instructions</h3>
       <textarea
+        className={styles.instrtext}
         placeholder="Enter instructions"
         value={instructions}
         onChange={(e) => setInstructions(e.target.value)}

@@ -26,12 +26,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
-
-            {/* <Route
+            <Route
               path="/add-recipe"
               element={<PrivateRoute component={AddRecipePage} />}
-            /> */}
-            <Route path="/add-recipe" element={<AddRecipePage />} />
+            />
             <Route
               path="/profile/:recipeType"
               element={<PrivateRoute component={ProfilePage} />}
