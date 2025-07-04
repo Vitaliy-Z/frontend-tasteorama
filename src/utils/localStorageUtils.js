@@ -1,20 +1,11 @@
-const TOKEN_KEY = "token";
-
 export const lsSetToken = (token) => {
-  if (typeof localStorage !== "undefined") {
-    localStorage.setItem(TOKEN_KEY, token);
-  }
+  localStorage.setItem("token", token);
 };
 
 export const lsGetToken = () => {
-  if (typeof localStorage !== "undefined") {
-    return localStorage.getItem(TOKEN_KEY);
-  }
-  return null;
+  return localStorage.getItem("token");
 };
 
 export const lsRemoveToken = () => {
-  if (typeof localStorage !== "undefined") {
-    localStorage.removeItem(TOKEN_KEY);
-  }
+  localStorage.removeItem("token");
 };
