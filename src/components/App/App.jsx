@@ -26,7 +26,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/recipes/:recipeId" element={<RecipeViewPage />} />
-
             <Route
               path="/add-recipe"
               element={<PrivateRoute component={AddRecipePage} />}

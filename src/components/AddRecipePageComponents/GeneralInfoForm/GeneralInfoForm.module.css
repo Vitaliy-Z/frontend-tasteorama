@@ -1,0 +1,46 @@
+.sectionGeneralInfo {
+  margin-bottom: 32px;
+}
+
+.sectionGeneralInfo h3 {
+  margin-bottom: 16px;
+}
+
+.sectionGeneralInfo label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.sectionGeneralInfo input,
+.sectionGeneralInfo textarea,
+.sectionGeneralInfo select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.sectionGeneralInfo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.row label {
+  flex: 1 1 45%;
+  min-width: 140px;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 32px;
+  }
+}
