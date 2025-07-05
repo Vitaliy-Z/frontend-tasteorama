@@ -15,9 +15,9 @@ const GeneralInfoForm = ({
   return (
     <section className={styles.sectionGeneralInfo}>
       <h3>General Information</h3>
-      <label>
+       <label>
         Recipe Title
-        <input
+        <input className={styles.inputTitle}
           type="text"
           placeholder="Enter the name of your recipe"
           value={title}
@@ -34,7 +34,7 @@ const GeneralInfoForm = ({
       </label>
       <label>
         Cooking time in minutes
-        <input
+        <input className={styles.inputCookin}
           type="number"
           value={time}
           onChange={(e) => setTime(e.target.value)}
@@ -53,7 +53,7 @@ const GeneralInfoForm = ({
 
         <label>
           Category
-          <select
+          <select 
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -65,7 +65,7 @@ const GeneralInfoForm = ({
           </select>
         </label>
       </div>
-    </section>
+      </section>
   );
 };
 

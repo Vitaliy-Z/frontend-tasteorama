@@ -4,7 +4,7 @@ import Icon from "../../shared/Icon/Icon";
 const PhotoUpload = ({ handlePhotoChange }) => {
   return (
     <>
-      <h3>Upload Photo</h3>
+      <h3 className={styles.titledAdd}>Upload Photo</h3>
       <div className={styles.uploadArea}>
         <Icon name="photo" classname={styles.cameraIcon} />
         <input

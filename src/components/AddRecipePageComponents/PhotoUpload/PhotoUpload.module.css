@@ -1,5 +1,5 @@
-h3 {
-  margin-bottom: 16px;
+.titledAdd {
+  margin-bottom: 4px;
 }
 
 .uploadArea {
@@ -13,7 +13,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 24px auto;
+  margin: 0 auto;
 }
 
 .cameraIcon {
@@ -39,6 +39,4 @@ h3 {
     max-width: none;
     height: 383px;
   }
-}
-@media screen and (min-width: 1440px) {
 }

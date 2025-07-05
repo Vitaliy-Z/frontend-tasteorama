@@ -11,7 +11,7 @@
 .flexContainer {
   display: flex;
   flex-direction: column;
-}
+  }
 
 .leftContent {
   width: 100%;
@@ -20,7 +20,6 @@
 @media screen and (min-width: 768px) {
   .formContainer {
     max-width: 100%;
-    padding: 0 32px;
   }
   .titleAddRecipe {
     font-size: 48px;
@@ -31,12 +30,16 @@
   .formContainer {
     max-width: 100%;
   }
+  .titleAddRecipe {
+  font-size: 48px;
+  }
   .flexContainer {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 24px;
+    gap: 40px;
   }
+
 
   .flexContainer > :first-child {
     order: 2;

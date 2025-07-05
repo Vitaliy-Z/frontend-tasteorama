@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./IngredientsForm.module.css";
-
+import Icon from "../../shared/Icon/Icon.jsx";
 const IngredientsForm = ({
   ingredient,
   setIngredient,
@@ -12,7 +12,7 @@ const IngredientsForm = ({
   ingredientOptions,
 }) => {
   return (
-    <section>
+    <section className={styles.sectionIngr}>
       <h3>Ingredients</h3>
       <div className={styles.inputRow}>
         <label>
@@ -32,7 +32,7 @@ const IngredientsForm = ({
 
         <label>
           Amount
-          <input
+          <input 
             type="text"
             placeholder="100g"
             value={amount}
@@ -47,23 +47,40 @@ const IngredientsForm = ({
       >
         Add new ingredient
       </button>
-      <div className={styles.tableHeader}>
-        <span>Name:</span>
-        <span>Amount:</span>
-      </div>
-
-      <ul>
-        {ingredientsList.map((ing, index) => (
-          <li className={styles.ingrlist} key={index}>
-            {ing.name} - {ing.amount}
-            <button type="button" onClick={() => removeIngredient(index)}>
-              Remove
-            </button>
-          </li>
-        ))}
-      </ul>
+     {ingredientsList.length > 0 && (
+        <>
+          <div className={styles.ingredientsTable}>
+            <div className={styles.tableHeader}>
+              <span>Name:</span>
+              <span>Amount:</span>
+            </div>
+            <ul className={styles.ingredientsList}>
+              {ingredientsList.map((ing, index) => (
+                <li className={styles.ingrlist} key={index}>
+                  <span className={styles.ingrName}>{ing.name}</span>
+                  <span className={styles.ingrAmount}>{ing.amount}</span>
+                   <button
+        className={styles.deleteIcon}
+        type="button"
+        onClick={() => removeIngredient(index)}
+        aria-label="Remove ingredient">
+        <Icon name="delete" classname={styles.iconSvg} />
+      </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <button
+            className={styles.removeIngr}
+            type="button"
+            onClick={() => removeIngredient(ingredientsList.length - 1)}
+            disabled={ingredientsList.length === 0}
+          >
+            Remove last Ingredient
+          </button>
+        </>
+      )}
     </section>
   );
 };
-
 export default IngredientsForm;
