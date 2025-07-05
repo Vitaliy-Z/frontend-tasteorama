@@ -4,10 +4,11 @@ import {
   fetchRegisterUser,
   fetchLoginUser,
   fetchLogoutUser,
+  fetchUser
 } from "./operations.js";
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite,
+  fetchDeleteRecipesFromFavorite
 } from "../recipes/operations.js";
 import { handleError, handlePending } from "../../utils/reduxUtils.js";
 import { deleteAuthorizationToken } from "../../api/api.js";
@@ -17,7 +18,7 @@ const authSlice = createSlice({
   initialState: {
     user: null,
     isLoading: false,
-    error: null,
+    error: null
   },
   extraReducers: (builder) =>
     builder
@@ -63,7 +64,15 @@ const authSlice = createSlice({
           state.isLoading = false;
         }
       )
-      .addCase(fetchDeleteRecipesFromFavorite.rejected, handleError),
+      .addCase(fetchDeleteRecipesFromFavorite.rejected, handleError)
+
+      .addCase(fetchUser.pending, handlePending)
+      .addCase(fetchUser.fulfilled, (state, { payload }) => {
+        state.error = null;
+        state.user = payload;
+        state.isLoading = false;
+      })
+      .addCase(fetchUser.rejected, handleError)
 });
 
 export default authSlice.reducer;

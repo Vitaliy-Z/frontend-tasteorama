@@ -6,6 +6,8 @@ import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { lsGetToken } from "../../utils/localStorageUtils";
+import { useDispatch } from "react-redux";
+import { fetchUser } from "../../redux/auth/operations.js";
 import { setAuthorizationToken } from "../../api/api";
 
 import { PrivateRoute } from "../../routes/PrivateRoute.jsx";
@@ -21,10 +23,13 @@ const ProfilePage = lazy(() =>
 const AuthPage = lazy(() => import("../../pages/AuthPage.jsx"));
 
 const App = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const token = lsGetToken();
     if (token) {
       setAuthorizationToken(token);
+      dispatch(fetchUser());
     }
   }, []);
 
@@ -41,7 +46,10 @@ const App = () => {
               path="/auth/:authType"
               element={<RestrictedRoute component={AuthPage} />}
             />
-
+            <Route
+              path="/auth/*"
+              element={<RestrictedRoute component={AuthPage} />}
+            />
             <Route
               path="/add-recipe"
               element={<PrivateRoute component={AddRecipePage} />}
@@ -53,10 +61,6 @@ const App = () => {
             <Route
               path="/profile/*"
               element={<Navigate to="/profile/own" replace />}
-            />
-            <Route
-              path="/auth"
-              element={<RestrictedRoute component={AuthPage} />}
             />
 
             <Route path="*" element={<Navigate to="/" />} />
