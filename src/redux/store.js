@@ -12,6 +12,6 @@ export const store = configureStore({
     recipes: recipesReducer,
     categories: categoriesReducer,
     ingredients: ingredientsReducer,
-    filteres: filtersReducer
-  }
+    filteres: filtersReducer,
+  },
 });

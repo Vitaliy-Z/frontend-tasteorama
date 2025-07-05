@@ -6,7 +6,7 @@ import Logo from "../Logo/Logo.jsx";
 
 const Footer = () => {
   const user = useSelector(selectUser);
-  console.log("Footer user:", user);
+
   const isLoggedIn = !!user;
 
   return (
