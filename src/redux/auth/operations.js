@@ -47,3 +47,16 @@ export const fetchLogoutUser = createAsyncThunk(
     }
   }
 );
+
+export const fetchUser = createAsyncThunk(
+  "auth/fetchUser",
+  async (_, thunkAPI) => {
+    try {
+      const dataUser = await apiClient.get("/users");
+      const user = dataUser.data.data;
+      return user;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err);
+    }
+  }
+);

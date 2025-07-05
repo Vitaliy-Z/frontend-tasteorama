@@ -5,8 +5,8 @@
 }
 .sectionIngr h3 {
   font-weight: 600;
-font-size: 24px;
-color: var(--black);
+  font-size: 24px;
+  color: var(--black);
 }
 
 .sectionIngr label {
@@ -94,7 +94,7 @@ button:hover {
 }
 .ingrlist {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   gap: 4px;
   justify-content: space-between;
   align-items: flex-start;
@@ -105,7 +105,6 @@ button:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
-
 
 li button {
   background-color: var(--light-brown);
@@ -124,9 +123,13 @@ li button:hover {
   display: block;
 }
 .buttonAddingr {
-    margin-bottom: 32px;
- }
- .deleteIcon {
+  margin-bottom: 32px;
+}
+.buttonAddingr:disabled {
+  background-color: var(--light-gray);
+  color: var(--gray);
+}
+.deleteIcon {
   display: none;
   background: transparent;
   border: none;
@@ -143,11 +146,11 @@ li button:hover {
 @media screen and (min-width: 768px) {
   .sectionIngr {
     gap: 0;
-}
- .sectionIngr h3 {
- font-size: 32px;
- margin-bottom: 32px;
-}
+  }
+  .sectionIngr h3 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
   .inputRow {
     display: flex;
     justify-content: space-between;
@@ -174,50 +177,48 @@ li button:hover {
     justify-content: center;
     margin-top: 16px;
     margin-bottom: 32px;
- }
-    ul {
+  }
+  ul {
     max-width: none;
   }
-  
+
   .ingrlist {
     height: 44px;
     padding: 12px 0px;
- }
-   .removeIngr {
+  }
+  .removeIngr {
     display: none;
   }
   .deleteIcon {
-   display: inline-block;
-   margin-right: 74px;
-}
-.ingredientsTable {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 431px;
-  height: auto;
-}
-.tableHeader {
-  margin-right: 72px;
-}
-.ingrlist {
+    display: inline-block;
+    margin-right: 74px;
+  }
+  .ingredientsTable {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 431px;
+    height: auto;
+  }
+  .tableHeader {
+    margin-right: 72px;
+  }
+  .ingrlist {
     height: 44px;
     padding: 12px 0px;
- }
+  }
 }
-@media screen and (min-width: 1440px){
-  
-.buttonAddingr {
-  width: 258px;
-  height: auto;
-}
-.inputRow {
+@media screen and (min-width: 1440px) {
+  .buttonAddingr {
+    width: 258px;
+    height: auto;
+  }
+  .inputRow {
     margin-bottom: 17px;
   }
   .ingrlist {
     height: 28px;
     padding: 0;
     margin: 0;
-    
-     }
+  }
 }

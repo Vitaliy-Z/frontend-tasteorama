@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "^1.10.0",
+    "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "lottie-react": "^2.4.1",
     "modern-normalize": "^3.0.1",
@@ -20,9 +21,12 @@
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.2",
+    "react-toastify": "^11.0.5",
+    "yup": "^1.6.1",
     "react-spinners": "^0.17.0",
     "react-tabs": "^6.1.0",
     "yup": "^1.6.1"
+
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

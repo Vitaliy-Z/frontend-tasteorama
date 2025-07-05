@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./PhotoUpload.module.css";
 import Icon from "../../shared/Icon/Icon";
-const PhotoUpload = ({ handlePhotoChange }) => {
+const PhotoUpload = ({ onChange }) => {
+  const handlePhotoChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      onChange(file);
+    }
+  };
   return (
     <>
       <h3 className={styles.titledAdd}>Upload Photo</h3>

@@ -1,43 +1,51 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCategories } from "../../../redux/categories/operations";
+import { selectCategories } from "../../../redux/categories/selectors";
+
 import styles from "./GeneralInfoForm.module.css";
-const GeneralInfoForm = ({
-  title,
-  setTitle,
-  description,
-  setDescription,
-  time,
-  setTime,
-  calories,
-  setCalories,
-  category,
-  setCategory,
-  categoryOptions,
-}) => {
+
+const GeneralInfoForm = ({ recipe, setRecipe }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, [dispatch]);
+  const categories = useSelector(selectCategories);
+
   return (
     <section className={styles.sectionGeneralInfo}>
       <h3>General Information</h3>
-       <label>
+      <label>
         Recipe Title
-        <input className={styles.inputTitle}
+        <input
+          className={styles.inputTitle}
           type="text"
           placeholder="Enter the name of your recipe"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={recipe.title}
+          onChange={(e) =>
+            setRecipe((state) => ({ ...state, title: e.target.value }))
+          }
         />
       </label>
       <label>
         Recipe Description
         <textarea
           placeholder="Enter a brief description of your recipe"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          value={recipe.description}
+          onChange={(e) =>
+            setRecipe((state) => ({ ...state, description: e.target.value }))
+          }
         />
       </label>
       <label>
         Cooking time in minutes
-        <input className={styles.inputCookin}
+        <input
+          className={styles.inputCookin}
           type="number"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
+          value={recipe.time}
+          onChange={(e) =>
+            setRecipe((state) => ({ ...state, time: e.target.value }))
+          }
         />
       </label>
       <div className={styles.row}>
@@ -46,26 +54,35 @@ const GeneralInfoForm = ({
           <input
             type="text"
             placeholder="150 cals"
-            value={calories}
-            onChange={(e) => setCalories(e.target.value)}
+            value={recipe.calories}
+            onChange={(e) =>
+              setRecipe((state) => ({ ...state, calories: e.target.value }))
+            }
           />
         </label>
 
         <label>
           Category
-          <select 
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
+          <select
+            value={recipe.category ?? "Choose category"}
+            onChange={(e) =>
+              setRecipe((state) =>
+                e.target.value !== ""
+                  ? { ...state, category: e.target.value }
+                  : { ...state, category: null }
+              )
+            }
           >
-            {categoryOptions.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
+            <option value={""}>Choose category</option>
+            {categories.map((cat) => (
+              <option key={cat._id} value={cat.name}>
+                {cat.name}
               </option>
             ))}
           </select>
         </label>
       </div>
-      </section>
+    </section>
   );
 };
 

@@ -1,5 +1,5 @@
 import styles from "./InstructionsForm.module.css";
-const InstructionsForm = ({ instructions, setInstructions }) => {
+const InstructionsForm = ({ instructions, onUpdateInstructions }) => {
   return (
     <div className={styles.instrContainer}>
       <h3>Instructions</h3>
@@ -7,7 +7,7 @@ const InstructionsForm = ({ instructions, setInstructions }) => {
         className={styles.instrtext}
         placeholder="Enter instructions"
         value={instructions}
-        onChange={(e) => setInstructions(e.target.value)}
+        onChange={(e) => onUpdateInstructions(e.target.value)}
       />
     </div>
   );

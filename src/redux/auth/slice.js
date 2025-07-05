@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   fetchRegisterUser,
   fetchLoginUser,
-  fetchLogoutUser
+  fetchLogoutUser,
+  fetchUser
 } from "./operations.js";
 import {
   fetchAddRecipesToFavorite,
@@ -64,6 +65,14 @@ const authSlice = createSlice({
         }
       )
       .addCase(fetchDeleteRecipesFromFavorite.rejected, handleError)
+
+      .addCase(fetchUser.pending, handlePending)
+      .addCase(fetchUser.fulfilled, (state, { payload }) => {
+        state.error = null;
+        state.user = payload;
+        state.isLoading = false;
+      })
+      .addCase(fetchUser.rejected, handleError)
 });
 
 export default authSlice.reducer;

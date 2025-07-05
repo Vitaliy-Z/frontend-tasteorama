@@ -1,52 +1,36 @@
 import React, { useState } from "react";
-import styles from "./AddRecipeForm.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import GeneralInfoForm from "../GeneralInfoForm/GeneralInfoForm.jsx";
 import IngredientsForm from "../IngredientsForm/IngredientsForm.jsx";
 import InstructionsForm from "../InstructionsForm/InstructionsForm.jsx";
 import PhotoUpload from "../../AddRecipePageComponents/PhotoUpload/PhotoUpload.jsx";
+import { fetchAddRecipe } from "../../../redux/recipes/operations";
+import { selectRecipesIsLoading } from "../../../redux/recipes/selectors";
+import Loader from "../../shared/Loader/Loader.jsx";
+
+import styles from "./AddRecipeForm.module.css";
+
+const initialRecipeState = {
+  title: "",
+  description: "",
+  time: "",
+  calories: "",
+  ingredients: [],
+  instructions: "",
+  thumb: null,
+  category: null
+};
+
 const AddRecipeForm = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [time, setTime] = useState("");
-  const [calories, setCalories] = useState("");
-  const [ingredientName, setIngredientName] = useState("");
-  const [ingredientAmount, setIngredientAmount] = useState("");
-  const [ingredientsList, setIngredientsList] = useState([]);
-  const [instructions, setInstructions] = useState("");
-  const [photo, setPhoto] = useState(null);
-  const [category, setCategory] = useState("Soup");
-  const ingredientOptions = ["Broccoli", "Carrot", "Tomato"];
+  const [recipe, setRecipe] = useState(initialRecipeState);
+  const dispatch = useDispatch();
 
-  const addIngredient = () => {
-    if (ingredientName && ingredientAmount) {
-      setIngredientsList([
-        ...ingredientsList,
-        { name: ingredientName, amount: ingredientAmount },
-      ]);
-      setIngredientName("");
-      setIngredientAmount("");
-    }
-  };
-
-  const removeIngredient = (index) => {
-    setIngredientsList(ingredientsList.filter((_, i) => i !== index));
-  };
-
-  const handlePhotoChange = (e) => {
-    setPhoto(e.target.files[0]);
-  };
+  const isLoading = useSelector(selectRecipesIsLoading);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({
-      title,
-      description,
-      time,
-      calories,
-      ingredientsList,
-      instructions,
-      photo,
-    });
+    dispatch(fetchAddRecipe(recipe));
+    setRecipe(initialRecipeState);
   };
 
   return (
@@ -56,39 +40,46 @@ const AddRecipeForm = () => {
           <h1 className={styles.titleAddRecipe}>Add Recipe</h1>
           <div className={styles.flexContainer}>
             <div className={styles.rightSide}>
-              <PhotoUpload handlePhotoChange={handlePhotoChange} />
+              <PhotoUpload
+                onChange={(value) =>
+                  setRecipe((prev) => ({ ...prev, thumb: value }))
+                }
+              />
             </div>
             <div className={styles.leftContent}>
-              <GeneralInfoForm
-                title={title}
-                setTitle={setTitle}
-                description={description}
-                setDescription={setDescription}
-                time={time}
-                setTime={setTime}
-                calories={calories}
-                setCalories={setCalories}
-                category={category}
-                setCategory={setCategory}
-                categoryOptions={["Soup", "Main", "Salad", "Dessert"]}
-              />
+              <GeneralInfoForm recipe={recipe} setRecipe={setRecipe} />
               <IngredientsForm
-                ingredient={ingredientName}
-                setIngredient={setIngredientName}
-                amount={ingredientAmount}
-                setAmount={setIngredientAmount}
-                ingredientsList={ingredientsList}
-                addIngredient={addIngredient}
-                removeIngredient={removeIngredient}
-                ingredientOptions={ingredientOptions}
+                ingredients={recipe.ingredients}
+                onAddIngredient={(value) =>
+                  setRecipe((prev) => ({
+                    ...prev,
+                    ingredients: [...prev.ingredients, value]
+                  }))
+                }
+                onRemoveIngredient={(index) =>
+                  setRecipe((prev) => ({
+                    ...prev,
+                    ingredients: prev.ingredients.filter((_, i) => i !== index)
+                  }))
+                }
               />
               <InstructionsForm
-                instructions={instructions}
-                setInstructions={setInstructions}
+                instructions={recipe.instructions}
+                onUpdateInstructions={(value) =>
+                  setRecipe((prev) => ({ ...prev, instructions: value }))
+                }
               />
-              <button type="submit" className={styles.submitBtn}>
-                Publish Recipe
-              </button>
+              {isLoading ? (
+                <Loader />
+              ) : (
+                <button
+                  type="submit"
+                  className={styles.submitBtn}
+                  disabled={isLoading}
+                >
+                  Publish Recipe
+                </button>
+              )}
             </div>
           </div>
         </div>
