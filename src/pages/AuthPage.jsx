@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
-import RegistrationForm from "../components/Auth/Forms/RegistrationForm.jsx";
-import LoginForm from "../components/Auth/Forms/LoginForm.jsx";
+import RegistrationForm from "../components/AuthPage/Forms/RegistrationForm.jsx";
+import LoginForm from "../components/AuthPage/Forms/LoginForm.jsx";
 
 const AuthPage = () => {
   const { authType } = useParams();

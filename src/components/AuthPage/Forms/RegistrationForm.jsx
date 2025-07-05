@@ -1,10 +1,11 @@
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form } from "formik";
 import { toast } from "react-toastify";
 
 import { fetchRegisterUser } from "../../../redux/auth/operations.js";
+import { selectAuthError } from "../../../redux/auth/selectors.js";
 import { registerSchema, initialValues } from "./formConfig.js";
 
 import BaseInput from "./BaseInput.jsx";
@@ -22,6 +23,8 @@ export default function RegistrationForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
+  const authError = useSelector(selectAuthError);
+
   const handleSubmit = useCallback(
     async (values, actions) => {
       try {
@@ -34,18 +37,13 @@ export default function RegistrationForm() {
         toast.success("Registration successful");
         navigate("/");
       } catch (error) {
-        const message = error?.message?.toLowerCase?.() || "";
-
-        if (message.includes("email")) {
-          actions.setFieldError("email", "Email already in use.");
-        } else {
-          toast.error("Registration failed. Try again later.");
-        }
-
-        actions.setSubmitting(false);
+        toast.error(
+          authError?.message || "Registration failed. Try again later.",
+          actions.setSubmitting(false)
+        );
       }
     },
-    [dispatch, navigate]
+    [dispatch, navigate, authError]
   );
 
   return (

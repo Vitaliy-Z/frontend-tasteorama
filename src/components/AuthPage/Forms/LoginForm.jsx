@@ -1,5 +1,5 @@
 import { Formik, Form } from "formik";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useState, useCallback } from "react";
@@ -8,6 +8,7 @@ import SubmitButton from "./SubmitButton.jsx";
 import BaseInput from "./BaseInput.jsx";
 import RedirectLink from "./RedirectLink.jsx";
 import { fetchLoginUser } from "../../../redux/auth/operations.js";
+import { selectAuthError } from "../../../redux/auth/selectors.js";
 import { loginSchema, loginInitialValues } from "./formConfig.js";
 
 import css from "./StylesForm.module.css";
@@ -16,21 +17,20 @@ const LoginForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const authError = useSelector(selectAuthError);
 
   const handleSubmit = useCallback(
     async (values, actions) => {
       try {
-        console.log("Logging in with", values);
         await dispatch(fetchLoginUser(values)).unwrap();
         toast.success("Login successful");
         navigate("/");
       } catch (error) {
-        console.log("Login error:", error);
-        toast.error(error?.message || "Invalid email or password");
+        toast.error(authError?.message || "Invalid email or password");
         actions.setSubmitting(false);
       }
     },
-    [dispatch, navigate]
+    [dispatch, navigate, authError]
   );
 
   return (

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import apiClient, {
   deleteAuthorizationToken,
-  setAuthorizationToken,
+  setAuthorizationToken
 } from "../../api/api.js";
 
 export const fetchRegisterUser = createAsyncThunk(
@@ -42,6 +42,19 @@ export const fetchLogoutUser = createAsyncThunk(
     try {
       await apiClient.post("/auth/logout");
       deleteAuthorizationToken();
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err);
+    }
+  }
+);
+
+export const fetchUser = createAsyncThunk(
+  "auth/fetchUser",
+  async (_, thunkAPI) => {
+    try {
+      const dataUser = await apiClient.get("/users");
+      const user = dataUser.data.data;
+      return user;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
