@@ -1,0 +1,42 @@
+.titledAdd {
+  margin-bottom: 4px;
+}
+
+.uploadArea {
+  width: 100%;
+  max-width: 361px;
+  height: 383px;
+  background: #9f9f9f;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cameraIcon {
+  width: 52px;
+  height: 52px;
+  stroke-width: 1;
+  fill: #070707;
+  pointer-events: none;
+}
+
+.fileInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 768px) {
+  .uploadArea {
+    width: 100%;
+    max-width: none;
+    height: 383px;
+  }
+}

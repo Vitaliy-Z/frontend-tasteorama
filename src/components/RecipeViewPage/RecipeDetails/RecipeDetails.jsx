@@ -1,12 +1,17 @@
+import { lazy } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./RecipeDetails.module.css";
-import AboutSection from "../AboutSection/AboutSection.jsx";
-import GeneralInfo from "../GeneralInfo/GeneralInfo.jsx";
-import IngredientsRecipeViewPage from "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx";
-import StepsSections from "../StepsSections/StepsSections.jsx";
-import Icon from "../../shared/Icon/Icon.jsx";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../../redux/auth/selectors.js";
+
+const GeneralInfo = lazy("../GeneralInfo/GeneralInfo.jsx");
+const AboutSection = lazy("../AboutSection/AboutSection.jsx");
+const IngredientsRecipeViewPage = lazy(
+  "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx"
+);
+const StepsSections = lazy("../StepsSections/StepsSections.jsx");
+const Icon = lazy("../../shared/Icon/Icon.jsx");
+
+import styles from "./RecipeDetails.module.css";
 
 const RecipeDetails = ({ recipe }) => {
   const navigate = useNavigate();
@@ -24,6 +29,7 @@ const RecipeDetails = ({ recipe }) => {
         src={recipe.thumb || recipe.imageUrl}
         alt={recipe.title}
         className={styles.recipeImage}
+        loading="lazy"
       />
       <h1 className={styles.title}>{recipe.title}</h1>
       <div className={styles.recipeLayout}>
