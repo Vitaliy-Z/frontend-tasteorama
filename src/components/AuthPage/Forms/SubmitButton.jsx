@@ -3,6 +3,8 @@ import Loader from "../../shared/Loader/Loader";
 import css from "./StylesForm.module.css";
 
 const SubmitButton = ({ isSubmitting, text }) => {
+  if (isSubmitting) return <Loader />;
+
   return (
     <button
       type="submit"
@@ -10,14 +12,14 @@ const SubmitButton = ({ isSubmitting, text }) => {
       disabled={isSubmitting}
       aria-busy={isSubmitting}
     >
-      {isSubmitting ? <Loader /> : text}
+      {text}
     </button>
   );
 };
 
 SubmitButton.propTypes = {
   isSubmitting: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default SubmitButton;

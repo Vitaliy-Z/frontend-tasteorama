@@ -36,11 +36,12 @@ export default function RegistrationForm() {
 
         toast.success("Registration successful");
         navigate("/");
-      } catch (error) {
+      } catch {
         toast.error(
-          authError?.message || "Registration failed. Try again later.",
-          actions.setSubmitting(false)
+          authError?.message || "Registration failed. Try again later."
         );
+      } finally {
+        actions.setSubmitting(false);
       }
     },
     [dispatch, navigate, authError]

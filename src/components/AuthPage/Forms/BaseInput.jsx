@@ -1,5 +1,6 @@
 import { Field, ErrorMessage } from "formik";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 import Icon from "../../shared/Icon/Icon.jsx";
 import css from "./StylesForm.module.css";
 
@@ -10,7 +11,7 @@ export default function BaseInput({
   type = "text",
   showToggle = false,
   show,
-  onToggle,
+  onToggle
 }) {
   return (
     <label className={css.label} htmlFor={name}>
@@ -27,9 +28,15 @@ export default function BaseInput({
                   type={showToggle ? (show ? "text" : "password") : type}
                   placeholder={placeholder}
                   className={clsx(css.input, {
-                    [css.inputError]: hasError,
+                    [css.inputError]: hasError
                   })}
-                  autoComplete="off"
+                  autoComplete={
+                    type === "email"
+                      ? "email"
+                      : type === "password"
+                      ? "current-password"
+                      : "on"
+                  }
                   aria-invalid={hasError ? "true" : undefined}
                 />
                 {showToggle && (
@@ -54,3 +61,13 @@ export default function BaseInput({
     </label>
   );
 }
+
+BaseInput.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  showToggle: PropTypes.bool,
+  show: PropTypes.bool,
+  onToggle: PropTypes.func
+};

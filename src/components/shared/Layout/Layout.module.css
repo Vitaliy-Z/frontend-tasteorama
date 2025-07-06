@@ -1,5 +1,6 @@
 .section {
   padding: 48px 0;
+  min-height: 100%;
 }
 .container {
   max-width: 393px;

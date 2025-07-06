@@ -25,8 +25,9 @@ const LoginForm = () => {
         await dispatch(fetchLoginUser(values)).unwrap();
         toast.success("Login successful");
         navigate("/");
-      } catch (error) {
+      } catch {
         toast.error(authError?.message || "Invalid email or password");
+      } finally {
         actions.setSubmitting(false);
       }
     },
@@ -61,7 +62,7 @@ const LoginForm = () => {
             />
             <SubmitButton isSubmitting={isSubmitting} text="Login" />
             <RedirectLink
-              text="Don’t have an account?"
+              text="Don't have an account?"
               linkText="Register"
               to="/auth/register"
             />

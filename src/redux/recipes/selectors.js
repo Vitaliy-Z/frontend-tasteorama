@@ -24,13 +24,13 @@ export const selectRecipesByIngredients = ({ recipes, filters }) => {
 export const selectFilteredRecipes = (state) => {
   let filteredRecipes = state.recipes.items;
 
-  if (state.filter.filterByName !== "") {
+  if (state.filters.filterByName !== "") {
     filteredRecipes = selectRecipeByName(state);
   }
-  if (state.filter.filterByCategory) {
+  if (state.filters.filterByCategory) {
     filteredRecipes = selectRecipesByCategory(state);
   }
-  if (state.filter.filterByIngredients) {
+  if (state.filters.filterByIngredients) {
     filteredRecipes = selectRecipesByIngredients(state);
   }
 
