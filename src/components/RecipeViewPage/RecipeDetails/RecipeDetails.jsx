@@ -24,6 +24,7 @@ const RecipeDetails = ({ recipe }) => {
         src={recipe.thumb || recipe.imageUrl}
         alt={recipe.title}
         className={styles.recipeImage}
+        loading="lazy"
       />
       <h1 className={styles.title}>{recipe.title}</h1>
       <div className={styles.recipeLayout}>
