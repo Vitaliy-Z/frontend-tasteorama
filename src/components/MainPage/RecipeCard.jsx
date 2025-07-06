@@ -1,21 +1,31 @@
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import css from "./RecipeCard.module.css";
-
-import FavoriteBtn from "../MainPage/SaveIcon.jsx";
-import LearnMoreBtn from "../MainPage/LearnMoreBtn.jsx";
 import { BsClock } from "react-icons/bs";
+import { FaRegBookmark } from "react-icons/fa6";
+import { RiDeleteBin4Line } from "react-icons/ri";
+
+import {
+  fetchAddRecipesToFavorite,
+  fetchDeleteRecipesFromFavorite,
+} from "../../redux/recipes/operations";
 
 export default function RecipeCard({ recipe }) {
   const { _id, title, description, thumb, time, calories, isFavorite } = recipe;
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLearnMoreClick = () => {
     navigate(`/recipes/${_id}`);
   };
 
   const handleFavoriteClick = () => {
-    alert("Please log in to add to favorites");
+    if (isFavorite) {
+      dispatch(fetchDeleteRecipesFromFavorite(_id));
+    } else {
+      dispatch(fetchAddRecipesToFavorite(_id));
+    }
   };
 
   return (
@@ -28,19 +38,29 @@ export default function RecipeCard({ recipe }) {
           <BsClock className={css.icon} /> {time}
         </span>
       </div>
+
       <div>
         <p className={css.description}>{description}</p>
-        <p className={css.calories}>
-          {calories ? `~${calories} cals` : " — cals"}
-        </p>
+        <p className={css.calories}>{calories ? `~${calories} kcal` : "— kcal"}</p>
       </div>
+
       <div className={css.actions}>
-        <LearnMoreBtn onClick={handleLearnMoreClick} />
-        <FavoriteBtn
-          recipeId={_id}
-          isInitiallyFavorite={isFavorite}
+        <button
+          type="button"
+          className={css.learnMoreBtn}
+          onClick={handleLearnMoreClick}
+        >
+          Learn More
+        </button>
+
+        <button
+          type="button"
+          className={`${css.favoriteBtn} ${isFavorite ? css.active : ""}`}
           onClick={handleFavoriteClick}
-        />
+          aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+        >
+          {isFavorite ? <RiDeleteBin4Line /> : <FaRegBookmark />}
+        </button>
       </div>
     </div>
   );

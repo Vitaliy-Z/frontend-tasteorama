@@ -1,12 +1,16 @@
- import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import SearchBox from "../components/MainPage/SearchBox";
 import Filters from "../components/MainPage/Filters";
 import RecipesList from "../components/MainPage/RecipesList";
+import LoadMoreBtn from "../components/MainPage/LoadMoreBtn";
 
 import mockRecipes from "../api/mockData/recipes.json";
-import categoriesData from "../api/mockData/categories.json";      
-import ingredientsData from "../api/mockData/ingredients.json";   
+import categoriesData from "../api/mockData/categories.json";
+import ingredientsData from "../api/mockData/ingredients.json";
+
+const PER_PAGE = 12;
+
 const MainPage = () => {
   const [recipes, setRecipes] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -16,10 +20,12 @@ const MainPage = () => {
   const [filterByCategory, setFilterByCategory] = useState("");
   const [filterByIngredients, setFilterByIngredients] = useState("");
 
+  const [visibleCount, setVisibleCount] = useState(PER_PAGE);
+
   useEffect(() => {
     setRecipes(mockRecipes);
-    setCategories(categoriesData.map((cat) => cat.name));
-    setIngredients(ingredientsData.map((ing) => ing.name));
+    setCategories(categoriesData);       
+    setIngredients(ingredientsData);     
   }, []);
 
   const filteredRecipes = recipes.filter((recipe) => {
@@ -31,9 +37,27 @@ const MainPage = () => {
     return matchName && matchCategory && matchIngredients;
   });
 
+  const visibleRecipes = filteredRecipes.slice(0, visibleCount);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + PER_PAGE);
+  };
+
+  const handleClearFilters = () => {
+    setFilterByName("");
+    setFilterByCategory("");
+    setFilterByIngredients("");
+    setVisibleCount(PER_PAGE);
+  };
+
   return (
     <main>
-      <SearchBox onSearch={(query) => setFilterByName(query)} />
+      <SearchBox
+        onSearch={(query) => {
+          setFilterByName(query);
+          setVisibleCount(PER_PAGE);
+        }}
+      />
 
       <Filters
         recipesCount={filteredRecipes.length}
@@ -41,16 +65,22 @@ const MainPage = () => {
         setFilterByCategory={setFilterByCategory}
         filterByIngredients={filterByIngredients}
         setFilterByIngredients={setFilterByIngredients}
-        clearFilters={() => {
-          setFilterByName("");
-          setFilterByCategory("");
-          setFilterByIngredients("");
-        }}
+        clearFilters={handleClearFilters}
         categories={categories}
-        ingredients={ingredients} 
+        ingredients={ingredients}
       />
 
-      <RecipesList recipes={filteredRecipes} />
+      {visibleRecipes.length > 0 ? (
+        <>
+          <RecipesList recipes={visibleRecipes} />
+
+          {visibleRecipes.length < filteredRecipes.length && (
+            <LoadMoreBtn onClick={handleLoadMore} />
+          )}
+        </>
+      ) : (
+        <p>Recipe not found</p>
+      )}
     </main>
   );
 };

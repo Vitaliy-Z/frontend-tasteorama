@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { GrFilter } from "react-icons/gr";
-
+import { AiOutlineClose } from "react-icons/ai";
 import css from "./Filters.module.css";
 
 const Filters = ({
@@ -14,10 +14,10 @@ const Filters = ({
   ingredients = [],
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isCompactView, setIsCompactView] = useState(window.innerWidth < 1440);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsCompactView(window.innerWidth < 1440);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -35,30 +35,28 @@ const Filters = ({
   };
 
   return (
-  <div>
-     <div className={css.containerTitle}>
-       <h1 className={css.title}>Recipes</h1>
-     </div>
+  <div className={css.wrapper}>
+    <h1 className={css.title}>Recipes</h1>
 
-    <div className={css.containerTwo}>
+    <div className={css.topBar}>
       <p className={css.recipesCount}>{recipesCount} recipes found</p>
 
-      {isMobile ? (
+      {isCompactView ? (
         <div className={css.filtersDropdownContainer}>
           <button
             onClick={() => setShowDropdown(!showDropdown)}
             className={css.dropdownButton}
           >
             <span className={css.buttonText}>Filters</span>
-            <GrFilter className={css.icon} />
+            {showDropdown ? (
+              <AiOutlineClose className={css.icon} />
+            ) : (
+              <GrFilter className={css.icon} />
+            )}
           </button>
 
           {showDropdown && (
             <div className={css.dropdownContent}>
-              <button onClick={handleReset} className={css.resetButton}>
-                Reset filters
-              </button>
-
               <select
                 value={filterByCategory || ""}
                 onChange={handleCategoryChange}
@@ -84,11 +82,15 @@ const Filters = ({
                   </option>
                 ))}
               </select>
+
+              <button onClick={handleReset} className={css.resetButton}>
+                Reset filters
+              </button>
             </div>
           )}
         </div>
       ) : (
-        <div className={css.filtersContainer}>
+        <div className={css.filtersRow}>
           <button onClick={handleReset} className={css.resetButton}>
             Reset filters
           </button>
@@ -123,6 +125,6 @@ const Filters = ({
     </div>
   </div>
 );
-}
+};
 
 export default Filters;

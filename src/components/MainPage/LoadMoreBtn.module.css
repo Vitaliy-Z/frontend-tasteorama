@@ -2,11 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 372px;
   height: 54px;
   margin: 24px auto;
-
   padding: 16px;
   background-color: #9b6c43;
   color: #fff;
@@ -33,6 +31,7 @@
 }
 
 /* Tablet */
+
 @media (min-width: 768px) {
   .button {
     width: 344px;
@@ -40,6 +39,7 @@
 }
 
 /* Desktop */
+
 @media (min-width: 1280px) {
   .button {
     width: 289px;
