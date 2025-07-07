@@ -1,5 +1,6 @@
+import PropTypes from "prop-types";
+import RecipeCard from "../RecipeCard/RecipeCard.jsx";
 import css from "./RecipesList.module.css";
-import RecipeCard from "../MainPage/RecipeCard";
 
 const RecipesList = ({ recipes }) => {
   return (
@@ -11,6 +12,10 @@ const RecipesList = ({ recipes }) => {
       ))}
     </ul>
   );
+};
+
+RecipesList.propTypes = {
+  recipes: PropTypes.array.isRequired
 };
 
 export default RecipesList;

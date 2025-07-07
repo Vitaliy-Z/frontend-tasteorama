@@ -1,23 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+
 import { fetchRecipesById } from "../redux/recipes/operations.js";
 import {
-  selectCurrentRecipes,
   selectRecipesError,
-  selectRecipesIsLoading
+  selectRecipesIsLoadingCurrentRecipe
 } from "../redux/recipes/selectors.js";
+
 import NotFound from "../components/RecipeViewPage/NotFound/NotFound.jsx";
-import RecipeDetails from "../components/RecipeViewPage/RecipeDetails/RecipeDetails.jsx";
+const RecipeDetails = lazy(() =>
+  import("../components/RecipeViewPage/RecipeDetails/RecipeDetails.jsx")
+);
 import Loader from "../components/shared/Loader/Loader";
 
 const RecipeViewPage = () => {
   const { recipeId } = useParams();
   const dispatch = useDispatch();
 
-  const recipe = useSelector(selectCurrentRecipes);
   const error = useSelector(selectRecipesError);
-  const isLoading = useSelector(selectRecipesIsLoading);
+  const isLoading = useSelector(selectRecipesIsLoadingCurrentRecipe);
 
   useEffect(() => {
     if (recipeId) {
@@ -27,9 +29,12 @@ const RecipeViewPage = () => {
 
   if (isLoading) return <Loader />;
   if (error) return <NotFound />;
-  if (!recipe) return <NotFound />;
 
-  return <RecipeDetails recipe={recipe} />;
+  return (
+    <Suspense fallback={<Loader />}>
+      <RecipeDetails />
+    </Suspense>
+  );
 };
 
 export default RecipeViewPage;

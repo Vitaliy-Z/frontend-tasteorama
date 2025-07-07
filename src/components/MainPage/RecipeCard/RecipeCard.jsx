@@ -7,8 +7,8 @@ import { RiDeleteBin4Line } from "react-icons/ri";
 
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite,
-} from "../../redux/recipes/operations";
+  fetchDeleteRecipesFromFavorite
+} from "../../../redux/recipes/operations";
 
 export default function RecipeCard({ recipe }) {
   const { _id, title, description, thumb, time, calories, isFavorite } = recipe;
@@ -41,7 +41,9 @@ export default function RecipeCard({ recipe }) {
 
       <div>
         <p className={css.description}>{description}</p>
-        <p className={css.calories}>{calories ? `~${calories} kcal` : "— kcal"}</p>
+        <p className={css.calories}>
+          {calories ? `~${calories} kcal` : "— kcal"}
+        </p>
       </div>
 
       <div className={css.actions}>

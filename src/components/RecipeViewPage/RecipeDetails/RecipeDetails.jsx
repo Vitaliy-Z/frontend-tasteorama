@@ -1,27 +1,38 @@
-import { lazy } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../../redux/auth/selectors.js";
 
-const GeneralInfo = lazy("../GeneralInfo/GeneralInfo.jsx");
-const AboutSection = lazy("../AboutSection/AboutSection.jsx");
-const IngredientsRecipeViewPage = lazy(
-  "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx"
-);
-const StepsSections = lazy("../StepsSections/StepsSections.jsx");
-const Icon = lazy("../../shared/Icon/Icon.jsx");
+import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
+
+import NotFound from "../NotFound/NotFound.jsx";
+import Icon from "../../shared/Icon/Icon.jsx";
+import GeneralInfo from "../GeneralInfo/GeneralInfo.jsx";
+import AboutSection from "../AboutSection/AboutSection.jsx";
+import IngredientsRecipeViewPage from "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx";
+import StepsSections from "../StepsSections/StepsSections.jsx";
+
+// const GeneralInfo = lazy("../GeneralInfo/GeneralInfo.jsx");
+// const AboutSection = lazy("../AboutSection/AboutSection.jsx");
+// const IngredientsRecipeViewPage = lazy(
+//   "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx"
+// );
+// const StepsSections = lazy("../StepsSections/StepsSections.jsx");
 
 import styles from "./RecipeDetails.module.css";
 
-const RecipeDetails = ({ recipe }) => {
+const RecipeDetails = () => {
   const navigate = useNavigate();
   const isLoggedIn = useSelector(selectUser);
+  const recipe = useSelector(selectCurrentRecipes);
+
   const handleFavoriteClick = () => {
     if (!isLoggedIn) {
       navigate("/login");
       return;
     }
   };
+
+  if (!recipe) return <NotFound />;
 
   return (
     <>
