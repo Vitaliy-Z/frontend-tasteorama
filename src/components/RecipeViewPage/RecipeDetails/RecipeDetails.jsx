@@ -1,3 +1,4 @@
+import { lazy } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../../redux/auth/selectors.js";
@@ -6,17 +7,13 @@ import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
 
 import NotFound from "../NotFound/NotFound.jsx";
 import Icon from "../../shared/Icon/Icon.jsx";
-import GeneralInfo from "../GeneralInfo/GeneralInfo.jsx";
-import AboutSection from "../AboutSection/AboutSection.jsx";
-import IngredientsRecipeViewPage from "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx";
-import StepsSections from "../StepsSections/StepsSections.jsx";
 
-// const GeneralInfo = lazy("../GeneralInfo/GeneralInfo.jsx");
-// const AboutSection = lazy("../AboutSection/AboutSection.jsx");
-// const IngredientsRecipeViewPage = lazy(
-//   "../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx"
-// );
-// const StepsSections = lazy("../StepsSections/StepsSections.jsx");
+const GeneralInfo = lazy(() => import("../GeneralInfo/GeneralInfo.jsx"));
+const AboutSection = lazy(() => import("../AboutSection/AboutSection.jsx"));
+const IngredientsRecipeViewPage = lazy(
+  import("../IngredientsRecipeViewPage/IngredientsRecipeViewPage.jsx")
+);
+const StepsSections = lazy(() => import("../StepsSections/StepsSections.jsx"));
 
 import styles from "./RecipeDetails.module.css";
 
@@ -35,7 +32,7 @@ const RecipeDetails = () => {
   if (!recipe) return <NotFound />;
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <img
         src={recipe.thumb || recipe.imageUrl}
         alt={recipe.title}
@@ -57,7 +54,7 @@ const RecipeDetails = () => {
           <StepsSections instructions={recipe.instructions} />
         </div>
       </div>
-    </>
+    </Suspense>
   );
 };
 export default RecipeDetails;
