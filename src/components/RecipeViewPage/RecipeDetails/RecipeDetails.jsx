@@ -42,7 +42,7 @@ const RecipeDetails = () => {
           <GeneralInfo category={recipe.category} time={recipe.time} />
           <button className={styles.saveButton} onClick={handleFavoriteClick}>
             Save
-            <Icon name="bookmarkicon" className={styles.icon} />
+            <Icon name="bookmarkicon" classname={styles.icon} />
           </button>
         </div>
         <div className={styles.leftContent}>

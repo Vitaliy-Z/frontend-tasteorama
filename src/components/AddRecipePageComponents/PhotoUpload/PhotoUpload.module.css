@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .cameraIcon {
@@ -32,6 +33,11 @@
   cursor: pointer;
   top: 0;
   left: 0;
+}
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .uploadArea {
