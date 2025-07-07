@@ -1,5 +1,4 @@
-import React from "react";
-import AddRecipeForm from "../components/AddRecipePageComponents/AddRecipeForm/AddRecipeForm";
+import AddRecipeForm from "../components/AddRecipePage/AddRecipeForm/AddRecipeForm.jsx";
 
 const AddRecipePage = () => {
   return <AddRecipeForm />;

@@ -116,7 +116,11 @@ const recipesSlice = createSlice({
       })
       .addCase(fetchOwnRecipes.fulfilled, (state, { payload }) => {
         state.error = null;
-        state.items = payload;
+        state.items = payload.data;
+        state.page = payload.page;
+        state.perPage = payload.perPage;
+        state.totalItems = payload.totalItems;
+        state.totalPages = payload.totalPages;
         state.isLoadingOwnRecipes = false;
       })
       .addCase(fetchOwnRecipes.rejected, (state, action) => {

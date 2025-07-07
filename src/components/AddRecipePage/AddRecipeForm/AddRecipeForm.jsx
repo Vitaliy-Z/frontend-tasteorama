@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import { fetchAddRecipe } from "../../../redux/recipes/operations";
+import { selectRecipesIsLoadingAddRecipe } from "../../../redux/recipes/selectors";
+
 import GeneralInfoForm from "../GeneralInfoForm/GeneralInfoForm.jsx";
 import IngredientsForm from "../IngredientsForm/IngredientsForm.jsx";
 import InstructionsForm from "../InstructionsForm/InstructionsForm.jsx";
-import PhotoUpload from "../../AddRecipePageComponents/PhotoUpload/PhotoUpload.jsx";
-import { fetchAddRecipe } from "../../../redux/recipes/operations";
-import { selectRecipesIsLoadingAddRecipe } from "../../../redux/recipes/selectors";
+import PhotoUpload from "../PhotoUpload/PhotoUpload.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
 
 import styles from "./AddRecipeForm.module.css";
