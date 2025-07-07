@@ -18,9 +18,7 @@ import Loader from "../shared/Loader/Loader.jsx";
 const MainPage = lazy(() => import("../../pages/MainPage.jsx"));
 const RecipeViewPage = lazy(() => import("../../pages/RecipeViewPage.jsx"));
 const AddRecipePage = lazy(() => import("../../pages/AddRecipePage.jsx"));
-const ProfilePage = lazy(() =>
-  import("../../pages/ProfilePage/ProfilePage.jsx")
-);
+const ProfilePage = lazy(() => import("../../pages/ProfilePage.jsx"));
 const AuthPage = lazy(() => import("../../pages/AuthPage.jsx"));
 
 const App = () => {
