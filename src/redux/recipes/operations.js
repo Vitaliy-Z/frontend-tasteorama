@@ -12,6 +12,17 @@ export const fetchRecipes = createAsyncThunk(
     }
   }
 );
+export const loadMoreRecipes = createAsyncThunk(
+  "recipes/loadMoreRecipes",
+  async (queryParams = {}, thunkAPI) => {
+    try {
+      const { data } = await apiClient.get("/recipes", { params: queryParams });
+      return data.data;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err);
+    }
+  }
+);
 export const fetchRecipesById = createAsyncThunk(
   "recipes/fetchRecipesById",
   async (recipeId, thunkAPI) => {

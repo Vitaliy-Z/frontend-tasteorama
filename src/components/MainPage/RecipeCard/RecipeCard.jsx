@@ -7,8 +7,8 @@ import { RiDeleteBin4Line } from "react-icons/ri";
 
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite,
-} from "../../redux/recipes/operations";
+  fetchDeleteRecipesFromFavorite
+} from "../../../redux/recipes/operations";
 
 export default function RecipeCard({ recipe }) {
   const { _id, title, description, thumb, time, calories, isFavorite } = recipe;

@@ -5,7 +5,7 @@ import IngredientsForm from "../IngredientsForm/IngredientsForm.jsx";
 import InstructionsForm from "../InstructionsForm/InstructionsForm.jsx";
 import PhotoUpload from "../../AddRecipePageComponents/PhotoUpload/PhotoUpload.jsx";
 import { fetchAddRecipe } from "../../../redux/recipes/operations";
-import { selectRecipesIsLoading } from "../../../redux/recipes/selectors";
+import { selectRecipesIsLoadingAddRecipe } from "../../../redux/recipes/selectors";
 import Loader from "../../shared/Loader/Loader.jsx";
 
 import styles from "./AddRecipeForm.module.css";
@@ -25,7 +25,7 @@ const AddRecipeForm = () => {
   const [recipe, setRecipe] = useState(initialRecipeState);
   const dispatch = useDispatch();
 
-  const isLoading = useSelector(selectRecipesIsLoading);
+  const isLoading = useSelector(selectRecipesIsLoadingAddRecipe);
 
   const handleSubmit = (e) => {
     e.preventDefault();

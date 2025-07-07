@@ -47,21 +47,21 @@ const authSlice = createSlice({
       })
       .addCase(fetchLogoutUser.rejected, handleError)
 
-      .addCase(fetchAddRecipesToFavorite.pending, handlePending)
-      .addCase(fetchAddRecipesToFavorite.fulfilled, (state, { payload }) => {
+      .addCase(fetchAddRecipesToFavorite.pending, (state) => {
         state.error = null;
+      })
+      .addCase(fetchAddRecipesToFavorite.fulfilled, (state, { payload }) => {
         state.user = payload;
-        state.isLoading = false;
       })
       .addCase(fetchAddRecipesToFavorite.rejected, handleError)
 
-      .addCase(fetchDeleteRecipesFromFavorite.pending, handlePending)
+      .addCase(fetchDeleteRecipesFromFavorite.pending, (state) => {
+        state.error = null;
+      })
       .addCase(
         fetchDeleteRecipesFromFavorite.fulfilled,
         (state, { payload }) => {
-          state.error = null;
           state.user = payload;
-          state.isLoading = false;
         }
       )
       .addCase(fetchDeleteRecipesFromFavorite.rejected, handleError)

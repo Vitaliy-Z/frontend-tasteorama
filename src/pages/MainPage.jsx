@@ -1,88 +1,58 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import SearchBox from "../components/MainPage/SearchBox";
-import Filters from "../components/MainPage/Filters";
-import RecipesList from "../components/MainPage/RecipesList";
-import LoadMoreBtn from "../components/MainPage/LoadMoreBtn";
+import { fetchRecipes, loadMoreRecipes } from "../redux/recipes/operations";
+import { fetchCategories } from "../redux/categories/operations";
+import { fetchIngredients } from "../redux/ingredients/operations";
+import {
+  selectRecipesItems,
+  selectRecipesPage,
+  selectRecipesIsLoadingAllRecipes,
+  selectRecipesIsLoadingMoreRecipes
+} from "../redux/recipes/selectors.js";
+import { selectFilterByName } from "../redux/filters/selectors.js";
 
-import mockRecipes from "../api/mockData/recipes.json";
-import categoriesData from "../api/mockData/categories.json";
-import ingredientsData from "../api/mockData/ingredients.json";
+import { setPage } from "../redux/recipes/slice.js";
 
-const PER_PAGE = 12;
+import Loader from "../components/shared/Loader/Loader.jsx";
+import SearchBox from "../components/MainPage/SearchBox/SearchBox.jsx";
+import Filters from "../components/MainPage/Filters/Filters.jsx";
+import RecipesList from "../components/MainPage/RecipesList/RecipesList.jsx";
+import LoadMoreBtn from "../components/MainPage/LoadMoreBtn/LoadMoreBtn.jsx";
 
 const MainPage = () => {
+  const dispatch = useDispatch();
 
-  const [recipes, setRecipes] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [ingredients, setIngredients] = useState([]);
+  const recipes = useSelector(selectRecipesItems);
+  const isLoadingAllRecipes = useSelector(selectRecipesIsLoadingAllRecipes);
+  const isLoadingMoreRecipes = useSelector(selectRecipesIsLoadingMoreRecipes);
+  const page = useSelector(selectRecipesPage);
 
-  const [filterByName, setFilterByName] = useState("");
-  const [filterByCategory, setFilterByCategory] = useState("");
-  const [filterByIngredients, setFilterByIngredients] = useState("");
-
-  const [visibleCount, setVisibleCount] = useState(PER_PAGE);
+  const filterByName = useSelector(selectFilterByName);
 
   useEffect(() => {
-    setRecipes(mockRecipes);
-    setCategories(categoriesData);       
-    setIngredients(ingredientsData);     
-  }, []);
-
-  const filteredRecipes = recipes.filter((recipe) => {
-    const matchName = recipe.title.toLowerCase().includes(filterByName.toLowerCase());
-    const matchCategory = filterByCategory ? recipe.category === filterByCategory : true;
-    const matchIngredients = filterByIngredients
-      ? recipe.ingredients.some((ing) => ing.name === filterByIngredients)
-      : true;
-    return matchName && matchCategory && matchIngredients;
-  });
-
-  const visibleRecipes = filteredRecipes.slice(0, visibleCount);
+    dispatch(fetchRecipes());
+    dispatch(fetchCategories());
+    dispatch(fetchIngredients());
+  }, [dispatch]);
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + PER_PAGE);
-  };
-
-  const handleClearFilters = () => {
-    setFilterByName("");
-    setFilterByCategory("");
-    setFilterByIngredients("");
-    setVisibleCount(PER_PAGE);
+    dispatch(setPage(page + 1));
+    dispatch(loadMoreRecipes({ page: page + 1, title: filterByName }));
   };
 
   return (
-    <main>
-      <SearchBox
-        onSearch={(query) => {
-          setFilterByName(query);
-          setVisibleCount(PER_PAGE);
-        }}
-      />
+    <>
+      <SearchBox />
+      <Filters />
+      {isLoadingAllRecipes ? <Loader /> : <RecipesList recipes={recipes} />}
 
-      <Filters
-        recipesCount={filteredRecipes.length}
-        filterByCategory={filterByCategory}
-        setFilterByCategory={setFilterByCategory}
-        filterByIngredients={filterByIngredients}
-        setFilterByIngredients={setFilterByIngredients}
-        clearFilters={handleClearFilters}
-        categories={categories}
-        ingredients={ingredients}
-      />
-
-      {visibleRecipes.length > 0 ? (
-        <>
-          <RecipesList recipes={visibleRecipes} />
-
-          {visibleRecipes.length < filteredRecipes.length && (
-            <LoadMoreBtn onClick={handleLoadMore} />
-          )}
-        </>
+      {isLoadingMoreRecipes ? (
+        <Loader />
       ) : (
-        <p>Recipe not found</p>
+        <LoadMoreBtn onClick={handleLoadMore} />
       )}
-    </main>
+    </>
   );
 };
 
