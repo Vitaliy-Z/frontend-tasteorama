@@ -8,11 +8,12 @@ import {
   selectRecipesIsLoadingCurrentRecipe
 } from "../redux/recipes/selectors.js";
 
+import Loader from "../components/shared/Loader/Loader";
 import NotFound from "../components/RecipeViewPage/NotFound/NotFound.jsx";
+
 const RecipeDetails = lazy(() =>
   import("../components/RecipeViewPage/RecipeDetails/RecipeDetails.jsx")
 );
-import Loader from "../components/shared/Loader/Loader";
 
 const RecipeViewPage = () => {
   const { recipeId } = useParams();
