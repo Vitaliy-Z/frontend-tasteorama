@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title{
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.recipesCount {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.filtersRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.resetButton {
+  height: 19px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.resetButton:hover {
+  color: #595d62;
+  border-bottom-color: #595d62;
+}
+
+.select {
+  max-width: 179px;
+  height: 33px;
+  padding: 4px 8px;
+  border: 1px solid var(--Light-gray, rgba(217, 217, 217, 1));
+  border-radius: 0px;
+  background-color: #fff;
+  color: #595d62;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filtersDropdownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  width: fit-content;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  width: 80px;
+  height: 28px;
+  padding: 0 8px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttonText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #000;
+}
+
+.icon {
+  font-size: 12px;
+  color: #000;
+  border-radius: 50%;
+  border-color:black;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* === Mobile === */
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 24px;
+  }
+
+  .resetButton {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+}
+
+/* === Tablet === */
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 48px 32px 16px;
+  }
+
+  .resetButton {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+}
+
+/* === Desktop === */
+@media screen and (min-width: 1440px) {
+  .wrapper{
+  padding: 48px 108px 22px; 
+  }
+}
