@@ -41,7 +41,9 @@ export default function RecipeCard({ recipe }) {
 
       <div>
         <p className={css.description}>{description}</p>
-        <p className={css.calories}>{calories ? `~${calories} kcal` : "— kcal"}</p>
+        <p className={css.calories}>
+          {calories ? `~${calories} kcal` : "— kcal"}
+        </p>
       </div>
 
       <div className={css.actions}>
