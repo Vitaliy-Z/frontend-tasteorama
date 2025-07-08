@@ -4,13 +4,13 @@
   justify-content: center;
   gap: 24px;
   list-style: none;
-  margin: 0;
+  margin-bottom: 24px;
 }
 
 /* Mobile */
 
 @media screen and (max-width: 767px) {
-  .list > li {
+  .list>li {
     width: 100%;
     max-width: 361px;
   }
@@ -19,8 +19,9 @@
 /* Tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .list > li {
-    flex: 0 1 calc((100% - 24px) / 2); /* 2 колонки, 1 gap */
+  .list>li {
+    flex: 0 1 calc((100% - 24px) / 2);
+    /* 2 колонки, 1 gap */
     max-width: 336px;
   }
 }
@@ -28,8 +29,9 @@
 /* Desktop */
 
 @media screen and (min-width: 1440px) {
-  .list > li {
-    flex: 0 1 calc((100% - 3 * 24px) / 4); /* 4 колонки, 3 gap */
+  .list>li {
+    flex: 0 1 calc((100% - 3 * 24px) / 4);
+    /* 4 колонки, 3 gap */
     max-width: 288px;
   }
 }
