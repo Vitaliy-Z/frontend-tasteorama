@@ -28,6 +28,23 @@
   border-color: var(--black);
 }
 
+.profileTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.recipesCount {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--black);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.filtersWrapper {
+  flex-shrink: 1;
+}
+
 @media (min-width: 768px) {
   .tab {
     font-size: 12px;
