@@ -27,6 +27,10 @@ export default function RecipeCard({ recipe }) {
   };
 
   const handleFavoriteClick = () => {
+    if (!user) {
+      navigate("/auth/login");
+      return;
+    }
     if (isFavorite) {
       dispatch(fetchDeleteRecipesFromFavorite(_id));
     } else {

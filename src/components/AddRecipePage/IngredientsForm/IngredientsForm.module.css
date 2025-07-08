@@ -106,11 +106,16 @@
   display: block;
 }
 .buttonAddingr {
+  border-radius: 6px;
+  border: none;
+  background-color: var(--light-brown);
+  color: var(--white);
   margin-bottom: 32px;
 }
 .buttonAddingr:disabled {
   background-color: var(--light-gray);
   color: var(--gray);
+  cursor: not-allowed;
 }
 .deleteIcon {
   display: none;
