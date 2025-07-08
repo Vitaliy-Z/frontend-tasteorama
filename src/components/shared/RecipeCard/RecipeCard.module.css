@@ -40,22 +40,24 @@
 }
 
 .icon {
-  font-size: 24px;
+  width: 14px;
+  height: 14px;
+  fill: transparent;
+  stroke: var(--black);
   flex-shrink: 0;
 }
 
 .time {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   font-size: 12px;
   font-weight: 600;
   color: #000;
   background-color: #fff;
   border-radius: 8px;
-  padding: 2px 8px 2px 4px;
-  width: 53px;
-  height: 28px;
+  padding: 6px 8px;
 }
 
 .description {
@@ -107,16 +109,11 @@
   margin: 0 auto;
 }
 
-.learnMoreBtn :hover {
-  background-color: #d9d9d9;
+.learnMoreBtn:hover {
+  border-color: var(--light-brown);
 }
 
-.learnMoreBtn :focus {
-  background-color: #d9d9d9;
-  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
-}
-
-.learnMoreBtn :disabled {
+.learnMoreBtn:disabled {
   background-color: #d9d9d9;
   box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
   opacity: 0.3;
@@ -134,21 +131,26 @@
   background: transparent;
   font-size: 24px;
   cursor: pointer;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
   color: #000;
   margin: 0 auto;
 }
 
-.favoriteBtn:not(.active):hover,
-.favoriteBtn:not(.active):focus {
-  border-color: #ff6b6b;
-  color: #ff6b6b;
+.favoriteBtn:hover {
+  border-color: var(--light-brown);
 }
 
-.active {
-  color: #fff;
-  border: none;
-  background-color: #ff6b6b;
+.iconSave {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: var(--black);
+}
+
+.iconSaveFavorite {
+  fill: var(--light-brown);
+  stroke: var(--light-brown);
 }
 
 .smallWhite {
@@ -163,7 +165,6 @@
   cursor: pointer;
 }
 
-
 @media (min-width: 768px) {
   .card {
     width: 339px;
@@ -175,15 +176,12 @@
   .titleRow {
     height: 58px;
   }
-  .time {
-    padding: 2px 0px 0px 0px;
-    height: 30px;
-  }
+
   .calories {
     font-size: 16px;
   }
 
-  .learnMoreBtn  {
+  .learnMoreBtn {
     width: 267px;
   }
 }
@@ -201,7 +199,7 @@
     height: 30px;
   }
 
-  .learnMoreBtn  {
+  .learnMoreBtn {
     width: 216px;
   }
 }
