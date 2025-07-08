@@ -13,14 +13,14 @@ import Loader from "../../shared/Loader/Loader.jsx";
 import styles from "./AddRecipeForm.module.css";
 
 const initialRecipeState = {
-  title: "",
-  description: "",
-  time: "",
-  calories: "",
-  ingredients: [],
-  instructions: "",
-  thumb: null,
-  category: null
+  name: "",
+  decr: "",
+  cookiesTime: "",
+  cals: "",
+  category: null,
+  ingredient: [],
+  instruction: "",
+  recipeImg: null
 };
 
 const AddRecipeForm = () => {
@@ -31,7 +31,18 @@ const AddRecipeForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(fetchAddRecipe(recipe));
+
+    const formData = new FormData();
+    formData.append("name", recipe.name);
+    formData.append("decr", recipe.decr);
+    formData.append("cookiesTime", recipe.cookiesTime);
+    formData.append("cals", recipe.cals);
+    formData.append("category", recipe.category);
+    formData.append("ingredient", JSON.stringify(recipe.ingredient));
+    formData.append("instruction", recipe.instruction);
+    formData.append("recipeImg", recipe.recipeImg);
+
+    dispatch(fetchAddRecipe(formData));
     setRecipe(initialRecipeState);
   };
 
@@ -44,31 +55,31 @@ const AddRecipeForm = () => {
             <div className={styles.rightSide}>
               <PhotoUpload
                 onChange={(value) =>
-                  setRecipe((prev) => ({ ...prev, thumb: value }))
+                  setRecipe((prev) => ({ ...prev, recipeImg: value }))
                 }
               />
             </div>
             <div className={styles.leftContent}>
               <GeneralInfoForm recipe={recipe} setRecipe={setRecipe} />
               <IngredientsForm
-                ingredients={recipe.ingredients}
+                ingredients={recipe.ingredient}
                 onAddIngredient={(value) =>
                   setRecipe((prev) => ({
                     ...prev,
-                    ingredients: [...prev.ingredients, value]
+                    ingredient: [...prev.ingredient, value]
                   }))
                 }
                 onRemoveIngredient={(index) =>
                   setRecipe((prev) => ({
                     ...prev,
-                    ingredients: prev.ingredients.filter((_, i) => i !== index)
+                    ingredient: prev.ingredient.filter((_, i) => i !== index)
                   }))
                 }
               />
               <InstructionsForm
-                instructions={recipe.instructions}
+                instructions={recipe.instruction}
                 onUpdateInstructions={(value) =>
-                  setRecipe((prev) => ({ ...prev, instructions: value }))
+                  setRecipe((prev) => ({ ...prev, instruction: value }))
                 }
               />
               {isLoading ? (

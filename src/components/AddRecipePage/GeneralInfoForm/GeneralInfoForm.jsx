@@ -21,9 +21,9 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
           className={styles.inputTitle}
           type="text"
           placeholder="Enter the name of your recipe"
-          value={recipe.title}
+          value={recipe.name}
           onChange={(e) =>
-            setRecipe((state) => ({ ...state, title: e.target.value }))
+            setRecipe((state) => ({ ...state, name: e.target.value }))
           }
         />
       </label>
@@ -31,9 +31,9 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
         Recipe Description
         <textarea
           placeholder="Enter a brief description of your recipe"
-          value={recipe.description}
+          value={recipe.decr}
           onChange={(e) =>
-            setRecipe((state) => ({ ...state, description: e.target.value }))
+            setRecipe((state) => ({ ...state, decr: e.target.value }))
           }
         />
       </label>
@@ -42,9 +42,12 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
         <input
           className={styles.inputCookin}
           type="number"
-          value={recipe.time}
+          value={recipe.cookiesTime}
           onChange={(e) =>
-            setRecipe((state) => ({ ...state, time: e.target.value }))
+            setRecipe((state) => ({
+              ...state,
+              cookiesTime: Number(e.target.value)
+            }))
           }
         />
       </label>
@@ -52,11 +55,14 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
         <label>
           Calories
           <input
-            type="text"
-            placeholder="150 cals"
-            value={recipe.calories}
+            type="number"
+            placeholder="150"
+            value={recipe.cals}
             onChange={(e) =>
-              setRecipe((state) => ({ ...state, calories: e.target.value }))
+              setRecipe((state) => ({
+                ...state,
+                cals: Number(e.target.value)
+              }))
             }
           />
         </label>
