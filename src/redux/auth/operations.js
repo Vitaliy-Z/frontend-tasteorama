@@ -53,7 +53,6 @@ export const fetchUser = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const dataUser = await apiClient.get("/users");
-      console.log(" dataUser:", dataUser);
       const user = dataUser.data.data;
       return user;
     } catch (err) {
