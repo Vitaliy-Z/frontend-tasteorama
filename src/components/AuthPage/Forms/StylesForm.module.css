@@ -95,7 +95,15 @@
   justify-content: center;
 }
 
+.icon {
+  width: 16px;
+  height: 16px;
+}
 
+.eyeIcon {
+  fill: none;
+  stroke: var(--black);
+}
 
 
 .checkboxInput {
