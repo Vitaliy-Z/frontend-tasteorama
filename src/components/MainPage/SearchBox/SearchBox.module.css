@@ -116,3 +116,11 @@
     padding: 0;
   }
 }
+
+/* === Desktop === */
+
+@media screen and (min-width: 1024px) {
+  .area {
+    padding: 128px 108px;
+  }
+}
