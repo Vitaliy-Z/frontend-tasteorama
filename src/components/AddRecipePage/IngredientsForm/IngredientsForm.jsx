@@ -29,7 +29,7 @@ const IngredientsForm = ({
 
   return (
     <section className={styles.sectionIngr}>
-      <h3>Ingredients</h3>
+      <h3 className={styles.sectionIngrTitle}>Ingredients</h3>
       <div className={styles.inputRow}>
         <label>
           Name
@@ -48,7 +48,7 @@ const IngredientsForm = ({
           </select>
         </label>
 
-        <label>
+        <label className={styles.label}>
           Amount
           <input
             type="text"

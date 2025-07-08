@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
 import { GrFilter } from "react-icons/gr";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+
+// import { AiOutlineClose } from "react-icons/ai";
 import css from "./Filters.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
   selectRecipesPage,
-  selectRecipesTotalItems
+  selectRecipesTotalItems,
 } from "../../../redux/recipes/selectors.js";
 import {
   selectFilterByCategory,
   selectFilterByIngredients,
-  selectFilterByName
+  selectFilterByName,
 } from "../../../redux/filters/selectors.js";
 import {
   setFilterByCategory,
-  setFilterByIngredients
+  setFilterByIngredients,
 } from "../../../redux/filters/slice.js";
 import { selectCategories } from "../../../redux/categories/selectors.js";
 import { selectIngredients } from "../../../redux/ingredients/selectors.js";
@@ -56,7 +58,7 @@ const Filters = () => {
         page,
         title: searchQuery,
         category,
-        ingredients: filterByIngredients
+        ingredients: filterByIngredients,
       })
     );
   };
@@ -69,14 +71,14 @@ const Filters = () => {
         page,
         title: searchQuery,
         category: filterByCategory,
-        ingredients: ingredient
+        ingredients: ingredient,
       })
     );
   };
 
   return (
     <div className={css.wrapper}>
-      <h1 className={css.title}>Recipes</h1>
+      <h2 className={css.title}>Recipes</h2>
 
       <div className={css.topBar}>
         <p className={css.recipesCount}>{recipesCount} recipes found</p>
@@ -89,7 +91,7 @@ const Filters = () => {
             >
               <span className={css.buttonText}>Filters</span>
               {showDropdown ? (
-                <AiOutlineClose className={css.icon} />
+                <AiOutlineCloseCircle className={css.icon} />
               ) : (
                 <GrFilter className={css.icon} />
               )}
