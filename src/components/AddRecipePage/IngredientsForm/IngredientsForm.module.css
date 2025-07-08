@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 32px;
 }
-.sectionIngr h3 {
+.sectionIngrTitle {
   font-weight: 600;
   font-size: 24px;
   color: var(--black);
@@ -31,23 +31,6 @@
   color: var(--gray);
 }
 
-button {
-  background-color: #9b6c43;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 16px;
-  transition: background-color 0.3s ease;
-  display: block;
-  width: 100%;
-}
-
-button:hover {
-  background-color: #9b6c43;
-}
 .removeIngr {
   display: block;
   width: 100%;
@@ -106,7 +89,7 @@ button:hover {
   background-color: #fff;
 }
 
-li button {
+.deleteIcon {
   background-color: var(--light-brown);
   padding: 6px 10px;
   font-size: 0.9rem;
@@ -116,18 +99,23 @@ li button {
   flex-shrink: 0;
 }
 
-li button:hover {
+.deleteIcon:hover {
   background-color: #c0392b;
 }
 .inputRow {
   display: block;
 }
 .buttonAddingr {
+  border-radius: 6px;
+  border: none;
+  background-color: var(--light-brown);
+  color: var(--white);
   margin-bottom: 32px;
 }
 .buttonAddingr:disabled {
   background-color: var(--light-gray);
   color: var(--gray);
+  cursor: not-allowed;
 }
 .deleteIcon {
   display: none;
@@ -157,15 +145,15 @@ li button:hover {
     align-items: flex-end;
     gap: 24px;
   }
-  .inputRow label:first-child select {
+  .inputRow .label:first-child select {
     width: 431px;
     height: 48px;
   }
-  .inputRow label:last-child input[type="text"] {
+  .inputRow .label:last-child input[type="text"] {
     width: 249px;
     height: 46px;
   }
-  label {
+  .sectionIngr label {
     flex: 1;
   }
   .buttonAddingr {
@@ -178,7 +166,7 @@ li button:hover {
     margin-top: 16px;
     margin-bottom: 32px;
   }
-  ul {
+  .ingredientsList {
     max-width: none;
   }
 

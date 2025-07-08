@@ -17,7 +17,7 @@ import { setPage } from "../redux/recipes/slice.js";
 import Loader from "../components/shared/Loader/Loader.jsx";
 import SearchBox from "../components/MainPage/SearchBox/SearchBox.jsx";
 import Filters from "../components/MainPage/Filters/Filters.jsx";
-import RecipesList from "../components/MainPage/RecipesList/RecipesList.jsx";
+import RecipesList from "../components/shared/RecipesList/RecipesList.jsx";
 import LoadMoreBtn from "../components/MainPage/LoadMoreBtn/LoadMoreBtn.jsx";
 
 const MainPage = () => {

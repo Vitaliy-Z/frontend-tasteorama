@@ -1,13 +1,13 @@
 .card {
-  width: 361px;
-  height: 455px;
+  /* width: 361px;
+  height: 455px; */
   background-color: #faf3e0;
   border-radius: 16px;
   padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
 }
 
 .image {
@@ -20,9 +20,9 @@
 .titleRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   /* width: 337px; */
-  height: 30px;
+  /* height: 30px; */
 }
 
 .title {
@@ -36,17 +36,21 @@
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 4px;
+  /* padding: 4px; */
 }
 
 .icon {
-  font-size: 24px;
+  width: 14px;
+  height: 14px;
+  fill: transparent;
+  stroke: var(--black);
   flex-shrink: 0;
 }
 
 .time {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   font-size: 12px;
   font-weight: 600;
@@ -63,7 +67,7 @@
   font-weight: 400;
   line-height: 155%;
   color: #000;
-  margin: 8px 0 8px;
+  margin: 0 0 8px 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -75,7 +79,7 @@
 .calories {
   font-size: 14px;
   color: #333;
-  font-style: italic;
+  /* font-style: italic; */
   margin: 0;
   line-height: 155%;
 }
@@ -84,7 +88,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  gap: 8px;
+  /* margin-top: 12px; */
 }
 
 .learnMoreBtn {
@@ -107,16 +112,11 @@
   margin: 0 auto;
 }
 
-.learnMoreBtn :hover {
-  background-color: #d9d9d9;
+.learnMoreBtn:hover {
+  border-color: var(--light-brown);
 }
 
-.learnMoreBtn :focus {
-  background-color: #d9d9d9;
-  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
-}
-
-.learnMoreBtn :disabled {
+.learnMoreBtn:disabled {
   background-color: #d9d9d9;
   box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
   opacity: 0.3;
@@ -134,21 +134,26 @@
   background: transparent;
   font-size: 24px;
   cursor: pointer;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
   color: #000;
   margin: 0 auto;
 }
 
-.favoriteBtn:not(.active):hover,
-.favoriteBtn:not(.active):focus {
-  border-color: #ff6b6b;
-  color: #ff6b6b;
+.favoriteBtn:hover {
+  border-color: var(--light-brown);
 }
 
-.active {
-  color: #fff;
-  border: none;
-  background-color: #ff6b6b;
+.iconSave {
+  width: 17px;
+  height: 19px;
+  fill: transparent;
+  stroke: var(--black);
+}
+
+.iconSaveFavorite {
+  fill: var(--light-brown);
+  stroke: var(--light-brown);
 }
 
 .smallWhite {
@@ -163,27 +168,25 @@
   cursor: pointer;
 }
 
-
 @media (min-width: 768px) {
   .card {
     width: 339px;
     height: 483px;
   }
+
   .image {
     border-radius: 16px;
   }
+
   .titleRow {
     height: 58px;
   }
-  .time {
-    padding: 2px 0px 0px 0px;
-    height: 30px;
-  }
+
   .calories {
     font-size: 16px;
   }
 
-  .learnMoreBtn  {
+  .learnMoreBtn {
     width: 267px;
   }
 }
@@ -193,15 +196,17 @@
     width: 288px;
     height: 431px;
   }
+
   .image {
     border-radius: 8px;
     height: 178px;
   }
+
   .titleRow {
     height: 30px;
   }
 
-  .learnMoreBtn  {
+  .learnMoreBtn {
     width: 216px;
   }
 }

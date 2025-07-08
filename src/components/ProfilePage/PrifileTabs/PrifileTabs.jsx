@@ -2,12 +2,14 @@ import { useParams, useNavigate, Navigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-import MyRecipesList from "../../components/ProfilePage/MyRecipesList/MyRecipesList";
-import FavoritesList from "../../components/ProfilePage/FavoritesList/FavoritesList";
-import styles from "./ProfilePage.module.css";
+import MyRecipesList from "../MyRecipesList/MyRecipesList.jsx";
+import FavoritesList from "../FavoritesList/FavoritesList.jsx";
 
-const ProfilePage = () => {
+import styles from "./ProfileTabs.module.css";
+
+const PrifileTabs = () => {
   const { recipeType } = useParams();
+
   const navigate = useNavigate();
 
   const tabRoutes = ["own", "favorites"];
@@ -45,4 +47,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default PrifileTabs;

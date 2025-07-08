@@ -1,8 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../../redux/auth/selectors.js";
 
 import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
+import {
+  fetchAddRecipesToFavorite,
+  fetchDeleteRecipesFromFavorite
+} from "../../../redux/recipes/operations";
 
 import NotFound from "../NotFound/NotFound.jsx";
 import Icon from "../../shared/Icon/Icon.jsx";
@@ -13,16 +17,26 @@ import IngredientsRecipeViewPage from "../IngredientsRecipeViewPage/IngredientsR
 import StepsSections from "../StepsSections/StepsSections.jsx";
 
 import styles from "./RecipeDetails.module.css";
+import clsx from "clsx";
 
 const RecipeDetails = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectUser);
   const recipe = useSelector(selectCurrentRecipes);
 
+  const user = useSelector(selectUser);
+  const isFavorite = user?.favorites?.includes(recipe._id);
+
   const handleFavoriteClick = () => {
     if (!isLoggedIn) {
-      navigate("/login");
+      navigate("/auth/login");
       return;
+    }
+    if (isFavorite) {
+      dispatch(fetchDeleteRecipesFromFavorite(recipe._id));
+    } else {
+      dispatch(fetchAddRecipesToFavorite(recipe._id));
     }
   };
 
@@ -40,9 +54,22 @@ const RecipeDetails = () => {
       <div className={styles.recipeLayout}>
         <div className={styles.generalInfobutton}>
           <GeneralInfo category={recipe.category} time={recipe.time} />
-          <button className={styles.saveButton} onClick={handleFavoriteClick}>
+          <button
+            type="button"
+            className={styles.saveButton}
+            onClick={handleFavoriteClick}
+            aria-label={
+              isFavorite ? "Remove from favorites" : "Add to favorites"
+            }
+          >
             Save
-            <Icon name="bookmarkicon" className={styles.icon} />
+            <Icon
+              name="bookmarkicon"
+              classname={clsx(
+                styles.icon,
+                isFavorite && styles.iconSaveFavorite
+              )}
+            />
           </button>
         </div>
         <div className={styles.leftContent}>
