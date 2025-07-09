@@ -22,7 +22,11 @@ const PhotoUpload = ({ onChange }) => {
         {!imagePreview ? (
           <Icon name="photo" classname={styles.cameraIcon} />
         ) : (
-          <img src={imagePreview} alt="Preview" className={styles.previewImage} />
+          <img
+            src={imagePreview}
+            alt="Preview"
+            className={styles.previewImage}
+          />
         )}
         <input
           type="file"

@@ -1,8 +1,9 @@
+import React, { useEffect } from "react";
 import { ErrorMessage } from "formik";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../../redux/categories/operations";
 import { selectCategories } from "../../../redux/categories/selectors";
+
 import styles from "./GeneralInfoForm.module.css";
 
 const GeneralInfoForm = ({ values, setFieldValue }) => {
@@ -20,11 +21,11 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
       <label>
         Recipe Title
         <input
-          className={styles.inputTitle}
           type="text"
           placeholder="Enter recipe name"
           value={values.title}
           onChange={(e) => setFieldValue("title", e.target.value)}
+          className={styles.inputTitle}
         />
       </label>
       <ErrorMessage name="title" component="div" className={styles.error} />
@@ -37,15 +38,19 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
           onChange={(e) => setFieldValue("description", e.target.value)}
         />
       </label>
-      <ErrorMessage name="description" component="div" className={styles.error} />
+      <ErrorMessage
+        name="description"
+        component="div"
+        className={styles.error}
+      />
 
       <label>
         Cooking time (min)
         <input
-          className={styles.inputCookin}
           type="number"
           value={values.time}
           onChange={(e) => setFieldValue("time", e.target.value)}
+          className={styles.inputCookin}
         />
       </label>
       <ErrorMessage name="time" component="div" className={styles.error} />
@@ -60,7 +65,11 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
             onChange={(e) => setFieldValue("calories", e.target.value)}
           />
         </label>
-        <ErrorMessage name="calories" component="div" className={styles.error} />
+        <ErrorMessage
+          name="calories"
+          component="div"
+          className={styles.error}
+        />
 
         <label>
           Category
@@ -76,7 +85,11 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
             ))}
           </select>
         </label>
-        <ErrorMessage name="category" component="div" className={styles.error} />
+        <ErrorMessage
+          name="category"
+          component="div"
+          className={styles.error}
+        />
       </div>
     </section>
   );

@@ -12,6 +12,7 @@ export const fetchRecipes = createAsyncThunk(
     }
   },
 );
+
 export const loadMoreRecipes = createAsyncThunk(
   "recipes/loadMoreRecipes",
   async (queryParams = {}, thunkAPI) => {
@@ -23,6 +24,7 @@ export const loadMoreRecipes = createAsyncThunk(
     }
   },
 );
+
 export const fetchRecipesById = createAsyncThunk(
   "recipes/fetchRecipesById",
   async (recipeId, thunkAPI) => {
@@ -34,21 +36,20 @@ export const fetchRecipesById = createAsyncThunk(
     }
   },
 );
+
 export const fetchAddRecipe = createAsyncThunk(
   "recipes/fetchAddRecipe",
   async (newRecipe, thunkAPI) => {
     try {
-      const { data } = await apiClient.post("/recipes", newRecipe, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      // важливо: НЕ ВКАЗУЄМО headers — axios сам поставить правильний Content-Type з boundary
+      const { data } = await apiClient.post("/recipes", newRecipe);
       return data.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
   },
 );
+
 export const fetchOwnRecipes = createAsyncThunk(
   "recipes/fetchOwnRecipes",
   async (_, thunkAPI) => {
@@ -60,6 +61,7 @@ export const fetchOwnRecipes = createAsyncThunk(
     }
   },
 );
+
 export const fetchFavoriteRecipes = createAsyncThunk(
   "recipes/fetchFavoriteRecipes",
   async (_, thunkAPI) => {
@@ -71,6 +73,7 @@ export const fetchFavoriteRecipes = createAsyncThunk(
     }
   },
 );
+
 export const fetchAddRecipesToFavorite = createAsyncThunk(
   "recipes/fetchAddRecipesToFavorite",
   async (recipeId, thunkAPI) => {
@@ -82,6 +85,7 @@ export const fetchAddRecipesToFavorite = createAsyncThunk(
     }
   },
 );
+
 export const fetchDeleteRecipesFromFavorite = createAsyncThunk(
   "recipes/fetchDeleteRecipesFromFavorite",
   async (recipeId, thunkAPI) => {

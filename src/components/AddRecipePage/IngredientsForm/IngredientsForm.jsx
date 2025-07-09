@@ -22,7 +22,9 @@ const IngredientsForm = ({ values, setFieldValue }) => {
       <div className={styles.inputRow}>
         <select
           value={ingredient.name}
-          onChange={(e) => setIngredient({ ...ingredient, name: e.target.value })}
+          onChange={(e) =>
+            setIngredient({ ...ingredient, name: e.target.value })
+          }
         >
           <option value="">Select ingredient</option>
           {allIngredients.map((ing) => (
@@ -36,7 +38,9 @@ const IngredientsForm = ({ values, setFieldValue }) => {
           type="text"
           placeholder="100g"
           value={ingredient.measure}
-          onChange={(e) => setIngredient({ ...ingredient, measure: e.target.value })}
+          onChange={(e) =>
+            setIngredient({ ...ingredient, measure: e.target.value })
+          }
         />
       </div>
 
@@ -55,7 +59,11 @@ const IngredientsForm = ({ values, setFieldValue }) => {
             >
               Add Ingredient
             </button>
-            <ErrorMessage name="ingredients" component="div" className={styles.error} />
+            <ErrorMessage
+              name="ingredients"
+              component="div"
+              className={styles.error}
+            />
 
             {values.ingredients.length > 0 && (
               <ul className={styles.ingredientsList}>

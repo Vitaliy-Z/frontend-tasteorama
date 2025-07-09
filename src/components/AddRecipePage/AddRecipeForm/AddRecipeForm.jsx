@@ -1,14 +1,15 @@
 import React from "react";
 import { Formik, Form, ErrorMessage } from "formik";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAddRecipe } from "../../../redux/recipes/operations";
-import { selectRecipesIsLoading } from "../../../redux/recipes/selectors";
 import * as Yup from "yup";
+
+import { fetchAddRecipe } from "../../../redux/recipes/operations";
+import { selectRecipesIsLoadingAddRecipe } from "../../../redux/recipes/selectors";
 
 import GeneralInfoForm from "../GeneralInfoForm/GeneralInfoForm.jsx";
 import IngredientsForm from "../IngredientsForm/IngredientsForm.jsx";
 import InstructionsForm from "../InstructionsForm/InstructionsForm.jsx";
-import PhotoUpload from "../../AddRecipePageComponents/PhotoUpload/PhotoUpload.jsx";
+import PhotoUpload from "../PhotoUpload/PhotoUpload.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
 
 import styles from "./AddRecipeForm.module.css";
@@ -21,31 +22,49 @@ const initialValues = {
   category: "",
   ingredients: [],
   instructions: "",
-  thumb: null,
+  recipeImg: null,
 };
 
 const validationSchema = Yup.object({
   title: Yup.string().trim().min(2).max(100).required("Title is required"),
   description: Yup.string().trim().min(5).required("Description is required"),
-  time: Yup.number().typeError("Must be a number").positive("Must be positive").required("Time required"),
-  calories: Yup.number().typeError("Must be a number").min(0, "Cannot be negative").nullable(),
+  time: Yup.number()
+    .typeError("Must be a number")
+    .positive("Must be positive")
+    .required("Time is required"),
+  calories: Yup.number()
+    .typeError("Must be a number")
+    .min(0, "Cannot be negative")
+    .nullable(),
   category: Yup.string().required("Category is required"),
-  ingredients: Yup.array().of(
-    Yup.object({
-      name: Yup.string().required("Ingredient name required"),
-      measure: Yup.string().required("Amount required"),
-    })
-  ).min(1, "Add at least one ingredient"),
+  ingredients: Yup.array()
+    .of(
+      Yup.object({
+        name: Yup.string().required("Ingredient name required"),
+        measure: Yup.string().required("Amount required"),
+      }),
+    )
+    .min(1, "Add at least one ingredient"),
   instructions: Yup.string().trim().required("Instructions required"),
-  thumb: Yup.mixed().required("Photo is required"),
+  recipeImg: Yup.mixed().required("Photo is required"),
 });
 
 const AddRecipeForm = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectRecipesIsLoading);
+  const isLoading = useSelector(selectRecipesIsLoadingAddRecipe);
 
   const handleSubmit = (values, { resetForm }) => {
-    dispatch(fetchAddRecipe(values));
+    const formData = new FormData();
+    formData.append("name", values.title);
+    formData.append("decr", values.description);
+    formData.append("cookiesTime", values.time);
+    formData.append("cals", values.calories); 
+    formData.append("category", values.category);
+    formData.append("instruction", values.instructions);
+    formData.append("recipeImg", values.recipeImg);
+    formData.append("ingredient", JSON.stringify(values.ingredients));
+
+    dispatch(fetchAddRecipe(formData));
     resetForm();
   };
 
@@ -62,20 +81,34 @@ const AddRecipeForm = () => {
             <div className={styles.flexContainer}>
               <div className={styles.rightSide}>
                 <PhotoUpload
-                  value={values.thumb}
-                  onChange={(file) => setFieldValue("thumb", file)}
+                  value={values.recipeImg}
+                  onChange={(file) => setFieldValue("recipeImg", file)}
                 />
-                <ErrorMessage name="thumb" component="div" className={styles.error} />
+                <ErrorMessage
+                  name="recipeImg"
+                  component="div"
+                  className={styles.error}
+                />
               </div>
 
               <div className={styles.leftContent}>
-                <GeneralInfoForm values={values} setFieldValue={setFieldValue} />
-                <IngredientsForm values={values} setFieldValue={setFieldValue} />
+                <GeneralInfoForm
+                  values={values}
+                  setFieldValue={setFieldValue}
+                />
+                <IngredientsForm
+                  values={values}
+                  setFieldValue={setFieldValue}
+                />
                 <InstructionsForm
                   value={values.instructions}
                   onChange={(val) => setFieldValue("instructions", val)}
                 />
-                <ErrorMessage name="instructions" component="div" className={styles.error} />
+                <ErrorMessage
+                  name="instructions"
+                  component="div"
+                  className={styles.error}
+                />
 
                 {isLoading || isSubmitting ? (
                   <Loader />
