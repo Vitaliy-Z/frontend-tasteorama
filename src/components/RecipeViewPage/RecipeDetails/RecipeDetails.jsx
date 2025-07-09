@@ -5,7 +5,7 @@ import { selectUser } from "../../../redux/auth/selectors.js";
 import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite
+  fetchDeleteRecipesFromFavorite,
 } from "../../../redux/recipes/operations";
 
 import NotFound from "../NotFound/NotFound.jsx";
@@ -23,9 +23,11 @@ const RecipeDetails = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectUser);
+  const user = useSelector(selectUser);
   const recipe = useSelector(selectCurrentRecipes);
 
-  const user = useSelector(selectUser);
+  if (!recipe) return <NotFound />;
+
   const isFavorite = user?.favorites?.includes(recipe._id);
 
   const handleFavoriteClick = () => {
@@ -39,8 +41,6 @@ const RecipeDetails = () => {
       dispatch(fetchAddRecipesToFavorite(recipe._id));
     }
   };
-
-  if (!recipe) return <NotFound />;
 
   return (
     <>
@@ -81,4 +81,5 @@ const RecipeDetails = () => {
     </>
   );
 };
+
 export default RecipeDetails;
