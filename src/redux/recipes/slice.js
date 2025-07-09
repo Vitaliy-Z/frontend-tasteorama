@@ -6,7 +6,7 @@ import {
   fetchFavoriteRecipes,
   fetchAddRecipe,
   fetchOwnRecipes,
-  loadMoreRecipes
+  loadMoreRecipes,
 } from "./operations.js";
 import { handleError } from "../../utils/reduxUtils.js";
 
@@ -25,13 +25,13 @@ const recipesSlice = createSlice({
     isLoadingFavoriteRecipes: false,
     isLoadingAddRecipe: false,
     isLoadingOwnRecipes: false,
-    error: null
+    error: null,
   },
 
   reducers: {
     setPage: (state, { payload }) => {
       state.page = payload;
-    }
+    },
   },
 
   extraReducers: (builder) =>
@@ -126,7 +126,7 @@ const recipesSlice = createSlice({
       .addCase(fetchOwnRecipes.rejected, (state, action) => {
         state.isLoadingOwnRecipes = false;
         handleError(state, action);
-      })
+      }),
 });
 
 export const { setPage } = recipesSlice.actions;

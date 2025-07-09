@@ -9,12 +9,13 @@ import {
 
 import RecipesList from "../../shared/RecipesList/RecipesList.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
+import styles from "./FavoritesList.module.css";
 
 const FavoritesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
   const isLoadingFavoriteRecipes = useSelector(
-    selectRecipesIsLoadingFavoriteRecipes
+    selectRecipesIsLoadingFavoriteRecipes,
   );
 
   useEffect(() => {
@@ -27,7 +28,12 @@ const FavoritesList = () => {
   if (!Array.isArray(recipes) || recipes.length === 0)
     return <h3>No favorites</h3>;
 
-  return <RecipesList recipes={recipes} />;
+  return (
+    <div>
+      <p className={styles.recipesCount}>{recipes.length} recipes found</p>
+      <RecipesList recipes={recipes} />
+    </div>
+  );
 };
 
 export default FavoritesList;

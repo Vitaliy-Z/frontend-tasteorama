@@ -13,17 +13,23 @@ const successMessagesMap = new Map([
 
 // КАСТОМНІ ПОМИЛКИ
 const errorHandlersMap = new Map([
-  ["fetchLoginUser", (action) => {
-    const status = action.payload?.status;
-    const message = action.payload?.message?.toLowerCase();
-    if (status === 401) return "Wrong email or password.";
-    if (message?.includes("not registered")) return "User not found.";
-    return "Login failed.";
-  }],
+  [
+    "fetchLoginUser",
+    (action) => {
+      const status = action.payload?.status;
+      const message = action.payload?.message?.toLowerCase();
+      if (status === 401) return "Wrong email or password.";
+      if (message?.includes("not registered")) return "User not found.";
+      return "Login failed.";
+    },
+  ],
   ["fetchRegisterUser", () => "Registration failed. Try another email."],
   ["fetchLogoutUser", () => "Logout failed."],
   ["fetchAddRecipesToFavorite", () => "Failed to add recipe to favorites."],
-  ["fetchDeleteRecipesFromFavorite", () => "Failed to remove recipe from favorites."],
+  [
+    "fetchDeleteRecipesFromFavorite",
+    () => "Failed to remove recipe from favorites.",
+  ],
   ["fetchAddRecipe", () => "Failed to add recipe."],
   ["fetchFavoriteRecipes", () => "Failed to load favorite recipes."],
   ["fetchRecipes", () => "Failed to load recipes."],
@@ -44,7 +50,8 @@ export const toastMiddleware = () => (next) => (action) => {
     let errorMessage;
     for (const [key, handler] of errorHandlersMap.entries()) {
       if (action.type.includes(key)) {
-        errorMessage = typeof handler === "function" ? handler(action) : handler;
+        errorMessage =
+          typeof handler === "function" ? handler(action) : handler;
         break;
       }
     }
@@ -74,7 +81,9 @@ export const toastMiddleware = () => (next) => (action) => {
         const payload = action.payload;
         if (
           (Array.isArray(payload) && payload.length === 0) ||
-          (payload && Array.isArray(payload.recipes) && payload.recipes.length === 0)
+          (payload &&
+            Array.isArray(payload.recipes) &&
+            payload.recipes.length === 0)
         ) {
           toast.info(emptyMessage);
           break;

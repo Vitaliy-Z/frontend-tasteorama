@@ -46,7 +46,7 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
           onChange={(e) =>
             setRecipe((state) => ({
               ...state,
-              cookiesTime: Number(e.target.value)
+              cookiesTime: Number(e.target.value),
             }))
           }
         />
@@ -61,7 +61,7 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
             onChange={(e) =>
               setRecipe((state) => ({
                 ...state,
-                cals: Number(e.target.value)
+                cals: Number(e.target.value),
               }))
             }
           />
@@ -75,7 +75,7 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
               setRecipe((state) =>
                 e.target.value !== ""
                   ? { ...state, category: e.target.value }
-                  : { ...state, category: null }
+                  : { ...state, category: null },
               )
             }
           >

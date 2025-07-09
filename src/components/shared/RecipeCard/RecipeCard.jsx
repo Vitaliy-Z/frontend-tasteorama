@@ -31,7 +31,7 @@ export default function RecipeCard({ recipe }) {
 
   const handleFavoriteClick = () => {
     if (!user) {
-      setShowModal(true); // показую модалку 
+      setShowModal(true); // показую модалку
       return;
     }
 

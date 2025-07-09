@@ -67,7 +67,7 @@ const RecipeDetails = () => {
               name="bookmarkicon"
               classname={clsx(
                 styles.icon,
-                isFavorite && styles.iconSaveFavorite
+                isFavorite && styles.iconSaveFavorite,
               )}
             />
           </button>

@@ -9,7 +9,9 @@
   margin-left: -50vw;
   margin-right: -50vw;
   margin-bottom: 48px;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/bg11.jpg');
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+    url("/mob-bg@1x.webp");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -19,6 +21,13 @@
   gap: 24px;
   padding: 128px 32px 98px 32px;
   margin-top: -48px;
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+      url("/mob-bg@2x.webp");
+  }
 }
 
 .title {
@@ -79,7 +88,9 @@
 
 .button:focus {
   background-color: #9b6c43;
-  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
+  box-shadow:
+    0 0 0 6px rgba(78, 70, 180, 0.12),
+    0 0 0 2px #fff;
 }
 
 .button:focus:hover {
@@ -89,9 +100,18 @@
 /* === Tablet === */
 
 @media screen and (min-width: 768px) {
-
   .area {
     padding: 128px 32px;
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+      url("/tablet-bg@1x.webp");
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+        url("/tablet-bg@2x.webp");
+    }
   }
 
   .title {
@@ -122,5 +142,15 @@
 @media screen and (min-width: 1024px) {
   .area {
     padding: 128px 108px;
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+      url("/desktop-bg@1x.webp");
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+        url("/desktop-bg@2x.webp");
+    }
   }
 }
