@@ -1,29 +1,32 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchOwnRecipes } from "../../../redux/recipes/operations";
+import { fetchFavoriteRecipes } from "../../../redux/recipes/operations";
 import {
   selectRecipesItems,
-  selectRecipesIsLoadingOwnRecipes
+  selectRecipesIsLoadingFavoriteRecipes
 } from "../../../redux/recipes/selectors";
-import styles from "./MyRecipesList.module.css";
+
 import RecipesList from "../../shared/RecipesList/RecipesList.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
+import styles from "./FavoritesList.module.css";
 
-const MyRecipesList = () => {
+const FavoritesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
-
-  const isLoadingOwnRecipes = useSelector(selectRecipesIsLoadingOwnRecipes);
+  const isLoadingFavoriteRecipes = useSelector(
+    selectRecipesIsLoadingFavoriteRecipes
+  );
 
   useEffect(() => {
-    dispatch(fetchOwnRecipes());
+    dispatch(fetchFavoriteRecipes());
   }, [dispatch]);
 
-  if (isLoadingOwnRecipes) return <Loader />;
+  if (isLoadingFavoriteRecipes) return <Loader />;
 
+  // if (recipes.length === 0) return <h3>No favorites recipes</h3>;
   if (!Array.isArray(recipes) || recipes.length === 0)
-    return <h3>No own recipes</h3>;
+    return <h3>No favorites</h3>;
 
   return (
     <div>
@@ -33,5 +36,4 @@ const MyRecipesList = () => {
   );
 };
 
-export default MyRecipesList;
-// fix
+export default FavoritesList;
