@@ -48,7 +48,7 @@ export default function BaseInput({
                   >
                     <Icon
                       name={show ? "eye-open" : "eye-crossed"}
-                      className={css.eyeIcon}
+                      classname={css.eyeIcon}
                     />
                   </button>
                 )}

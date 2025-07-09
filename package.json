@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predev": "prettier --write .",
+    "predev": "npx prettier --write .",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
