@@ -58,8 +58,8 @@ const Filters = () => {
         page,
         title: searchQuery,
         category,
-        ingredients: filterByIngredients,
-      })
+        ingredient: filterByIngredients,
+      }),
     );
   };
 
@@ -71,8 +71,8 @@ const Filters = () => {
         page,
         title: searchQuery,
         category: filterByCategory,
-        ingredients: ingredient,
-      })
+        ingredient: ingredient,
+      }),
     );
   };
 

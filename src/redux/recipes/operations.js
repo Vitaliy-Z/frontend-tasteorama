@@ -10,7 +10,7 @@ export const fetchRecipes = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const loadMoreRecipes = createAsyncThunk(
   "recipes/loadMoreRecipes",
@@ -21,7 +21,7 @@ export const loadMoreRecipes = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const fetchRecipesById = createAsyncThunk(
   "recipes/fetchRecipesById",
@@ -32,7 +32,7 @@ export const fetchRecipesById = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const fetchAddRecipe = createAsyncThunk(
   "recipes/fetchAddRecipe",
@@ -40,27 +40,25 @@ export const fetchAddRecipe = createAsyncThunk(
     try {
       const { data } = await apiClient.post("/recipes", newRecipe, {
         headers: {
-          "Content-Type": "multipart/form-data"
-        }
+          "Content-Type": "multipart/form-data",
+        },
       });
       return data.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const fetchOwnRecipes = createAsyncThunk(
   "recipes/fetchOwnRecipes",
-  async (queryParams = {}, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
-      const { data } = await apiClient.get("/recipes/user", {
-        params: queryParams
-      });
-      return data.data;
+      const { data } = await apiClient.get("/recipes/user");
+      return data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const fetchFavoriteRecipes = createAsyncThunk(
   "recipes/fetchFavoriteRecipes",
@@ -71,7 +69,7 @@ export const fetchFavoriteRecipes = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const fetchAddRecipesToFavorite = createAsyncThunk(
   "recipes/fetchAddRecipesToFavorite",
@@ -82,7 +80,7 @@ export const fetchAddRecipesToFavorite = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 export const fetchDeleteRecipesFromFavorite = createAsyncThunk(
   "recipes/fetchDeleteRecipesFromFavorite",
@@ -93,5 +91,5 @@ export const fetchDeleteRecipesFromFavorite = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );

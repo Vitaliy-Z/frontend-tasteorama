@@ -31,7 +31,7 @@ const LoginForm = () => {
         actions.setSubmitting(false);
       }
     },
-    [dispatch, navigate, authError]
+    [dispatch, navigate, authError],
   );
 
   return (

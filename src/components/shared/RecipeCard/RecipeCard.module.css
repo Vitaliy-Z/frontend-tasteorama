@@ -118,7 +118,9 @@
 
 .learnMoreBtn:disabled {
   background-color: #d9d9d9;
-  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
+  box-shadow:
+    0 0 0 6px rgba(78, 70, 180, 0.12),
+    0 0 0 2px #fff;
   opacity: 0.3;
 }
 
@@ -134,7 +136,9 @@
   background: transparent;
   font-size: 24px;
   cursor: pointer;
-  transition: color 0.3s ease, border-color 0.3s ease,
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
     background-color 0.3s ease;
   color: #000;
   margin: 0 auto;

@@ -20,7 +20,7 @@ const initialRecipeState = {
   category: null,
   ingredient: [],
   instruction: "",
-  recipeImg: null
+  recipeImg: null,
 };
 
 const AddRecipeForm = () => {
@@ -66,13 +66,13 @@ const AddRecipeForm = () => {
                 onAddIngredient={(value) =>
                   setRecipe((prev) => ({
                     ...prev,
-                    ingredient: [...prev.ingredient, value]
+                    ingredient: [...prev.ingredient, value],
                   }))
                 }
                 onRemoveIngredient={(index) =>
                   setRecipe((prev) => ({
                     ...prev,
-                    ingredient: prev.ingredient.filter((_, i) => i !== index)
+                    ingredient: prev.ingredient.filter((_, i) => i !== index),
                   }))
                 }
               />

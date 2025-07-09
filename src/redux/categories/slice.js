@@ -8,7 +8,7 @@ const categoriesSlice = createSlice({
   initialState: {
     items: [],
     isLoading: false,
-    error: null
+    error: null,
   },
   extraReducers: (builder) =>
     builder
@@ -18,7 +18,7 @@ const categoriesSlice = createSlice({
         state.items = payload;
         state.isLoading = false;
       })
-      .addCase(fetchCategories.rejected, handleError)
+      .addCase(fetchCategories.rejected, handleError),
 });
 
 export default categoriesSlice.reducer;

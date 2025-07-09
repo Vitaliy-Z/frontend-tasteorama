@@ -8,7 +8,7 @@ import {
   selectRecipesItems,
   selectRecipesPage,
   selectRecipesIsLoadingAllRecipes,
-  selectRecipesIsLoadingMoreRecipes
+  selectRecipesIsLoadingMoreRecipes,
 } from "../redux/recipes/selectors.js";
 import { selectFilterByName } from "../redux/filters/selectors.js";
 

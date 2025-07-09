@@ -15,7 +15,7 @@ const RecipesList = ({ recipes }) => {
 };
 
 RecipesList.propTypes = {
-  recipes: PropTypes.array.isRequired
+  recipes: PropTypes.array.isRequired,
 };
 
 export default RecipesList;

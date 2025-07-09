@@ -34,8 +34,8 @@ export default function BaseInput({
                     type === "email"
                       ? "email"
                       : type === "password"
-                      ? "current-password"
-                      : "on"
+                        ? "current-password"
+                        : "on"
                   }
                   aria-invalid={hasError ? "true" : undefined}
                 />

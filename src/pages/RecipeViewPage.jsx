@@ -5,14 +5,14 @@ import { useParams } from "react-router-dom";
 import { fetchRecipesById } from "../redux/recipes/operations.js";
 import {
   selectRecipesError,
-  selectRecipesIsLoadingCurrentRecipe
+  selectRecipesIsLoadingCurrentRecipe,
 } from "../redux/recipes/selectors.js";
 
 import Loader from "../components/shared/Loader/Loader";
 import NotFound from "../components/RecipeViewPage/NotFound/NotFound.jsx";
 
-const RecipeDetails = lazy(() =>
-  import("../components/RecipeViewPage/RecipeDetails/RecipeDetails.jsx")
+const RecipeDetails = lazy(
+  () => import("../components/RecipeViewPage/RecipeDetails/RecipeDetails.jsx"),
 );
 
 const RecipeViewPage = () => {

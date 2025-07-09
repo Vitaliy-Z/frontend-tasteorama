@@ -8,7 +8,7 @@ const ingredientsSlice = createSlice({
   initialState: {
     items: [],
     isLoading: false,
-    error: null
+    error: null,
   },
   extraReducers: (builder) =>
     builder
@@ -18,7 +18,7 @@ const ingredientsSlice = createSlice({
         state.items = payload;
         state.isLoading = false;
       })
-      .addCase(fetchIngredients.rejected, handleError)
+      .addCase(fetchIngredients.rejected, handleError),
 });
 
 export default ingredientsSlice.reducer;
