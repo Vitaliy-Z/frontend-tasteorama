@@ -51,12 +51,10 @@ export const fetchAddRecipe = createAsyncThunk(
 );
 export const fetchOwnRecipes = createAsyncThunk(
   "recipes/fetchOwnRecipes",
-  async (queryParams = {}, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
-      const { data } = await apiClient.get("/recipes/user", {
-        params: queryParams
-      });
-      return data.data;
+      const { data } = await apiClient.get("/recipes/user");
+      return data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }

@@ -13,6 +13,7 @@ import Loader from "../../shared/Loader/Loader.jsx";
 const MyRecipesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
+  console.log(" recipes:", recipes);
   const isLoadingOwnRecipes = useSelector(selectRecipesIsLoadingOwnRecipes);
 
   useEffect(() => {

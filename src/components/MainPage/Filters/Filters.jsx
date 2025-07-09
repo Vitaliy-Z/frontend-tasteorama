@@ -7,16 +7,16 @@ import css from "./Filters.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
   selectRecipesPage,
-  selectRecipesTotalItems,
+  selectRecipesTotalItems
 } from "../../../redux/recipes/selectors.js";
 import {
   selectFilterByCategory,
   selectFilterByIngredients,
-  selectFilterByName,
+  selectFilterByName
 } from "../../../redux/filters/selectors.js";
 import {
   setFilterByCategory,
-  setFilterByIngredients,
+  setFilterByIngredients
 } from "../../../redux/filters/slice.js";
 import { selectCategories } from "../../../redux/categories/selectors.js";
 import { selectIngredients } from "../../../redux/ingredients/selectors.js";
@@ -58,7 +58,7 @@ const Filters = () => {
         page,
         title: searchQuery,
         category,
-        ingredients: filterByIngredients,
+        ingredient: filterByIngredients
       })
     );
   };
@@ -71,7 +71,7 @@ const Filters = () => {
         page,
         title: searchQuery,
         category: filterByCategory,
-        ingredients: ingredient,
+        ingredient: ingredient
       })
     );
   };
