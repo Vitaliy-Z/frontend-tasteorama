@@ -4,57 +4,32 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchOwnRecipes } from "../../../redux/recipes/operations";
 import {
   selectRecipesItems,
-  selectRecipesIsLoadingOwnRecipes,
-  selectRecipesPage,
-  selectRecipesTotalItems
+  selectRecipesIsLoadingOwnRecipes
 } from "../../../redux/recipes/selectors";
-import {
-  selectFilterByCategory,
-  selectFilterByIngredients
-} from "../../../redux/filters/selectors";
-
+import styles from "./MyRecipesList.module.css";
 import RecipesList from "../../shared/RecipesList/RecipesList.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
-import LoadMoreBtn from "../../MainPage/LoadMoreBtn/LoadMoreBtn.jsx";
 
 const MyRecipesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
-  console.log(" recipes:", recipes);
+
   const isLoadingOwnRecipes = useSelector(selectRecipesIsLoadingOwnRecipes);
-  const page = useSelector(selectRecipesPage);
-  const totalItems = useSelector(selectRecipesTotalItems);
-  const filterByCategory = useSelector(selectFilterByCategory);
-  const filterByIngredients = useSelector(selectFilterByIngredients);
 
   useEffect(() => {
-    dispatch(
-      fetchOwnRecipes({
-        page: 1,
-        category: filterByCategory || undefined,
-        ingredients: filterByIngredients || undefined
-      })
-    );
-  }, [dispatch, filterByCategory, filterByIngredients]);
-
-  const handleLoadMore = () => {
-    dispatch(
-      fetchOwnRecipes({
-        page: page + 1,
-        category: filterByCategory || undefined,
-        ingredients: filterByIngredients || undefined
-      })
-    );
-  };
+    dispatch(fetchOwnRecipes());
+  }, [dispatch]);
 
   if (isLoadingOwnRecipes) return <Loader />;
-  if (recipes.length === 0) return <h3>No own recipes</h3>;
+
+  if (!Array.isArray(recipes) || recipes.length === 0)
+    return <h3>No own recipes</h3>;
 
   return (
-    <>
+    <div>
+      <p className={styles.recipesCount}>{recipes.length} recipes found</p>
       <RecipesList recipes={recipes} />
-      {recipes.length < totalItems && <LoadMoreBtn onClick={handleLoadMore} />}
-    </>
+    </div>
   );
 };
 
