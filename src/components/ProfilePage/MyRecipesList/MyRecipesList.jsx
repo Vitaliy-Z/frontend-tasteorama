@@ -20,6 +20,7 @@ import LoadMoreBtn from "../../MainPage/LoadMoreBtn/LoadMoreBtn.jsx";
 const MyRecipesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
+  console.log(" recipes:", recipes);
   const isLoadingOwnRecipes = useSelector(selectRecipesIsLoadingOwnRecipes);
   const page = useSelector(selectRecipesPage);
   const totalItems = useSelector(selectRecipesTotalItems);
