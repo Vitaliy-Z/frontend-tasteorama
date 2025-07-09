@@ -22,8 +22,7 @@
   padding: 128px 32px 98px 32px;
   margin-top: -48px;
 
-  @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image:
       linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
       url("/mob-bg@2x.webp");
@@ -106,8 +105,7 @@
       linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
       url("/tablet-bg@1x.webp");
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background-image:
         linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
         url("/tablet-bg@2x.webp");
@@ -146,8 +144,7 @@
       linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
       url("/desktop-bg@1x.webp");
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background-image:
         linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
         url("/desktop-bg@2x.webp");
