@@ -5,7 +5,7 @@ import { selectUser } from "../../../redux/auth/selectors.js";
 import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite,
+  fetchDeleteRecipesFromFavorite
 } from "../../../redux/recipes/operations";
 
 import NotFound from "../NotFound/NotFound.jsx";
@@ -26,8 +26,6 @@ const RecipeDetails = () => {
   const user = useSelector(selectUser);
   const recipe = useSelector(selectCurrentRecipes);
 
-  if (!recipe) return <NotFound />;
-
   const isFavorite = user?.favorites?.includes(recipe._id);
 
   const handleFavoriteClick = () => {
@@ -41,6 +39,8 @@ const RecipeDetails = () => {
       dispatch(fetchAddRecipesToFavorite(recipe._id));
     }
   };
+
+  if (!recipe) return <NotFound />;
 
   return (
     <>
@@ -70,7 +70,7 @@ const RecipeDetails = () => {
               name="bookmarkicon"
               classname={clsx(
                 styles.icon,
-                isFavorite && styles.iconSaveFavorite,
+                isFavorite && styles.iconSaveFavorite
               )}
             />
           </button>

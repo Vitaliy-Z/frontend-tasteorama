@@ -9,7 +9,7 @@ import {
   selectRecipesPage,
   selectRecipesIsLoadingAllRecipes,
   selectRecipesIsLoadingMoreRecipes,
-  selectRecipesTotalItems,
+  selectRecipesTotalItems
 } from "../redux/recipes/selectors.js";
 import { selectFilterByName } from "../redux/filters/selectors.js";
 
@@ -29,7 +29,7 @@ const MainPage = () => {
   const isLoadingMoreRecipes = useSelector(selectRecipesIsLoadingMoreRecipes);
   const page = useSelector(selectRecipesPage);
 
-  const totalItems = useSelector(selectRecipesTotalItems); // всього рецептів
+  const totalItems = useSelector(selectRecipesTotalItems);
 
   const filterByName = useSelector(selectFilterByName);
 
@@ -44,7 +44,6 @@ const MainPage = () => {
     dispatch(loadMoreRecipes({ page: page + 1, title: filterByName }));
   };
 
-  // Кнопка є, коли  к-сть  рецептів менша за всього
   const hasMore = recipes.length < totalItems;
 
   return (

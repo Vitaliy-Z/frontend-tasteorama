@@ -20,7 +20,7 @@ export default function Header() {
   const userName = user?.name || "Guest";
 
   const handleLogout = () => {
-    setMenuOpen(false); // Закриваємо бургер-меню
+    setMenuOpen(false);
     dispatch(fetchLogoutUser());
     navigate("/");
   };
