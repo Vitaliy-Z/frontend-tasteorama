@@ -7,15 +7,14 @@ const PhotoUpload = ({ onChange }) => {
 
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-      if (file.type.includes("image")) {
-        setImagePreview(URL.createObjectURL(file));
-        onChange(file);
-      } else {
-        alert("Please upload a valid image file.");
-      }
+    if (file && file.type.includes("image")) {
+      setImagePreview(URL.createObjectURL(file));
+      onChange(file);
+    } else {
+      alert("Please upload a valid image file.");
     }
   };
+
   return (
     <>
       <h3 className={styles.titledAdd}>Upload Photo</h3>
@@ -23,11 +22,7 @@ const PhotoUpload = ({ onChange }) => {
         {!imagePreview ? (
           <Icon name="photo" classname={styles.cameraIcon} />
         ) : (
-          <img
-            src={imagePreview}
-            alt="Preview"
-            className={styles.previewImage}
-          />
+          <img src={imagePreview} alt="Preview" className={styles.previewImage} />
         )}
         <input
           type="file"

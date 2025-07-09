@@ -1,85 +1,74 @@
+import { ErrorMessage } from "formik";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../../redux/categories/operations";
 import { selectCategories } from "../../../redux/categories/selectors";
-
 import styles from "./GeneralInfoForm.module.css";
 
-const GeneralInfoForm = ({ recipe, setRecipe }) => {
+const GeneralInfoForm = ({ values, setFieldValue }) => {
   const dispatch = useDispatch();
+  const categories = useSelector(selectCategories);
+
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
-  const categories = useSelector(selectCategories);
 
   return (
     <section className={styles.sectionGeneralInfo}>
       <h3>General Information</h3>
+
       <label>
         Recipe Title
         <input
           className={styles.inputTitle}
           type="text"
-          placeholder="Enter the name of your recipe"
-          value={recipe.name}
-          onChange={(e) =>
-            setRecipe((state) => ({ ...state, name: e.target.value }))
-          }
+          placeholder="Enter recipe name"
+          value={values.title}
+          onChange={(e) => setFieldValue("title", e.target.value)}
         />
       </label>
+      <ErrorMessage name="title" component="div" className={styles.error} />
+
       <label>
-        Recipe Description
+        Description
         <textarea
-          placeholder="Enter a brief description of your recipe"
-          value={recipe.decr}
-          onChange={(e) =>
-            setRecipe((state) => ({ ...state, decr: e.target.value }))
-          }
+          placeholder="Brief description"
+          value={values.description}
+          onChange={(e) => setFieldValue("description", e.target.value)}
         />
       </label>
+      <ErrorMessage name="description" component="div" className={styles.error} />
+
       <label>
-        Cooking time in minutes
+        Cooking time (min)
         <input
           className={styles.inputCookin}
           type="number"
-          value={recipe.cookiesTime}
-          onChange={(e) =>
-            setRecipe((state) => ({
-              ...state,
-              cookiesTime: Number(e.target.value),
-            }))
-          }
+          value={values.time}
+          onChange={(e) => setFieldValue("time", e.target.value)}
         />
       </label>
+      <ErrorMessage name="time" component="div" className={styles.error} />
+
       <div className={styles.row}>
         <label>
           Calories
           <input
             type="number"
             placeholder="150"
-            value={recipe.cals}
-            onChange={(e) =>
-              setRecipe((state) => ({
-                ...state,
-                cals: Number(e.target.value),
-              }))
-            }
+            value={values.calories}
+            onChange={(e) => setFieldValue("calories", e.target.value)}
           />
         </label>
+        <ErrorMessage name="calories" component="div" className={styles.error} />
 
         <label>
           Category
           <select
-            value={recipe.category ?? "Choose category"}
-            onChange={(e) =>
-              setRecipe((state) =>
-                e.target.value !== ""
-                  ? { ...state, category: e.target.value }
-                  : { ...state, category: null },
-              )
-            }
+            value={values.category}
+            onChange={(e) => setFieldValue("category", e.target.value)}
           >
-            <option value={""}>Choose category</option>
+            <option value="">Choose category</option>
             {categories.map((cat) => (
               <option key={cat._id} value={cat.name}>
                 {cat.name}
@@ -87,6 +76,7 @@ const GeneralInfoForm = ({ recipe, setRecipe }) => {
             ))}
           </select>
         </label>
+        <ErrorMessage name="category" component="div" className={styles.error} />
       </div>
     </section>
   );
