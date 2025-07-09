@@ -58,7 +58,7 @@ const Filters = ({ hideTitle }) => {
         page,
         title: searchQuery,
         category,
-        ingredients: filterByIngredients
+        ingredient: filterByIngredients
       })
     );
   };
@@ -71,7 +71,7 @@ const Filters = ({ hideTitle }) => {
         page,
         title: searchQuery,
         category: filterByCategory,
-        ingredients: ingredient
+        ingredient: ingredient
       })
     );
   };
