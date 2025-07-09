@@ -43,7 +43,9 @@
   font-weight: 600;
   font-size: 12px;
   color: #000;
-  transition: color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
   white-space: nowrap;
   margin: 0 auto;
 }

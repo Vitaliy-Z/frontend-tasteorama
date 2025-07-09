@@ -58,7 +58,9 @@
   line-height: 1.55;
   color: var(--black);
   outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
   height: 100%;
   box-sizing: border-box;
 }
@@ -117,7 +119,9 @@
   background-color: var(--white);
   cursor: pointer;
   position: relative;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .checkboxInput:checked {
@@ -159,7 +163,10 @@
   background-color: var(--light-brown);
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
   font-weight: 600;
   font-size: 16px;
   color: var(--white);
