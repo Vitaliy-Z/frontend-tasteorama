@@ -44,13 +44,16 @@ const RecipeDetails = () => {
 
   return (
     <>
+    <div className={styles.wrapperImgh}>
+      <div className={styles.containerImg}>
       <img
         src={recipe.thumb || recipe.imageUrl}
-        alt={recipe.title}
-        className={styles.recipeImage}
-        loading="lazy"
+        alt={recipe.title} 
+        loading="lazy" 
       />
+      </div>
       <h1 className={styles.title}>{recipe.title}</h1>
+      </div>
       <div className={styles.recipeLayout}>
         <div className={styles.generalInfobutton}>
           <GeneralInfo category={recipe.category} time={recipe.time} />
