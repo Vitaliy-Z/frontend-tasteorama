@@ -9,11 +9,8 @@
   margin-left: -50vw;
   margin-right: -50vw;
   margin-bottom: 48px;
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.3)
-    ),
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
     url("/bg.webp");
   background-size: cover;
   background-position: center 25%;
@@ -84,7 +81,9 @@
 
 .button:focus {
   background-color: #9b6c43;
-  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
+  box-shadow:
+    0 0 0 6px rgba(78, 70, 180, 0.12),
+    0 0 0 2px #fff;
 }
 
 .button:focus:hover {

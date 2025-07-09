@@ -6,14 +6,14 @@ import {
   selectRecipesItems,
   selectRecipesIsLoadingOwnRecipes,
 } from "../../../redux/recipes/selectors";
-
+import styles from "./MyRecipesList.module.css";
 import RecipesList from "../../shared/RecipesList/RecipesList.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
 
 const MyRecipesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
-  console.log(" recipes:", recipes);
+
   const isLoadingOwnRecipes = useSelector(selectRecipesIsLoadingOwnRecipes);
 
   useEffect(() => {
@@ -22,11 +22,15 @@ const MyRecipesList = () => {
 
   if (isLoadingOwnRecipes) return <Loader />;
 
-  // if (recipes.length === 0) return <h3>No own recipes</h3>;
   if (!Array.isArray(recipes) || recipes.length === 0)
     return <h3>No own recipes</h3>;
 
-  return <RecipesList recipes={recipes} />;
+  return (
+    <div>
+      <p className={styles.recipesCount}>{recipes.length} recipes found</p>
+      <RecipesList recipes={recipes} />
+    </div>
+  );
 };
 
 export default MyRecipesList;
