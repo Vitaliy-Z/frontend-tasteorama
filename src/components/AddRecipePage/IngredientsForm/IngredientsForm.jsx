@@ -9,7 +9,7 @@ import styles from "./IngredientsForm.module.css";
 const IngredientsForm = ({
   ingredients,
   onAddIngredient,
-  onRemoveIngredient
+  onRemoveIngredient,
 }) => {
   const [ingredient, setIngredient] = useState({ name: "", measure: "" });
 

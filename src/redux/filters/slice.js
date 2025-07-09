@@ -5,7 +5,7 @@ const filtersSlice = createSlice({
   initialState: {
     filterByName: "",
     filterByCategory: null,
-    filterByIngredients: null
+    filterByIngredients: null,
   },
   reducers: {
     setFilterByName: (state, { payload }) => {
@@ -21,15 +21,15 @@ const filtersSlice = createSlice({
       state.filterByName = "";
       state.filterByCategory = null;
       state.filterByIngredients = null;
-    }
-  }
+    },
+  },
 });
 
 export const {
   setFilterByName,
   setFilterByCategory,
   setFilterByIngredients,
-  clearFilters
+  clearFilters,
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;

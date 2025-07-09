@@ -9,7 +9,7 @@ const IngredientsRecipeViewPage = ({ ingredients = [] }) => {
         {ingredients.length > 0 &&
           ingredients.map((item) => {
             const ingredient = ingredientsData.find(
-              (ing) => ing._id === item.id
+              (ing) => ing._id === item.id,
             );
             return (
               <li key={item.id}>

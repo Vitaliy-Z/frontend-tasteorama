@@ -11,7 +11,7 @@ export default function BaseInput({
   type = "text",
   showToggle = false,
   show,
-  onToggle
+  onToggle,
 }) {
   return (
     <label className={css.label} htmlFor={name}>
@@ -28,14 +28,14 @@ export default function BaseInput({
                   type={showToggle ? (show ? "text" : "password") : type}
                   placeholder={placeholder}
                   className={clsx(css.input, {
-                    [css.inputError]: hasError
+                    [css.inputError]: hasError,
                   })}
                   autoComplete={
                     type === "email"
                       ? "email"
                       : type === "password"
-                      ? "current-password"
-                      : "on"
+                        ? "current-password"
+                        : "on"
                   }
                   aria-invalid={hasError ? "true" : undefined}
                 />
@@ -69,5 +69,5 @@ BaseInput.propTypes = {
   type: PropTypes.string,
   showToggle: PropTypes.bool,
   show: PropTypes.bool,
-  onToggle: PropTypes.func
+  onToggle: PropTypes.func,
 };

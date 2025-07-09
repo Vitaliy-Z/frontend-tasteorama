@@ -31,20 +31,20 @@ export default function RegistrationForm() {
         const { name, email, password, privacyPolicyAccepted } = values;
 
         await dispatch(
-          fetchRegisterUser({ name, email, password, privacyPolicyAccepted })
+          fetchRegisterUser({ name, email, password, privacyPolicyAccepted }),
         ).unwrap();
 
         toast.success("Registration successful");
         navigate("/");
       } catch {
         toast.error(
-          authError?.message || "Registration failed. Try again later."
+          authError?.message || "Registration failed. Try again later.",
         );
       } finally {
         actions.setSubmitting(false);
       }
     },
-    [dispatch, navigate, authError]
+    [dispatch, navigate, authError],
   );
 
   return (

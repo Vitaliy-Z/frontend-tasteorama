@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import apiClient, {
   deleteAuthorizationToken,
-  setAuthorizationToken
+  setAuthorizationToken,
 } from "../../api/api.js";
 
 export const fetchRegisterUser = createAsyncThunk(
@@ -17,7 +17,7 @@ export const fetchRegisterUser = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 
 export const fetchLoginUser = createAsyncThunk(
@@ -33,7 +33,7 @@ export const fetchLoginUser = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 
 export const fetchLogoutUser = createAsyncThunk(
@@ -45,7 +45,7 @@ export const fetchLogoutUser = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
 
 export const fetchUser = createAsyncThunk(
@@ -58,5 +58,5 @@ export const fetchUser = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );

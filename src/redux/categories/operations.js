@@ -10,5 +10,5 @@ export const fetchCategories = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
+  },
 );
