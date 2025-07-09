@@ -22,7 +22,7 @@ import { selectCategories } from "../../../redux/categories/selectors.js";
 import { selectIngredients } from "../../../redux/ingredients/selectors.js";
 import { fetchRecipes } from "../../../redux/recipes/operations.js";
 
-const Filters = () => {
+const Filters = ({ hideTitle }) => {
   const dispatch = useDispatch();
 
   const [showDropdown, setShowDropdown] = useState(false);
@@ -78,10 +78,12 @@ const Filters = () => {
 
   return (
     <div className={css.wrapper}>
-      <h2 className={css.title}>Recipes</h2>
+      {!hideTitle && <h2 className={css.title}>Recipes</h2>}
 
       <div className={css.topBar}>
-        <p className={css.recipesCount}>{recipesCount} recipes found</p>
+        {!hideTitle && (
+          <p className={css.recipesCount}>{recipesCount} recipes found</p>
+        )}
 
         {isCompactView ? (
           <div className={css.filtersDropdownContainer}>
@@ -170,3 +172,4 @@ const Filters = () => {
 };
 
 export default Filters;
+// temp change
