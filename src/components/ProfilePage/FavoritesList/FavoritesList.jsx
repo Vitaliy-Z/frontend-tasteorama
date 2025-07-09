@@ -14,7 +14,7 @@ const FavoritesList = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(selectRecipesItems);
   const isLoadingFavoriteRecipes = useSelector(
-    selectRecipesIsLoadingFavoriteRecipes
+    selectRecipesIsLoadingFavoriteRecipes,
   );
 
   useEffect(() => {

@@ -12,7 +12,7 @@ export default defineConfig([
     plugins: {
       react,
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
+      "react-refresh": reactRefresh,
     },
     languageOptions: {
       ecmaVersion: 2020,
@@ -20,15 +20,15 @@ export default defineConfig([
       parserOptions: {
         ecmaVersion: "latest",
         ecmaFeatures: { jsx: true },
-        sourceType: "module"
-      }
+        sourceType: "module",
+      },
     },
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs["recommended-latest"].rules,
       ...reactRefresh.configs.vite.rules,
       "react/prop-types": 0,
-      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }]
-    }
-  }
+      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
+    },
+  },
 ]);

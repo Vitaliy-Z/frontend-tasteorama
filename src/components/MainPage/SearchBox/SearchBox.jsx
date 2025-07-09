@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   selectFilterByName,
   selectFilterByCategory,
-  selectFilterByIngredients
+  selectFilterByIngredients,
 } from "../../../redux/filters/selectors.js";
 import { setFilterByName } from "../../../redux/filters/slice.js";
 import { selectRecipesPage } from "../../../redux/recipes/selectors.js";
@@ -33,8 +33,8 @@ export const SearchBox = () => {
         page,
         title: searchQuery,
         category: filterByCategory,
-        ingredients: filterByIngredients
-      })
+        ingredients: filterByIngredients,
+      }),
     );
   };
 

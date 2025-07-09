@@ -34,6 +34,6 @@ export default function ConfirmModal({ onClose, onConfirm }) {
         </div>
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }

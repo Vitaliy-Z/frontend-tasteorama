@@ -3,7 +3,7 @@ import { lsRemoveToken, lsSetToken } from "../utils/localStorageUtils.js";
 
 const apiClient = axios.create({
   // baseURL: "https://backend-tasteorama-zji6.onrender.com/api"
-  baseURL: "https://backend-tasteorama.onrender.com/api"
+  baseURL: "https://backend-tasteorama.onrender.com/api",
 });
 
 export const setAuthorizationToken = (token) => {

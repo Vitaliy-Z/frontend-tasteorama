@@ -10,5 +10,5 @@ export const PrivateRoute = ({ component }) => {
 };
 
 PrivateRoute.propTypes = {
-  component: PropTypes.elementType.isRequired
+  component: PropTypes.elementType.isRequired,
 };

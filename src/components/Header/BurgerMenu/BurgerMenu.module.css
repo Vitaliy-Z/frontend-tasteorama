@@ -1,59 +1,58 @@
 /* BURGER стилі */
 .burgerBtn,
 .closeBtn {
-    display: block;
+  display: block;
 }
 
 .burgerBtn {
-    background: none;
-    border: none;
-    display: block;
-    position: relative;
-    width: 32px;
-    height: 32px;
+  background: none;
+  border: none;
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
 }
 
 .burgerIcon {
-    width: 20px;
-    height: 14px;
-    fill: #fff;
-    stroke: #fff;
+  width: 20px;
+  height: 14px;
+  fill: #fff;
+  stroke: #fff;
 }
 
 /* CLOSE стилі — кругла з контуром */
 .closeBtn {
-    background-color: transparent;
-    border: 1.3px solid #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
+  background-color: transparent;
+  border: 1.3px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
 }
 
 .closeIcon {
-    width: 10px;
-    height: 10px;
-    stroke: white;
-    stroke-width: 1.3;
-    stroke-linecap: round;
-    fill: none;
+  width: 10px;
+  height: 10px;
+  stroke: white;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  fill: none;
 }
 
 /* НАВІГАЦІЯ для десктоп без бургер */
 .desktopNav {
-    display: none;
+  display: none;
 }
 
 /* ====   Планшет   ==== */
 
 @media (min-width: 768px) {
-
-    .burgerBtn,
-    .closeBtn {
-        display: none;
-    }
+  .burgerBtn,
+  .closeBtn {
+    display: none;
+  }
 }
 
 /* ====   Десктоп  ==== */

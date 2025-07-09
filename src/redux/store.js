@@ -13,7 +13,7 @@ export const store = configureStore({
     recipes: recipesReducer,
     categories: categoriesReducer,
     ingredients: ingredientsReducer,
-    filters: filtersReducer
+    filters: filtersReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(toastMiddleware), //-ДОДАЛА
