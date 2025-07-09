@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchRecipes, loadMoreRecipes } from "../redux/recipes/operations";
-import { fetchCategories } from "../redux/categories/operations";
-import { fetchIngredients } from "../redux/ingredients/operations";
+import { fetchRecipes, loadMoreRecipes } from "../redux/recipes/operations.js";
+import { fetchCategories } from "../redux/categories/operations.js";
+import { fetchIngredients } from "../redux/ingredients/operations.js";
 import {
   selectRecipesItems,
   selectRecipesPage,
   selectRecipesIsLoadingAllRecipes,
   selectRecipesIsLoadingMoreRecipes,
+  selectRecipesTotalItems
 } from "../redux/recipes/selectors.js";
 import { selectFilterByName } from "../redux/filters/selectors.js";
 
@@ -28,6 +29,8 @@ const MainPage = () => {
   const isLoadingMoreRecipes = useSelector(selectRecipesIsLoadingMoreRecipes);
   const page = useSelector(selectRecipesPage);
 
+  const totalItems = useSelector(selectRecipesTotalItems);
+
   const filterByName = useSelector(selectFilterByName);
 
   useEffect(() => {
@@ -41,6 +44,8 @@ const MainPage = () => {
     dispatch(loadMoreRecipes({ page: page + 1, title: filterByName }));
   };
 
+  const hasMore = recipes.length < totalItems;
+
   return (
     <>
       <SearchBox />
@@ -50,7 +55,7 @@ const MainPage = () => {
       {isLoadingMoreRecipes ? (
         <Loader />
       ) : (
-        <LoadMoreBtn onClick={handleLoadMore} />
+        hasMore && <LoadMoreBtn onClick={handleLoadMore} />
       )}
     </>
   );

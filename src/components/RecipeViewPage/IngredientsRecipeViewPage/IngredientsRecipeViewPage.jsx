@@ -36,4 +36,5 @@ const IngredientsRecipeViewPage = ({ ingredients = [] }) => {
     </div>
   );
 };
+
 export default IngredientsRecipeViewPage;
