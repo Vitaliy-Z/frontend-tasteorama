@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchOwnRecipes } from "../../../redux/recipes/operations";
 import {
   selectRecipesItems,
-  selectRecipesIsLoadingOwnRecipes
+  selectRecipesIsLoadingOwnRecipes,
 } from "../../../redux/recipes/selectors";
 
 import RecipesList from "../../shared/RecipesList/RecipesList.jsx";
@@ -21,7 +21,9 @@ const MyRecipesList = () => {
 
   if (isLoadingOwnRecipes) return <Loader />;
 
-  if (recipes.length === 0) return <h3>No own recipes</h3>;
+  // if (recipes.length === 0) return <h3>No own recipes</h3>;
+  if (!Array.isArray(recipes) || recipes.length === 0)
+    return <h3>No own recipes</h3>;
 
   return <RecipesList recipes={recipes} />;
 };

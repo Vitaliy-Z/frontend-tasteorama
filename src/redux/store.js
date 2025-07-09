@@ -5,6 +5,8 @@ import categoriesReducer from "./categories/slice.js";
 import ingredientsReducer from "./ingredients/slice.js";
 import filtersReducer from "./filters/slice.js";
 
+import { toastMiddleware } from "../utils/toastMiddleware"; //-ДОДАЛА
+
 export const store = configureStore({
   reducer: {
     auth: userReducer,
@@ -12,5 +14,7 @@ export const store = configureStore({
     categories: categoriesReducer,
     ingredients: ingredientsReducer,
     filters: filtersReducer
-  }
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(toastMiddleware), //-ДОДАЛА
 });

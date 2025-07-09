@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchFavoriteRecipes } from "../../../redux/recipes/operations";
 import {
   selectRecipesItems,
-  selectRecipesIsLoadingFavoriteRecipes
+  selectRecipesIsLoadingFavoriteRecipes,
 } from "../../../redux/recipes/selectors";
 
 import RecipesList from "../../shared/RecipesList/RecipesList.jsx";
@@ -23,7 +23,9 @@ const FavoritesList = () => {
 
   if (isLoadingFavoriteRecipes) return <Loader />;
 
-  if (recipes.length === 0) return <h3>No favorites recipes</h3>;
+  // if (recipes.length === 0) return <h3>No favorites recipes</h3>;
+  if (!Array.isArray(recipes) || recipes.length === 0)
+    return <h3>No favorites</h3>;
 
   return <RecipesList recipes={recipes} />;
 };
