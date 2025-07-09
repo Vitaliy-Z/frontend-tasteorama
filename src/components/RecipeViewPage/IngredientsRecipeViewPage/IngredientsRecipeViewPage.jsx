@@ -6,23 +6,32 @@ const IngredientsRecipeViewPage = ({ ingredients = [] }) => {
     <div className={styles.sectioningredients}>
       <h2>Ingredients:</h2>
       <ul className={styles.ingredientsList}>
-        {ingredients.map((item, index) => {
-          // пошук деталей інгредієнта за id
-          const ingredient = ingredientsData.find((ing) => ing._id === item.id);
-          const name = ingredient?.name ?? "Unknown ingredient";
-
-          // створ. ключ: якщо item.id валідний — хапаємо, ні то fallback на індекс
-          const key = item.id ?? `unknown-${index}`;
-
-          return (
-            <li key={key}>
-              <p>
-                <span className={styles.ingname}>{name} – </span>
-                {item.measure}
-              </p>
-            </li>
-          );
-        })}
+        {ingredients.length > 0 &&
+          ingredients.map((item) => {
+            const ingredient = ingredientsData.find(
+              (ing) => ing._id === item.id
+            );
+            if (!ingredient) {
+              return (
+                <li key={item.id}>
+                  <p>
+                    <span className={styles.ingname}>
+                      Невідомий інгредієнт -{" "}
+                    </span>
+                    {item.measure}
+                  </p>
+                </li>
+              );
+            }
+            return (
+              <li key={item.id}>
+                <p>
+                  <span className={styles.ingname}>{ingredient.name} - </span>
+                  {item.measure}
+                </p>
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
