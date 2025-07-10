@@ -14,6 +14,10 @@ export const registerSchema = Yup.object().shape({
     .required("Name is required"),
   email: Yup.string()
     .email("Invalid email format")
+    .matches(
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      "Invalid email format",
+    )
     .max(128, "Email must be at most 128 characters")
     .required("Email is required"),
   password: Yup.string()
