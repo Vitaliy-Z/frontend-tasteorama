@@ -9,7 +9,7 @@ import {
   selectRecipesPage,
   selectRecipesIsLoadingAllRecipes,
   selectRecipesIsLoadingMoreRecipes,
-  selectRecipesTotalItems
+  selectRecipesTotalItems,
 } from "../redux/recipes/selectors.js";
 import { selectFilterByName } from "../redux/filters/selectors.js";
 
