@@ -9,11 +9,11 @@ import Loader from "../Loader/Loader.jsx";
 
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite
+  fetchDeleteRecipesFromFavorite,
 } from "../../../redux/recipes/operations.js";
 import {
   selectLoadToFavorite,
-  selectUser
+  selectUser,
 } from "../../../redux/auth/selectors.js";
 
 import css from "./RecipeCard.module.css";
@@ -88,7 +88,7 @@ export default function RecipeCard({ recipe }) {
                 name="flag"
                 classname={clsx(
                   css.iconSave,
-                  isFavorite && css.iconSaveFavorite
+                  isFavorite && css.iconSaveFavorite,
                 )}
               />
             )}
