@@ -23,7 +23,7 @@ const initialValues = {
   category: "",
   ingredients: [],
   instructions: "",
-  recipeImg: null
+  recipeImg: null,
 };
 
 const validationSchema = Yup.object({
@@ -43,12 +43,12 @@ const validationSchema = Yup.object({
     .of(
       Yup.object({
         name: Yup.string().required("Ingredient name required"),
-        measure: Yup.string().required("Amount required")
-      })
+        measure: Yup.string().required("Amount required"),
+      }),
     )
     .min(2, "Add at least minimum two ingredients"),
   instructions: Yup.string().trim().required("Instructions required"),
-  recipeImg: Yup.mixed().nullable()
+  recipeImg: Yup.mixed().nullable(),
 });
 
 const AddRecipeForm = () => {
