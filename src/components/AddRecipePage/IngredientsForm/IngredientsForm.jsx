@@ -9,7 +9,6 @@ import styles from "./IngredientsForm.module.css";
 const IngredientsForm = ({ values }) => {
   const dispatch = useDispatch();
   const allIngredients = useSelector(selectIngredients);
-
   const [ingredient, setIngredient] = useState({ name: "", measure: "" });
 
   useEffect(() => {
@@ -18,30 +17,37 @@ const IngredientsForm = ({ values }) => {
 
   return (
     <section className={styles.sectionIngr}>
-      <h3>Ingredients</h3>
-      <div className={styles.inputRow}>
-        <select
-          value={ingredient.name}
-          onChange={(e) =>
-            setIngredient({ ...ingredient, name: e.target.value })
-          }
-        >
-          <option value="">Select ingredient</option>
-          {allIngredients.map((ing) => (
-            <option key={ing._id} value={ing.name}>
-              {ing.name}
-            </option>
-          ))}
-        </select>
+      <h3 className={styles.sectionIngrTitle}>Ingredients</h3>
 
-        <input
-          type="text"
-          placeholder="100g"
-          value={ingredient.measure}
-          onChange={(e) =>
-            setIngredient({ ...ingredient, measure: e.target.value })
-          }
-        />
+      <div className={styles.inputRow}>
+        <label className="label">
+          Ingredient:
+          <select
+            value={ingredient.name}
+            onChange={(e) =>
+              setIngredient({ ...ingredient, name: e.target.value })
+            }
+          >
+            <option value="">Select ingredient</option>
+            {allIngredients.map((ing) => (
+              <option key={ing._id} value={ing.name}>
+                {ing.name}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="label">
+          Amount:
+          <input
+            type="text"
+            placeholder="100g"
+            value={ingredient.measure}
+            onChange={(e) =>
+              setIngredient({ ...ingredient, measure: e.target.value })
+            }
+          />
+        </label>
       </div>
 
       <FieldArray
@@ -59,6 +65,7 @@ const IngredientsForm = ({ values }) => {
             >
               Add Ingredient
             </button>
+
             <ErrorMessage
               name="ingredients"
               component="p"
@@ -66,21 +73,27 @@ const IngredientsForm = ({ values }) => {
             />
 
             {values.ingredients.length > 0 && (
-              <ul className={styles.ingredientsList}>
-                {values.ingredients.map((ing, index) => (
-                  <li key={index} className={styles.ingrlist}>
-                    <span>{ing.name}</span>
-                    <span>{ing.measure}</span>
-                    <button
-                      type="button"
-                      onClick={() => arrayHelpers.remove(index)}
-                      className={styles.deleteIcon}
-                    >
-                      <Icon name="delete" classname={styles.iconSvg} />
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <div className={styles.ingredientsTable}>
+                <div className={styles.tableHeader}>
+                  <span>Name:</span>
+                  <span>Amount:</span>
+                </div>
+                <ul className={styles.ingredientsList}>
+                  {values.ingredients.map((ing, index) => (
+                    <li key={index} className={styles.ingrlist}>
+                      <span className={styles.ingrName}>{ing.name}</span>
+                      <span className={styles.ingrAmount}>{ing.measure}</span>
+                      <button
+                        type="button"
+                        onClick={() => arrayHelpers.remove(index)}
+                        className={styles.deleteIcon}
+                      >
+                        <Icon name="delete" classname={styles.iconSvg} />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </>
         )}
