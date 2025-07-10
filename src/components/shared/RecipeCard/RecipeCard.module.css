@@ -4,7 +4,6 @@
   padding: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 16px;
 }
 
@@ -55,7 +54,9 @@
   width: 53px;
   height: 28px;
 }
-
+.descriptionWrapper {
+  margin-bottom: auto;
+}
 .description {
   font-size: 16px;
   font-weight: 400;
@@ -196,8 +197,7 @@
 @media (min-width: 1440px) {
   .card {
     height: 431px;
-    gap: 0;
-    align-items: space-between;
+    gap: 25px;
   }
 
   .image {
@@ -207,6 +207,9 @@
 
   .titleRow {
     height: 30px;
+  }
+  .descriptionWrapper {
+    margin-bottom: auto;
   }
 
   .learnMoreBtn {

@@ -56,7 +56,11 @@ const RecipeDetails = () => {
       </div>
       <div className={styles.recipeLayout}>
         <div className={styles.generalInfobutton}>
-          <GeneralInfo category={recipe.category} time={recipe.time} />
+          <GeneralInfo
+            category={recipe.category}
+            time={recipe.time}
+            calories={recipe.cals}
+          />
           <button
             type="button"
             className={styles.saveButton}

@@ -13,14 +13,13 @@ const RecipesList = ({ recipes }) => {
           </li>
         ))}
       </ul>
-      ,
       <ScrollToTopButton />
     </>
   );
 };
 
 RecipesList.propTypes = {
-  recipes: PropTypes.array.isRequired,
+  recipes: PropTypes.array.isRequired
 };
 
 export default RecipesList;

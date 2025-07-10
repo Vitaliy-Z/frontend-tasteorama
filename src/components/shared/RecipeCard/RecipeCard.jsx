@@ -19,7 +19,7 @@ import {
 import css from "./RecipeCard.module.css";
 
 export default function RecipeCard({ recipe }) {
-  const { _id, title, description, thumb, time, calories } = recipe;
+  const { _id, title, description, thumb, time, cals } = recipe;
 
   const user = useSelector(selectUser);
   const loadToFavorite = useSelector(selectLoadToFavorite);
@@ -59,11 +59,9 @@ export default function RecipeCard({ recipe }) {
           </span>
         </div>
 
-        <div>
+        <div className={css.descriptionWrapper}>
           <p className={css.description}>{description}</p>
-          <p className={css.calories}>
-            {calories ? `~${calories} kcal` : "— kcal"}
-          </p>
+          <p className={css.calories}>{cals ? `~${cals}` : "—"} kcal</p>
         </div>
 
         <div className={css.actions}>

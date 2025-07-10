@@ -9,7 +9,7 @@ import {
   selectRecipesPage,
   selectRecipesIsLoadingAllRecipes,
   selectRecipesIsLoadingMoreRecipes,
-  selectRecipesTotalItems,
+  selectRecipesTotalItems
 } from "../redux/recipes/selectors.js";
 import { selectCategoriesIsLoading } from "../redux/categories/selectors.js";
 import { selectIngredientsIsLoading } from "../redux/ingredients/selectors.js";
@@ -35,10 +35,7 @@ const MainPage = () => {
   const page = useSelector(selectRecipesPage);
 
   const isLoading =
-    isLoadingAllRecipes ||
-    isLoadingMoreRecipes ||
-    isLoadingCategories ||
-    isLoadingIngredients;
+    isLoadingAllRecipes || isLoadingCategories || isLoadingIngredients;
 
   const totalItems = useSelector(selectRecipesTotalItems);
 
@@ -66,7 +63,12 @@ const MainPage = () => {
         <>
           <Filters />
           <RecipesList recipes={recipes} />
-          {hasMore && <LoadMoreBtn onClick={handleLoadMore} />}
+          {hasMore &&
+            (isLoadingMoreRecipes ? (
+              <Loader size="small" />
+            ) : (
+              <LoadMoreBtn onClick={handleLoadMore} />
+            ))}
         </>
       )}
     </>
