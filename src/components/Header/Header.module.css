@@ -2,10 +2,12 @@
   background-color: #3d2218;
   position: relative;
   color: white;
-  padding: 14px 16px;
 }
 
 .container {
+  max-width: 393px;
+  padding: 0 16px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,22 +16,17 @@
   text-align: left;
 }
 
-/* Приховуємо десктопну навігацію на мобілці */
 .desktopNav {
   display: none;
 }
 
-/* Мобільне меню */
-/* Базові стилі */
 .mobileMenu {
   display: none;
 }
 
-/* Активні стилі — лише коли меню відкрите */
 .mobileMenu.open {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
   width: 100%;
   padding-top: 32px;
   padding-bottom: 26px;
@@ -37,14 +34,10 @@
   text-align: center;
 }
 
-/* ====  Планшет   ==== */
-
 @media (min-width: 768px) {
-  .header {
-    padding: 14px 32px;
-  }
-
   .container {
+    max-width: 768px;
+    padding: 0 32px;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
@@ -60,10 +53,9 @@
   }
 }
 
-/* ====   Десктоп (великий екран)   ====  */
-
-@media (min-width: 1024px) {
-  .header {
-    padding: 14px 108px;
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 108px;
   }
 }

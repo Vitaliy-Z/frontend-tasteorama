@@ -13,6 +13,7 @@ import PhotoUpload from "../PhotoUpload/PhotoUpload.jsx";
 import Loader from "../../shared/Loader/Loader.jsx";
 
 import styles from "./AddRecipeForm.module.css";
+import { useNavigate } from "react-router-dom";
 
 const initialValues = {
   title: "",
@@ -50,10 +51,11 @@ const validationSchema = Yup.object({
 });
 
 const AddRecipeForm = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLoading = useSelector(selectRecipesIsLoadingAddRecipe);
 
-  const handleSubmit = (values, { resetForm }) => {
+  const handleSubmit = async (values, { resetForm }) => {
     const formData = new FormData();
     formData.append("name", values.title);
     formData.append("decr", values.description);
@@ -64,8 +66,10 @@ const AddRecipeForm = () => {
     formData.append("recipeImg", values.recipeImg);
     formData.append("ingredient", JSON.stringify(values.ingredients));
 
-    dispatch(fetchAddRecipe(formData));
-    resetForm();
+    dispatch(fetchAddRecipe(formData)).then((res) => {
+      resetForm();
+      navigate(`/recipes/${res.payload._id}`);
+    });
   };
 
   return (
@@ -106,7 +110,7 @@ const AddRecipeForm = () => {
                 />
 
                 {isLoading || isSubmitting ? (
-                  <Loader />
+                  <Loader size="small" />
                 ) : (
                   <button
                     type="submit"

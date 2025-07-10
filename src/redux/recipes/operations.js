@@ -41,7 +41,6 @@ export const fetchAddRecipe = createAsyncThunk(
   "recipes/fetchAddRecipe",
   async (newRecipe, thunkAPI) => {
     try {
-      // важливо: НЕ ВКАЗУЄМО headers — axios сам поставить правильний Content-Type з boundary
       const { data } = await apiClient.post("/recipes", newRecipe);
       return data.data;
     } catch (err) {

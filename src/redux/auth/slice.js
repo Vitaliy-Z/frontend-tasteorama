@@ -19,6 +19,7 @@ const authSlice = createSlice({
     user: null,
     isLoading: false,
     error: null,
+    loadRecipeToFavorite: null,
   },
   extraReducers: (builder) =>
     builder
@@ -47,24 +48,34 @@ const authSlice = createSlice({
       })
       .addCase(fetchLogoutUser.rejected, handleError)
 
-      .addCase(fetchAddRecipesToFavorite.pending, (state) => {
+      .addCase(fetchAddRecipesToFavorite.pending, (state, action) => {
         state.error = null;
+        state.loadRecipeToFavorite = action.meta.arg;
       })
       .addCase(fetchAddRecipesToFavorite.fulfilled, (state, { payload }) => {
         state.user = payload;
+        state.loadRecipeToFavorite = null;
       })
-      .addCase(fetchAddRecipesToFavorite.rejected, handleError)
+      .addCase(fetchAddRecipesToFavorite.rejected, (state) => {
+        state.loadRecipeToFavorite = null;
+        handleError(state);
+      })
 
-      .addCase(fetchDeleteRecipesFromFavorite.pending, (state) => {
+      .addCase(fetchDeleteRecipesFromFavorite.pending, (state, action) => {
         state.error = null;
+        state.loadRecipeToFavorite = action.meta.arg;
       })
       .addCase(
         fetchDeleteRecipesFromFavorite.fulfilled,
         (state, { payload }) => {
           state.user = payload;
+          state.loadRecipeToFavorite = null;
         },
       )
-      .addCase(fetchDeleteRecipesFromFavorite.rejected, handleError)
+      .addCase(fetchDeleteRecipesFromFavorite.rejected, (state) => {
+        state.loadRecipeToFavorite = null;
+        handleError(state);
+      })
 
       .addCase(fetchUser.pending, handlePending)
       .addCase(fetchUser.fulfilled, (state, { payload }) => {
