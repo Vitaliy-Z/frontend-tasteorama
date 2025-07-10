@@ -32,6 +32,7 @@ const validationSchema = Yup.object({
   time: Yup.number()
     .typeError("Must be a number")
     .positive("Must be positive")
+    .max(360, "Maximum 360 minutes")
     .required("Time is required"),
   calories: Yup.number()
     .typeError("Must be a number")
