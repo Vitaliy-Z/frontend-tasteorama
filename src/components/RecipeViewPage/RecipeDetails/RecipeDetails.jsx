@@ -5,7 +5,7 @@ import { selectUser } from "../../../redux/auth/selectors.js";
 import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite,
+  fetchDeleteRecipesFromFavorite
 } from "../../../redux/recipes/operations";
 
 import NotFound from "../NotFound/NotFound.jsx";
@@ -23,9 +23,9 @@ const RecipeDetails = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectUser);
+  const user = useSelector(selectUser);
   const recipe = useSelector(selectCurrentRecipes);
 
-  const user = useSelector(selectUser);
   const isFavorite = user?.favorites?.includes(recipe._id);
 
   const handleFavoriteClick = () => {
@@ -44,13 +44,16 @@ const RecipeDetails = () => {
 
   return (
     <>
-      <img
-        src={recipe.thumb || recipe.imageUrl}
-        alt={recipe.title}
-        className={styles.recipeImage}
-        loading="lazy"
-      />
-      <h1 className={styles.title}>{recipe.title}</h1>
+      <div className={styles.wrapperImgh}>
+        <div className={styles.containerImg}>
+          <img
+            src={recipe.thumb || recipe.imageUrl}
+            alt={recipe.title}
+            loading="lazy"
+          />
+        </div>
+        <h1 className={styles.title}>{recipe.title}</h1>
+      </div>
       <div className={styles.recipeLayout}>
         <div className={styles.generalInfobutton}>
           <GeneralInfo category={recipe.category} time={recipe.time} />
@@ -67,7 +70,7 @@ const RecipeDetails = () => {
               name="bookmarkicon"
               classname={clsx(
                 styles.icon,
-                isFavorite && styles.iconSaveFavorite,
+                isFavorite && styles.iconSaveFavorite
               )}
             />
           </button>
@@ -81,4 +84,5 @@ const RecipeDetails = () => {
     </>
   );
 };
+
 export default RecipeDetails;

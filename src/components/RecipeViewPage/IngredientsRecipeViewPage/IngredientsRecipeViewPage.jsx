@@ -11,6 +11,18 @@ const IngredientsRecipeViewPage = ({ ingredients = [] }) => {
             const ingredient = ingredientsData.find(
               (ing) => ing._id === item.id,
             );
+            if (!ingredient) {
+              return (
+                <li key={item.id}>
+                  <p>
+                    <span className={styles.ingname}>
+                      Невідомий інгредієнт -{" "}
+                    </span>
+                    {item.measure}
+                  </p>
+                </li>
+              );
+            }
             return (
               <li key={item.id}>
                 <p>
@@ -24,4 +36,5 @@ const IngredientsRecipeViewPage = ({ ingredients = [] }) => {
     </div>
   );
 };
+
 export default IngredientsRecipeViewPage;
