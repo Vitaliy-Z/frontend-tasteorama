@@ -10,11 +10,7 @@ const InstructionsForm = ({ value, onChange }) => (
       value={value}
       onChange={(e) => onChange(e.target.value)}
     />
-    <ErrorMessage
-      name="instructions"
-      component="div"
-      className={styles.error}
-    />
+    <ErrorMessage name="instructions" component="p" style={{ color: "red" }} />
   </div>
 );
 

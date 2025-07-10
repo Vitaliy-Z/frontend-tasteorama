@@ -76,6 +76,7 @@
   margin: 0;
 }
 .ingrlist {
+  margin-bottom: 12px;
   display: flex;
   flex-direction: row;
   gap: 4px;
@@ -167,6 +168,7 @@
     margin-bottom: 32px;
   }
   .ingredientsList {
+    margin-bottom: 32px;
     max-width: none;
   }
 

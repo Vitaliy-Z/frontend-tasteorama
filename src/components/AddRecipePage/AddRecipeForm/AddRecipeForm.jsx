@@ -46,7 +46,7 @@ const validationSchema = Yup.object({
     )
     .min(1, "Add at least one ingredient"),
   instructions: Yup.string().trim().required("Instructions required"),
-  recipeImg: Yup.mixed().required("Photo is required"),
+  recipeImg: Yup.mixed().nullable(),
 });
 
 const AddRecipeForm = () => {
@@ -58,7 +58,7 @@ const AddRecipeForm = () => {
     formData.append("name", values.title);
     formData.append("decr", values.description);
     formData.append("cookiesTime", values.time);
-    formData.append("cals", values.calories); 
+    formData.append("cals", values.calories);
     formData.append("category", values.category);
     formData.append("instruction", values.instructions);
     formData.append("recipeImg", values.recipeImg);
@@ -86,8 +86,8 @@ const AddRecipeForm = () => {
                 />
                 <ErrorMessage
                   name="recipeImg"
-                  component="div"
-                  className={styles.error}
+                  component="p"
+                  style={{ color: "red" }}
                 />
               </div>
 
@@ -103,11 +103,6 @@ const AddRecipeForm = () => {
                 <InstructionsForm
                   value={values.instructions}
                   onChange={(val) => setFieldValue("instructions", val)}
-                />
-                <ErrorMessage
-                  name="instructions"
-                  component="div"
-                  className={styles.error}
                 />
 
                 {isLoading || isSubmitting ? (

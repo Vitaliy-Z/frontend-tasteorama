@@ -6,7 +6,7 @@ import { selectIngredients } from "../../../redux/ingredients/selectors";
 import Icon from "../../shared/Icon/Icon.jsx";
 import styles from "./IngredientsForm.module.css";
 
-const IngredientsForm = ({ values, setFieldValue }) => {
+const IngredientsForm = ({ values }) => {
   const dispatch = useDispatch();
   const allIngredients = useSelector(selectIngredients);
 
@@ -61,8 +61,8 @@ const IngredientsForm = ({ values, setFieldValue }) => {
             </button>
             <ErrorMessage
               name="ingredients"
-              component="div"
-              className={styles.error}
+              component="p"
+              style={{ color: "red" }}
             />
 
             {values.ingredients.length > 0 && (

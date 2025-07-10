@@ -28,7 +28,7 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
           className={styles.inputTitle}
         />
       </label>
-      <ErrorMessage name="title" component="div" className={styles.error} />
+      <ErrorMessage name="title" component="p" style={{ color: "red" }} />
 
       <label>
         Description
@@ -38,11 +38,7 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
           onChange={(e) => setFieldValue("description", e.target.value)}
         />
       </label>
-      <ErrorMessage
-        name="description"
-        component="div"
-        className={styles.error}
-      />
+      <ErrorMessage name="description" component="p" style={{ color: "red" }} />
 
       <label>
         Cooking time (min)
@@ -53,7 +49,7 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
           className={styles.inputCookin}
         />
       </label>
-      <ErrorMessage name="time" component="div" className={styles.error} />
+      <ErrorMessage name="time" component="p" style={{ color: "red" }} />
 
       <div className={styles.row}>
         <label>
@@ -65,11 +61,7 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
             onChange={(e) => setFieldValue("calories", e.target.value)}
           />
         </label>
-        <ErrorMessage
-          name="calories"
-          component="div"
-          className={styles.error}
-        />
+        <ErrorMessage name="calories" component="p" style={{ color: "red" }} />
 
         <label>
           Category
@@ -85,11 +77,7 @@ const GeneralInfoForm = ({ values, setFieldValue }) => {
             ))}
           </select>
         </label>
-        <ErrorMessage
-          name="category"
-          component="div"
-          className={styles.error}
-        />
+        <ErrorMessage name="category" component="p" style={{ color: "red" }} />
       </div>
     </section>
   );
