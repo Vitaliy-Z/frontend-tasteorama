@@ -4,7 +4,7 @@
   padding: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 16px;
 }
 
@@ -55,7 +55,9 @@
   width: 53px;
   height: 28px;
 }
-
+.descriptionWrapper {
+  margin-bottom: auto;
+}
 .description {
   font-size: 16px;
   font-weight: 400;
@@ -111,9 +113,7 @@
 
 .learnMoreBtn:disabled {
   background-color: #d9d9d9;
-  box-shadow:
-    0 0 0 6px rgba(78, 70, 180, 0.12),
-    0 0 0 2px #fff;
+  box-shadow: 0 0 0 6px rgba(78, 70, 180, 0.12), 0 0 0 2px #fff;
   opacity: 0.3;
 }
 
@@ -129,9 +129,7 @@
   background: transparent;
   font-size: 24px;
   cursor: pointer;
-  transition:
-    color 0.3s ease,
-    border-color 0.3s ease,
+  transition: color 0.3s ease, border-color 0.3s ease,
     background-color 0.3s ease;
   color: #000;
   margin: 0 auto;
@@ -195,8 +193,7 @@
 @media (min-width: 1440px) {
   .card {
     height: 431px;
-    gap: 0;
-    align-items: space-between;
+    gap: 25px;
   }
 
   .image {
@@ -206,6 +203,9 @@
 
   .titleRow {
     height: 30px;
+  }
+  .descriptionWrapper {
+    margin-bottom: auto;
   }
 
   .learnMoreBtn {

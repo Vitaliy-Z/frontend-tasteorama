@@ -5,7 +5,7 @@ import { selectUser } from "../../../redux/auth/selectors.js";
 import { selectCurrentRecipes } from "../../../redux/recipes/selectors.js";
 import {
   fetchAddRecipesToFavorite,
-  fetchDeleteRecipesFromFavorite,
+  fetchDeleteRecipesFromFavorite
 } from "../../../redux/recipes/operations";
 
 import NotFound from "../NotFound/NotFound.jsx";
@@ -56,7 +56,11 @@ const RecipeDetails = () => {
       </div>
       <div className={styles.recipeLayout}>
         <div className={styles.generalInfobutton}>
-          <GeneralInfo category={recipe.category} time={recipe.time} />
+          <GeneralInfo
+            category={recipe.category}
+            time={recipe.time}
+            calories={recipe.cals}
+          />
           <button
             type="button"
             className={styles.saveButton}
@@ -70,7 +74,7 @@ const RecipeDetails = () => {
               name="bookmarkicon"
               classname={clsx(
                 styles.icon,
-                isFavorite && styles.iconSaveFavorite,
+                isFavorite && styles.iconSaveFavorite
               )}
             />
           </button>
