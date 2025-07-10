@@ -9,8 +9,11 @@ import {
   selectRecipesPage,
   selectRecipesIsLoadingAllRecipes,
   selectRecipesIsLoadingMoreRecipes,
-  selectRecipesTotalItems,
+  selectRecipesTotalItems
 } from "../redux/recipes/selectors.js";
+import { selectCategoriesIsLoading } from "../redux/categories/selectors.js";
+import { selectIngredientsIsLoading } from "../redux/ingredients/selectors.js";
+
 import { selectFilterByName } from "../redux/filters/selectors.js";
 
 import { setPage } from "../redux/recipes/slice.js";
@@ -27,7 +30,15 @@ const MainPage = () => {
   const recipes = useSelector(selectRecipesItems);
   const isLoadingAllRecipes = useSelector(selectRecipesIsLoadingAllRecipes);
   const isLoadingMoreRecipes = useSelector(selectRecipesIsLoadingMoreRecipes);
+  const isLoadingCategories = useSelector(selectCategoriesIsLoading);
+  const isLoadingIngredients = useSelector(selectIngredientsIsLoading);
   const page = useSelector(selectRecipesPage);
+
+  const isLoading =
+    isLoadingAllRecipes ||
+    isLoadingMoreRecipes ||
+    isLoadingCategories ||
+    isLoadingIngredients;
 
   const totalItems = useSelector(selectRecipesTotalItems);
 
@@ -49,13 +60,14 @@ const MainPage = () => {
   return (
     <>
       <SearchBox />
-      <Filters />
-      {isLoadingAllRecipes ? <Loader /> : <RecipesList recipes={recipes} />}
-
-      {isLoadingMoreRecipes ? (
+      {isLoading ? (
         <Loader />
       ) : (
-        hasMore && <LoadMoreBtn onClick={handleLoadMore} />
+        <>
+          <Filters />
+          <RecipesList recipes={recipes} />
+          {hasMore && <LoadMoreBtn onClick={handleLoadMore} />}
+        </>
       )}
     </>
   );
