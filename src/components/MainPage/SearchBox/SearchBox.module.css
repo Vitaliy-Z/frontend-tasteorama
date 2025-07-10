@@ -1,26 +1,19 @@
-.area {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.hero {
   position: relative;
   width: 100vw;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-bottom: 48px;
+  margin: -48px -50vw 48px -50vw;
+  padding: 128px 32px 98px 32px;
+
+  color: white;
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
     url("/mob-bg@1x.webp");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
-  color: white;
   overflow: hidden;
-  box-sizing: border-box;
-  gap: 24px;
-  padding: 128px 32px 98px 32px;
-  margin-top: -48px;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image:
@@ -29,14 +22,20 @@
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 329px;
+  margin: 0 auto;
+}
+
 .title {
   font-weight: 600;
   font-size: 40px;
   line-height: 1.2;
   letter-spacing: 0;
   color: #fff;
-  height: 147px;
-  width: 329px;
 }
 
 .form {
@@ -96,11 +95,9 @@
   background-color: #9b6c43;
 }
 
-/* === Tablet === */
-
 @media screen and (min-width: 768px) {
-  .area {
-    padding: 128px 32px;
+  .hero {
+    padding: 128px 0;
     background-image:
       linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
       url("/tablet-bg@1x.webp");
@@ -111,7 +108,10 @@
         url("/tablet-bg@2x.webp");
     }
   }
-
+  .wrapper {
+    max-width: 768px;
+    padding: 0 32px;
+  }
   .title {
     font-size: 48px;
     height: 117px;
@@ -137,9 +137,8 @@
 
 /* === Desktop === */
 
-@media screen and (min-width: 1024px) {
-  .area {
-    padding: 128px 108px;
+@media screen and (min-width: 1440px) {
+  .hero {
     background-image:
       linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
       url("/desktop-bg@1x.webp");
@@ -149,5 +148,9 @@
         linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
         url("/desktop-bg@2x.webp");
     }
+  }
+  .wrapper {
+    max-width: 1440px;
+    padding: 0 108px;
   }
 }

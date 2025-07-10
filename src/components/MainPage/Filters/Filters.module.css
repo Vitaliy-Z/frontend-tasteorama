@@ -122,11 +122,20 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  /* Show dropdown on mobile, hide desktop filters */
+  .filtersDropdownContainer {
+    display: flex;
+  }
+
+  .filtersRow {
+    display: none;
+  }
 }
 
 /* === Tablet === */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .title {
     font-size: 40px;
   }
@@ -137,11 +146,29 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  /* Show dropdown on tablet, hide desktop filters */
+  .filtersDropdownContainer {
+    display: flex;
+  }
+
+  .filtersRow {
+    display: none;
+  }
 }
 
 /* === Desktop === */
 @media screen and (min-width: 1440px) {
   .topBar {
     height: 33px;
+  }
+
+  /* Hide dropdown on desktop, show desktop filters */
+  .filtersDropdownContainer {
+    display: none;
+  }
+
+  .filtersRow {
+    display: flex;
   }
 }

@@ -98,6 +98,7 @@ const recipesSlice = createSlice({
 
       .addCase(fetchAddRecipe.pending, (state) => {
         state.error = null;
+        state.currentRecipe = null;
         state.isLoadingAddRecipe = true;
       })
       .addCase(fetchAddRecipe.fulfilled, (state, { payload }) => {

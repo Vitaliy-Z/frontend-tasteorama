@@ -39,24 +39,26 @@ export const SearchBox = () => {
   };
 
   return (
-    <div className={css.area}>
-      <h1 className={css.title}>
-        Plan, Cook, and
-        <br />
-        Share Your Flavors
-      </h1>
-      <form onSubmit={handleSearch} className={css.form}>
-        <input
-          type="text"
-          placeholder="Search recipes"
-          value={searchQuery}
-          onChange={handleChange}
-          className={css.input}
-        />
-        <button type="submit" className={css.button}>
-          Search
-        </button>
-      </form>
+    <div className={css.hero}>
+      <div className={css.wrapper}>
+        <h1 className={css.title}>
+          Plan, Cook, and
+          <br />
+          Share Your Flavors
+        </h1>
+        <form onSubmit={handleSearch} className={css.form}>
+          <input
+            type="text"
+            placeholder="Search recipes"
+            value={searchQuery}
+            onChange={handleChange}
+            className={css.input}
+          />
+          <button type="submit" className={css.button}>
+            Search
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

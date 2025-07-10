@@ -5,22 +5,27 @@ import { useState } from "react";
 
 import Icon from "../Icon/Icon.jsx";
 import ErrorWhileSaving from "../../AddRecipePage/ErrorWhileSaving/ErrorWhileSaving.jsx";
-
-import css from "./RecipeCard.module.css";
+import Loader from "../Loader/Loader.jsx";
 
 import {
   fetchAddRecipesToFavorite,
   fetchDeleteRecipesFromFavorite,
-} from "../../../redux/recipes/operations";
-import { selectUser } from "../../../redux/auth/selectors.js";
+} from "../../../redux/recipes/operations.js";
+import {
+  selectLoadToFavorite,
+  selectUser,
+} from "../../../redux/auth/selectors.js";
+
+import css from "./RecipeCard.module.css";
 
 export default function RecipeCard({ recipe }) {
   const { _id, title, description, thumb, time, calories } = recipe;
 
   const user = useSelector(selectUser);
+  const loadToFavorite = useSelector(selectLoadToFavorite);
   const isFavorite = user?.favorites?.includes(_id);
 
-  const [showModal, setShowModal] = useState(false); // локальний стан модалки
+  const [showModal, setShowModal] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -31,7 +36,7 @@ export default function RecipeCard({ recipe }) {
 
   const handleFavoriteClick = () => {
     if (!user) {
-      setShowModal(true); // показую модалку
+      setShowModal(true);
       return;
     }
 
@@ -69,19 +74,26 @@ export default function RecipeCard({ recipe }) {
           >
             Learn More
           </button>
-
           <button
             type="button"
             className={css.favoriteBtn}
             onClick={handleFavoriteClick}
+            disabled={loadToFavorite === _id}
             aria-label={
               isFavorite ? "Remove from favorites" : "Add to favorites"
             }
           >
-            <Icon
-              name="flag"
-              classname={clsx(css.iconSave, isFavorite && css.iconSaveFavorite)}
-            />
+            {loadToFavorite === _id ? (
+              <Loader size="small" />
+            ) : (
+              <Icon
+                name="flag"
+                classname={clsx(
+                  css.iconSave,
+                  isFavorite && css.iconSaveFavorite,
+                )}
+              />
+            )}
           </button>
         </div>
       </div>
